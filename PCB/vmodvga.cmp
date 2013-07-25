@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 26/07/2013 00:17:27
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 26/07/2013 00:41:25
 
 BeginCmp
 TimeStamp = /51EC3BC1;
@@ -113,71 +113,64 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /51EC485A;
-Reference = C17;
-ValeurCmp = 22uf;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
 TimeStamp = /51EC4860;
-Reference = C18;
+Reference = C17;
 ValeurCmp = .1uf;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /51EC4866;
-Reference = C19;
+Reference = C18;
 ValeurCmp = .1uf;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /51EC486C;
-Reference = C20;
+Reference = C19;
 ValeurCmp = .1uf;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /51EC40C9;
-Reference = C21;
+Reference = C20;
 ValeurCmp = 22uf;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /51EC4164;
-Reference = C22;
+Reference = C21;
 ValeurCmp = .1uf;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /51EC417D;
-Reference = C23;
+Reference = C22;
 ValeurCmp = .1uf;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /51EC4183;
-Reference = C24;
+Reference = C23;
 ValeurCmp = .1uf;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /51EC4189;
-Reference = C25;
+Reference = C24;
 ValeurCmp = .1uf;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /51EC418F;
-Reference = C26;
+Reference = C25;
 ValeurCmp = .1uf;
 IdModule  = SM0805;
 EndCmp
@@ -197,8 +190,15 @@ IdModule  = -PANASONIC_E;
 EndCmp
 
 BeginCmp
-TimeStamp = /51EC3E79;
+TimeStamp = /51EC485A;
 Reference = Cp3;
+ValeurCmp = 22uf;
+IdModule  = -PANASONIC_E;
+EndCmp
+
+BeginCmp
+TimeStamp = /51EC3E79;
+Reference = Cp4;
 ValeurCmp = 4.7uf;
 IdModule  = -PANASONIC_C;
 EndCmp
