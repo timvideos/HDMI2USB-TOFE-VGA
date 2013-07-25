@@ -1,9 +1,139 @@
-PCBNEW-LibModule-V1  24/07/2013 02:33:08
+PCBNEW-LibModule-V1  25/07/2013 16:11:03
 # encoding utf-8
 Units mm
 $INDEX
+DE-15
 VHDCI
 $EndINDEX
+$MODULE DE-15
+Po 0 0 0 15 51F13FFE 00000000 ~~
+Li DE-15
+Sc 0
+AR 
+Op 0 0 0
+T0 -14.75 -6.1 1 1 0 0.15 N V 21 N "DE-15"
+T1 -15.3 -3.85 1 1 0 0.15 N V 21 N "VAL**"
+$PAD
+Sh "8" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -5.725 0
+$EndPAD
+$PAD
+Sh "9" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -3.435 0
+$EndPAD
+$PAD
+Sh "10" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -1.145 0
+$EndPAD
+$PAD
+Sh "11" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 1.145 0
+$EndPAD
+$PAD
+Sh "12" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3.435 0
+$EndPAD
+$PAD
+Sh "13" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -4.58 -1.98
+$EndPAD
+$PAD
+Sh "14" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -2.29 -1.98
+$EndPAD
+$PAD
+Sh "15" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 -1.98
+$EndPAD
+$PAD
+Sh "16" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.29 -1.98
+$EndPAD
+$PAD
+Sh "17" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 4.58 -1.98
+$EndPAD
+$PAD
+Sh "18" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -4.58 1.98
+$EndPAD
+$PAD
+Sh "19" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -2.29 1.98
+$EndPAD
+$PAD
+Sh "20" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 1.98
+$EndPAD
+$PAD
+Sh "21" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.29 1.98
+$EndPAD
+$PAD
+Sh "22" C 1.5 1.5 0 0 0
+Dr 1.05 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 4.58 1.98
+$EndPAD
+$PAD
+Sh "23" C 4.5 4.5 0 0 0
+Dr 3.96 0 0
+At STD N 0020FFFF
+Ne 0 ""
+Po 12.595 0
+.ZoneConnection 0
+$EndPAD
+$PAD
+Sh "24" C 4.5 4.5 0 0 0
+Dr 3.96 0 0
+At STD N 0020FFFF
+Ne 0 ""
+Po -12.595 0
+$EndPAD
+$EndMODULE DE-15
 $MODULE VHDCI
 Po 0 0 0 15 51EF2D81 00000000 ~~
 Li VHDCI
