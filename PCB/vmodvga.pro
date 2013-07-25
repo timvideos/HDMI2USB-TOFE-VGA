@@ -1,11 +1,6 @@
-update=24/07/2013 01:00:38
+update=26/07/2013 00:15:18
 version=1
-last_client=pcbnew
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
+last_client=cvpcb
 [general]
 version=1
 [eeschema]
@@ -68,7 +63,6 @@ DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
 [pcbnew/libraries]
-LibDir=
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -86,3 +80,11 @@ LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
 LibName17=vmodvga
+LibName18=C:/Program Files (x86)/KiCad/all/converted/analog-devices2
+LibName19=C:/Program Files (x86)/KiCad/all/converted/ref-packages
+LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
