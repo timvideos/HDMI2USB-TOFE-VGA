@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  25/07/2013 23:25:48
+PCBNEW-LibModule-V1  26/07/2013 02:20:54
 # encoding utf-8
 Units mm
 $INDEX
@@ -6,124 +6,131 @@ DE-15
 VHDCI
 $EndINDEX
 $MODULE DE-15
-Po 0 0 0 15 51F1A418 00000000 ~~
+Po 0 0 0 15 51F1CEF2 00000000 ~~
 Li DE-15
 Sc 0
 AR 
 Op 0 0 0
-T0 -14.75 -6.1 1 1 0 0.15 N V 21 N "DE-15"
-T1 -15.3 -3.85 1 1 0 0.15 N V 21 N "VAL**"
+T0 -12.3 -9.7 1 1 0 0.15 N V 21 N "DE-15"
+T1 14.25 -9.25 1 1 0 0.15 N V 21 N "VAL**"
+T2 -9.45 7.2 1 1 0 0.15 N V 21 N "PCB Edge"
+DS -14.95 -8.25 16.85 -8.2 0.15 21
+DS 16.85 -8.2 16.8 8.8 0.15 21
+DS 16.8 8.8 15.75 8.85 0.15 21
+DS -15.05 8.85 -15.05 -8.2 0.15 21
+DS 0.05 8.8 -15.05 8.8 0.15 21
+DS 0.1 8.8 16.3 8.8 0.15 21
 $PAD
 Sh "6" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po -5.725 0
+Po -5.725 -2
 $EndPAD
 $PAD
 Sh "7" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po -3.435 0
+Po -3.435 -2
 $EndPAD
 $PAD
 Sh "8" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po -1.145 0
+Po -1.145 -2
 $EndPAD
 $PAD
 Sh "9" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po 1.145 0
+Po 1.145 -2
 $EndPAD
 $PAD
 Sh "10" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po 3.435 0
+Po 3.435 -2
 $EndPAD
 $PAD
 Sh "1" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po -4.58 -1.98
+Po -4.58 -3.98
 $EndPAD
 $PAD
 Sh "2" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po -2.29 -1.98
+Po -2.29 -3.98
 $EndPAD
 $PAD
 Sh "3" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po 0 -1.98
+Po 0 -3.98
 $EndPAD
 $PAD
 Sh "4" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po 2.29 -1.98
+Po 2.29 -3.98
 $EndPAD
 $PAD
 Sh "5" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po 4.58 -1.98
+Po 4.58 -3.98
 $EndPAD
 $PAD
 Sh "11" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po -4.58 1.98
+Po -4.58 -0.02
 $EndPAD
 $PAD
 Sh "12" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po -2.29 1.98
+Po -2.29 -0.02
 $EndPAD
 $PAD
 Sh "13" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po 0 1.98
+Po 0 -0.02
 $EndPAD
 $PAD
 Sh "14" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po 2.29 1.98
+Po 2.29 -0.02
 $EndPAD
 $PAD
 Sh "15" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
 Ne 0 ""
-Po 4.58 1.98
+Po 4.58 -0.02
 $EndPAD
 $PAD
 Sh "" C 4.5 4.5 0 0 0
 Dr 3.96 0 0
 At STD N 0020FFFF
 Ne 0 ""
-Po 12.595 0
+Po 12.595 -2
 .ZoneConnection 0
 $EndPAD
 $PAD
@@ -131,7 +138,7 @@ Sh "" C 4.5 4.5 0 0 0
 Dr 3.96 0 0
 At STD N 0020FFFF
 Ne 0 ""
-Po -12.595 0
+Po -12.595 -2
 $EndPAD
 $EndMODULE DE-15
 $MODULE VHDCI
