@@ -1,11 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 26/07/2013 00:41:25
-
-BeginCmp
-TimeStamp = /51EC3BC1;
-Reference = C1;
-ValeurCmp = 22uf;
-IdModule  = SM0805;
-EndCmp
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 26/07/2013 00:51:19
 
 BeginCmp
 TimeStamp = /51EC3A1C;
@@ -134,13 +127,6 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /51EC40C9;
-Reference = C20;
-ValeurCmp = 22uf;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
 TimeStamp = /51EC4164;
 Reference = C21;
 ValeurCmp = .1uf;
@@ -201,6 +187,20 @@ TimeStamp = /51EC3E79;
 Reference = Cp4;
 ValeurCmp = 4.7uf;
 IdModule  = -PANASONIC_C;
+EndCmp
+
+BeginCmp
+TimeStamp = /51EC3BC1;
+Reference = Cp5;
+ValeurCmp = 22uf;
+IdModule  = -PANASONIC_E;
+EndCmp
+
+BeginCmp
+TimeStamp = /51EC40C9;
+Reference = Cp6;
+ValeurCmp = 22uf;
+IdModule  = -PANASONIC_E;
 EndCmp
 
 BeginCmp
