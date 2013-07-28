@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "27 jul 2013"
+Date "28 jul 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -450,8 +450,6 @@ Text Label 6300 1600 1    60   ~ 0
 SCL
 Text Label 6400 1600 1    60   ~ 0
 SDA
-Text Label 9050 2800 0    60   ~ 0
-DATACK
 Text Label 5600 5550 3    60   ~ 0
 DATACK
 NoConn ~ 10700 2900
@@ -1201,8 +1199,6 @@ Connection ~ 6350 900
 Wire Wire Line
 	6850 4400 6850 4600
 Wire Wire Line
-	9250 2800 9050 2800
-Wire Wire Line
 	10950 4600 10700 4600
 Wire Wire Line
 	10950 4300 10700 4300
@@ -1539,83 +1535,113 @@ Wire Wire Line
 	3050 3600 3500 3600
 Wire Wire Line
 	2200 4200 2200 3750
-Text Label 10700 4400 0    60   ~ 0
-SCL
 Text Label 10700 4700 0    60   ~ 0
+SCL
+Text Label 9250 4700 2    60   ~ 0
 SDA
+Text Label 10700 4500 0    60   ~ 0
+COST
+Text Label 10700 1400 0    60   ~ 0
+OE_Field
+Text Label 9250 1400 2    60   ~ 0
+VSOUT
+Text Label 9250 1600 2    60   ~ 0
+HSOUT
+Text Label 9250 1700 2    60   ~ 0
+SOGOUT
+Text Label 10700 1700 0    60   ~ 0
+R9
+Text Label 9250 1900 2    60   ~ 0
+R8
+Text Label 9250 2000 2    60   ~ 0
+R7
+Text Label 9250 2200 2    60   ~ 0
+R6
+Text Label 9250 2300 2    60   ~ 0
+R5
+Text Label 10700 2300 0    60   ~ 0
+R4
+Text Label 9250 2500 2    60   ~ 0
+R3
+Text Label 9250 2600 2    60   ~ 0
+R2
+Text Label 10700 2800 0    60   ~ 0
+DATACK
+Text Label 9250 2800 2    60   ~ 0
+R1
+Text Label 9250 3300 2    60   ~ 0
+R0
+Text Label 10700 1600 0    60   ~ 0
+PWRDWN
+Text Label 10700 4400 0    60   ~ 0
+CLAMP
 Text Label 9250 4500 2    60   ~ 0
 B0
-Text Label 10700 4500 0    60   ~ 0
-B1
 Text Label 9250 4400 2    60   ~ 0
-B2
-Text Label 9250 4200 2    60   ~ 0
-B3
+B1
 Text Label 10700 4200 0    60   ~ 0
+B2
+Text Label 10700 4100 0    60   ~ 0
+B3
+Text Label 9250 4200 2    60   ~ 0
 B4
 Text Label 9250 4100 2    60   ~ 0
 B5
 Text Label 10700 3800 0    60   ~ 0
 B6
-Text Label 9250 3900 2    60   ~ 0
+Text Label 10700 3900 0    60   ~ 0
 B7
-Text Label 10700 3600 0    60   ~ 0
+Text Label 9250 3900 2    60   ~ 0
 B8
 Text Label 9250 3800 2    60   ~ 0
 B9
-Text Label 10700 3500 0    60   ~ 0
+Text Label 10700 3600 0    60   ~ 0
 G0
-Text Label 9250 3600 2    60   ~ 0
+Text Label 10700 3500 0    60   ~ 0
 G1
-Text Label 10700 3300 0    60   ~ 0
+Text Label 10700 1900 0    60   ~ 0
+G9
+Text Label 10700 2000 0    60   ~ 0
+G8
+Text Label 10700 2200 0    60   ~ 0
+G7
+Text Label 10700 2500 0    60   ~ 0
+G6
+Wire Wire Line
+	10700 2400 10950 2400
+Connection ~ 10950 2400
+Text Label 9250 3600 2    60   ~ 0
 G2
 Text Label 9250 3500 2    60   ~ 0
 G3
-Text Label 10700 2800 0    60   ~ 0
+Text Label 10700 3300 0    60   ~ 0
 G4
-Text Label 9250 3300 2    60   ~ 0
-G5
 Text Label 10700 2600 0    60   ~ 0
-G6
-Text Label 9250 2600 2    60   ~ 0
-G7
-Text Label 10700 2300 0    60   ~ 0
-G8
-Text Label 9250 2500 2    60   ~ 0
-G9
-Text Label 10700 2400 0    60   ~ 0
-OE_Field
-Text Label 9250 2300 2    60   ~ 0
-VSOUT
-Text Label 10700 2200 0    60   ~ 0
-HSOUT
-Text Label 9250 2200 2    60   ~ 0
-SOGOUT
-Text Label 10700 2000 0    60   ~ 0
-R9
-Text Label 9250 2000 2    60   ~ 0
-R8
-Text Label 10700 1900 0    60   ~ 0
-R7
-Text Label 10700 1700 0    60   ~ 0
-R5
-Text Label 10700 1600 0    60   ~ 0
-R3
-Text Label 10700 1400 0    60   ~ 0
-R1
-Text Label 9250 1900 2    60   ~ 0
-R6
-Text Label 9250 1700 2    60   ~ 0
-R4
-Text Label 9250 1600 2    60   ~ 0
-R2
-Text Label 9250 1400 2    60   ~ 0
-R0
-Text Label 10800 5350 0    60   ~ 0
-COST
-Text Label 9250 4700 2    60   ~ 0
-CLAMP
-NoConn ~ 10700 2500
-NoConn ~ 10700 4100
-NoConn ~ 10700 3900
+G5
+$Comp
+L CONN_1 P5
+U 1 1 51F53F38
+P 1250 5050
+F 0 "P5" H 1330 5050 40  0000 L CNN
+F 1 "CONN_1" H 1250 5105 30  0001 C CNN
+F 2 "" H 1250 5050 60  0000 C CNN
+F 3 "" H 1250 5050 60  0000 C CNN
+	1    1250 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P6
+U 1 1 51F53F45
+P 1250 5150
+F 0 "P6" H 1330 5150 40  0000 L CNN
+F 1 "CONN_1" H 1250 5205 30  0001 C CNN
+F 2 "" H 1250 5150 60  0000 C CNN
+F 3 "" H 1250 5150 60  0000 C CNN
+	1    1250 5150
+	1    0    0    -1  
+$EndComp
+Text Label 1100 5050 2    60   ~ 0
+GND
+Text Label 1100 5150 2    60   ~ 0
+VCC
 $EndSCHEMATC
