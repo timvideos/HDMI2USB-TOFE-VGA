@@ -1,8 +1,6 @@
-update=29/07/2013 01:12:52
+update=29/07/2013 17:26:11
 version=1
-last_client=pcbnew
-[general]
-version=1
+last_client=kicad
 [eeschema]
 version=1
 LibDir=
@@ -88,3 +86,5 @@ LibName16=valves
 LibName17=vmodvga
 LibName18=C:/Program Files (x86)/KiCad/all/converted/analog-devices2
 LibName19=C:/Program Files (x86)/KiCad/all/converted/ref-packages
+[general]
+version=1
