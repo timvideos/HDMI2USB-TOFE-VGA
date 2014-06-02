@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  27/07/2013 01:34:37
+PCBNEW-LibModule-V1  03/06/2014 2:45:06 AM
 # encoding utf-8
 Units mm
 $INDEX
@@ -258,10 +258,10 @@ Po 0.5 0.15
 $EndPAD
 $EndMODULE R50x8
 $MODULE VHDCI
-Po 0 0 0 15 51F2F6F2 00000000 ~~
+Po 0 0 0 15 538CE950 00000000 ~~
 Li VHDCI
 Sc 0
-AR /51EC3171
+AR /5372965E
 Op 0 0 0
 T0 4.59 -4.45 1 1 0 0.15 N V 21 N "J3"
 T1 27.56 -4.18 1 1 0 0.15 N V 21 N "VHDCI"
@@ -270,63 +270,63 @@ $PAD
 Sh "51" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 3 "/VCC"
+Ne 39 "/VCC"
 Po 15.97 1.15
 $EndPAD
 $PAD
 Sh "49" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 13 "/DATACK"
 Po 14.37 1.15
 $EndPAD
 $PAD
 Sh "47" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 19 "/G5"
 Po 12.77 1.15
 $EndPAD
 $PAD
 Sh "45" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 41 "N-0000067"
 Po 11.17 1.15
 $EndPAD
 $PAD
 Sh "43" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 21 "/G7"
 Po 9.57 1.15
 $EndPAD
 $PAD
 Sh "41" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 22 "/G8"
 Po 7.97 1.15
 $EndPAD
 $PAD
 Sh "39" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 41 "N-0000067"
 Po 6.37 1.15
 $EndPAD
 $PAD
 Sh "37" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 27 "/PWRDWN"
 Po 4.77 1.15
 $EndPAD
 $PAD
 Sh "35" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 26 "/OE_Field"
 Po 3.17 1.15
 $EndPAD
 $PAD
@@ -340,49 +340,49 @@ $PAD
 Sh "55" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 41 "N-0000067"
 Po 19.17 1.15
 $EndPAD
 $PAD
 Sh "57" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 14 "/G0"
 Po 20.77 1.15
 $EndPAD
 $PAD
 Sh "59" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 7 "/B6"
 Po 22.37 1.15
 $EndPAD
 $PAD
 Sh "61" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 41 "N-0000067"
 Po 23.97 1.15
 $EndPAD
 $PAD
 Sh "63" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 3 "/B2"
 Po 25.57 1.15
 $EndPAD
 $PAD
 Sh "65" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 11 "/CLAMP"
 Po 27.17 1.15
 $EndPAD
 $PAD
 Sh "67" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 41 "N-0000067"
 Po 28.77 1.15
 $EndPAD
 $PAD
@@ -396,98 +396,98 @@ $PAD
 Sh "66" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 12 "/COST"
 Po 27.97 0
 $EndPAD
 $PAD
 Sh "64" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 41 "N-0000067"
 Po 26.37 0
 $EndPAD
 $PAD
 Sh "62" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 4 "/B3"
 Po 24.77 0
 $EndPAD
 $PAD
 Sh "60" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 8 "/B7"
 Po 23.17 0
 $EndPAD
 $PAD
 Sh "58" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 41 "N-0000067"
 Po 21.57 0
 $EndPAD
 $PAD
 Sh "56" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 15 "/G1"
 Po 19.97 0
 $EndPAD
 $PAD
 Sh "54" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 18 "/G4"
 Po 18.37 0
 $EndPAD
 $PAD
 Sh "36" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 41 "N-0000067"
 Po 3.97 0
 $EndPAD
 $PAD
 Sh "38" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 37 "/R9"
 Po 5.57 0
 $EndPAD
 $PAD
 Sh "40" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 23 "/G9"
 Po 7.17 0
 $EndPAD
 $PAD
 Sh "42" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 41 "N-0000067"
 Po 8.77 0
 $EndPAD
 $PAD
 Sh "44" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 32 "/R4"
 Po 10.37 0
 $EndPAD
 $PAD
 Sh "46" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 20 "/G6"
 Po 11.97 0
 $EndPAD
 $PAD
 Sh "48" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 41 "N-0000067"
 Po 13.57 0
 $EndPAD
 $PAD
@@ -501,14 +501,14 @@ $PAD
 Sh "52" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 3 "/VCC"
+Ne 39 "/VCC"
 Po 16.77 0
 $EndPAD
 $PAD
 Sh "18" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 3 "/VCC"
+Ne 39 "/VCC"
 Po 16.37 -2.35
 $EndPAD
 $PAD
@@ -522,98 +522,98 @@ $PAD
 Sh "14" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 24 "/GND"
 Po 13.17 -2.35
 $EndPAD
 $PAD
 Sh "12" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 31 "/R3"
 Po 11.57 -2.35
 $EndPAD
 $PAD
 Sh "10" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 33 "/R5"
 Po 9.97 -2.35
 $EndPAD
 $PAD
 Sh "8" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 24 "/GND"
 Po 8.37 -2.35
 $EndPAD
 $PAD
 Sh "6" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 36 "/R8"
 Po 6.77 -2.35
 $EndPAD
 $PAD
 Sh "4" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 38 "/SOGOUT"
 Po 5.17 -2.35
 $EndPAD
 $PAD
 Sh "2" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 24 "/GND"
 Po 3.57 -2.35
 $EndPAD
 $PAD
 Sh "20" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 28 "/R0"
 Po 17.97 -2.35
 $EndPAD
 $PAD
 Sh "22" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 17 "/G3"
 Po 19.57 -2.35
 $EndPAD
 $PAD
 Sh "24" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 24 "/GND"
 Po 21.17 -2.35
 $EndPAD
 $PAD
 Sh "26" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 9 "/B8"
 Po 22.77 -2.35
 $EndPAD
 $PAD
 Sh "28" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 6 "/B5"
 Po 24.37 -2.35
 $EndPAD
 $PAD
 Sh "30" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 24 "/GND"
 Po 25.97 -2.35
 $EndPAD
 $PAD
 Sh "32" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 1 "/B0"
 Po 27.57 -2.35
 $EndPAD
 $PAD
@@ -627,49 +627,49 @@ $PAD
 Sh "33" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 24 "/GND"
 Po 28.37 -1.2
 $EndPAD
 $PAD
 Sh "31" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 2 "/B1"
 Po 26.77 -1.2
 $EndPAD
 $PAD
 Sh "29" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 5 "/B4"
 Po 25.17 -1.2
 $EndPAD
 $PAD
 Sh "27" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 24 "/GND"
 Po 23.57 -1.2
 $EndPAD
 $PAD
 Sh "25" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 10 "/B9"
 Po 21.97 -1.2
 $EndPAD
 $PAD
 Sh "23" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 16 "/G2"
 Po 20.37 -1.2
 $EndPAD
 $PAD
 Sh "21" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 24 "/GND"
 Po 18.77 -1.2
 $EndPAD
 $PAD
@@ -683,63 +683,63 @@ $PAD
 Sh "1" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 40 "/VSOUT"
 Po 2.77 -1.2
 $EndPAD
 $PAD
 Sh "3" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 25 "/HSOUT"
 Po 4.37 -1.2
 $EndPAD
 $PAD
 Sh "5" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 24 "/GND"
 Po 5.97 -1.2
 $EndPAD
 $PAD
 Sh "7" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 35 "/R7"
 Po 7.57 -1.2
 $EndPAD
 $PAD
 Sh "9" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 34 "/R6"
 Po 9.17 -1.2
 $EndPAD
 $PAD
 Sh "11" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 2 "/GND"
+Ne 24 "/GND"
 Po 10.77 -1.2
 $EndPAD
 $PAD
 Sh "13" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 30 "/R2"
 Po 12.37 -1.2
 $EndPAD
 $PAD
 Sh "15" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 1 "/DATACK"
+Ne 29 "/R1"
 Po 13.97 -1.2
 $EndPAD
 $PAD
 Sh "17" C 1 1 0 0 0
 Dr 0.65 0 0
 At STD N 00E0FFFF
-Ne 3 "/VCC"
+Ne 39 "/VCC"
 Po 15.57 -1.2
 $EndPAD
 $PAD
@@ -750,15 +750,15 @@ Ne 0 ""
 Po 0 0
 $EndPAD
 $PAD
-Sh "" C 1.5 1.5 0 0 0
-Dr 1.2 0 0
+Sh "" C 2.2 2.2 0 0 0
+Dr 1.83 0 0
 At STD N 00E0FFFF
 Ne 0 ""
 Po -4.77 2.62
 $EndPAD
 $PAD
-Sh "" C 1.5 1.5 0 0 0
-Dr 1.2 0 0
+Sh "" C 2.2 2.2 0 0 0
+Dr 1.83 0 0
 At STD N 00E0FFFF
 Ne 0 ""
 Po 37.13 2.62
