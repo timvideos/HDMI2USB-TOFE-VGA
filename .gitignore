@@ -2,3 +2,4 @@
 *.bck
 PCB/vmodvga.kicad_pcb-bak
 *.ps
+*.db
