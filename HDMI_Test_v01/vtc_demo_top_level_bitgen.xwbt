@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\Rohit\Rohit\Projects\TI_ADC_2014\GSoC\HDL\HDMI_Test_v01\vtc_demo_top_level.ncd
+OUTFILE=G:\Rohit\Rohit\Projects\TI_ADC_2014\GSoC\HDL\HDMI_Test_v01\vtc_demo_top_level.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=G:\Rohit\Rohit\Projects\TI_ADC_2014\GSoC\HDL\HDMI_Test_v01
+LICENSE=WebPack
+USER_INFO=__0_0_0
