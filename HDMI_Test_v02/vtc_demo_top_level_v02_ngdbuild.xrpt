@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<document OS="nt" product="ISE" version="14.2">
+
+  <!--The data in this file is primarily intended for consumption by Xilinx tools.
+    The structure and the elements are likely to change over the next few releases.
+    This means code written to parse this file will need to be revisited each subsequent release.-->
+
+  <application stringID="NgdBuild" timeStamp="Tue Jun 17 23:27:10 2014">
+    <section stringID="User_Env">
+      <table stringID="User_EnvVar">
+        <column stringID="variable"/>
+        <column stringID="value"/>
+        <row stringID="row" value="0">
+          <item stringID="variable" value="Path"/>
+          <item stringID="value" value="G:\Xilinx\14.2\ISE_DS\ISE\\lib\nt;G:\Xilinx\14.2\ISE_DS\ISE\\bin\nt;G:\Xilinx\14.2\ISE_DS\ISE\bin\nt;G:\Xilinx\14.2\ISE_DS\ISE\lib\nt;G:\Xilinx\Vivado\2012.2\bin;G:\Xilinx\14.2\ISE_DS\PlanAhead\bin;G:\Xilinx\14.2\ISE_DS\EDK\bin\nt;G:\Xilinx\14.2\ISE_DS\EDK\lib\nt;G:\Xilinx\14.2\ISE_DS\EDK\gnu\microblaze\nt\bin;G:\Xilinx\14.2\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;G:\Xilinx\14.2\ISE_DS\EDK\gnuwin\bin;G:\Xilinx\14.2\ISE_DS\EDK\gnu\arm\nt\bin;G:\Xilinx\14.2\ISE_DS\common\bin\nt;G:\Xilinx\14.2\ISE_DS\common\lib\nt;C:\WinAVR-20100110\bin;C:\WinAVR-20100110\utils\bin;C:\Program Files\AMD APP\bin\x86;C:\Program Files\NVIDIA Corporation\PhysX\Common;C:\Program Files\PC Connectivity Solution\;C:\Python27\Lib\site-packages\PyQt4\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Python27\;G:\Program Files\MATLAB\R2013a\runtime\win32;G:\Program Files\MATLAB\R2013a\bin;C:\Program Files\MATLAB\R2010a\runtime\win32;C:\Program Files\MATLAB\R2010a\bin;C:\ti\ccsv5;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\IVI Foundation\VISA\WinNT\Bin\;G:\Downloads\Programs\OpenCV\opencv\build\x86;C:\msp430-asm\naken_asm;C:\ti\MSP430Flasher_1.2.1\;C:\Program Files\TortoiseSVN\bin;C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\Program Files\FTDI\Vinculum II Toolchain\Tools\bin;C:\CodeSourcery\bin;C:\Program Files\Flash Magic;G:\Program Files\QuickTime\QTSystem\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\Rohit\AppData\Local\Enthought\Canopy32\User;C:\Users\Rohit\AppData\Local\Enthought\Canopy32\User\Scripts;C:\Users\Rohit\AppData\Roaming\npm"/>
+        </row>
+        <row stringID="row" value="1">
+          <item stringID="variable" value="PATHEXT"/>
+          <item stringID="value" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+        </row>
+        <row stringID="row" value="2">
+          <item stringID="variable" value="XILINX"/>
+          <item stringID="value" value="G:\Xilinx\14.2\ISE_DS\ISE\"/>
+        </row>
+        <row stringID="row" value="3">
+          <item stringID="variable" value="XILINX_DSP"/>
+          <item stringID="value" value="G:\Xilinx\14.2\ISE_DS\ISE"/>
+        </row>
+        <row stringID="row" value="4">
+          <item stringID="variable" value="XILINX_EDK"/>
+          <item stringID="value" value="G:\Xilinx\14.2\ISE_DS\EDK"/>
+        </row>
+        <row stringID="row" value="5">
+          <item stringID="variable" value="XILINX_PLANAHEAD"/>
+          <item stringID="value" value="G:\Xilinx\14.2\ISE_DS\PlanAhead"/>
+        </row>
+        <row stringID="row" value="6">
+          <item stringID="variable" value="XILINX_VIVADO"/>
+          <item stringID="value" value="G:\Xilinx\Vivado\2012.2"/>
+        </row>
+      </table>
+      <item stringID="User_EnvOs" value="OS Information">
+        <item stringID="User_EnvOsname" value="Microsoft Windows 7 , 32-bit"/>
+        <item stringID="User_EnvOsrelease" value="Service Pack 1  (build 7601)"/>
+      </item>
+      <item stringID="User_EnvHost" value="Rohit-DELL"/>
+      <table stringID="User_EnvCpu">
+        <column stringID="arch"/>
+        <column stringID="speed"/>
+        <row stringID="row" value="0">
+          <item stringID="arch" value="Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz"/>
+          <item stringID="speed" value="2494 MHz"/>
+        </row>
+      </table>
+    </section>
+    <task stringID="NGDBUILD_OPTION_SUMMARY">
+      <section stringID="NGDBUILD_OPTION_SUMMARY">
+        <item DEFAULT="None" label="-intstyle" stringID="NGDBUILD_intstyle" value="ise"/>
+        <item DEFAULT="None" label="-dd" stringID="NGDBUILD_output_dir" value="_ngo"/>
+        <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="xc6slx45-csg324-3"/>
+        <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="vtc_demo.ucf"/>
+      </section>
+    </task>
+    <task stringID="NGDBUILD_REPORT">
+      <section stringID="NGDBUILD_DESIGN_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_ERRORS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_WARNINGS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_WARNINGS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_INFOS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="0"/>
+      </section>
+      <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFIO2" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFPLL" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DCM_CLKGEN" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="104"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="47"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="33"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDP" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDR" value="52"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="14"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="8"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="19"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="31"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="53"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="52"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="89"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="275"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="19"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="31"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUFDS" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OSERDES2" value="8"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_RAM16X1D" value="30"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_SRLC16E" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="21"/>
+      </section>
+      <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFIO2" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFPLL" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DCM_CLKGEN" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="104"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="47"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="33"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDP" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDR" value="52"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="14"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="8"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="19"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="31"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="53"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="52"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="89"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="275"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="19"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="31"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUFDS" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OSERDES2" value="8"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_PLL_ADV" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_SRLC16E" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_TS_TIMESPEC" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="21"/>
+      </section>
+      <section stringID="NGDBUILD_CORE_GENERATION_SUMMARY">
+        <section stringID="NGDBUILD_CORE_INSTANCES"/>
+      </section>
+    </task>
+  </application>
+
+</document>
