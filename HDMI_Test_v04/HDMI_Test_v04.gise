@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="HDMI_Test_v04.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="rising_edge_detector.vhi"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="vtc_demo_top_level_v03.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="vtc_demo_top_level_v03.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="vtc_demo_top_level_v03.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="vtc_demo_top_level_v03.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="vtc_demo_top_level_v03.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="vtc_demo_top_level_v03.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="vtc_demo_top_level_v03.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="vtc_demo_top_level_v03.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="vtc_demo_top_level_v03.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="vtc_demo_top_level_v03.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="vtc_demo_top_level_v03.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="vtc_demo_top_level_v03.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="vtc_demo_top_level_v03.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="vtc_demo_top_level_v03.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="vtc_demo_top_level_v03.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="vtc_demo_top_level_v03.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="vtc_demo_top_level_v03_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="vtc_demo_top_level_v03_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="vtc_demo_top_level_v03_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="vtc_demo_top_level_v03_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="vtc_demo_top_level_v03_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="vtc_demo_top_level_v03_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="vtc_demo_top_level_v03_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="vtc_demo_top_level_v03_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="vtc_demo_top_level_v03_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="vtc_demo_top_level_v03_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="vtc_demo_top_level_v04.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="vtc_demo_top_level_v04.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="vtc_demo_top_level_v04.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="vtc_demo_top_level_v04.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="vtc_demo_top_level_v04.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="vtc_demo_top_level_v04.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="vtc_demo_top_level_v04.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="vtc_demo_top_level_v04.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="vtc_demo_top_level_v04.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="vtc_demo_top_level_v04.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="vtc_demo_top_level_v04.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="vtc_demo_top_level_v04.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="vtc_demo_top_level_v04.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="vtc_demo_top_level_v04.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="vtc_demo_top_level_v04.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="vtc_demo_top_level_v04.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="vtc_demo_top_level_v04.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="vtc_demo_top_level_v04.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="vtc_demo_top_level_v04.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="vtc_demo_top_level_v04.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="vtc_demo_top_level_v04.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="vtc_demo_top_level_v04.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="vtc_demo_top_level_v04.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="vtc_demo_top_level_v04_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="vtc_demo_top_level_v04_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="vtc_demo_top_level_v04_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="vtc_demo_top_level_v04_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="vtc_demo_top_level_v04_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="vtc_demo_top_level_v04_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="vtc_demo_top_level_v04_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="vtc_demo_top_level_v04_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="vtc_demo_top_level_v04_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="vtc_demo_top_level_v04_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="vtc_demo_top_level_v04_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="vtc_demo_top_level_v04_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="vtc_demo_top_level_v04_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="vtc_demo_top_level_v04_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="vtc_demo_top_level_v04_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1403178562" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1403178562">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1403178945" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="6811792941651764084" xil_pn:start_ts="1403178945">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1403178945" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="4287599315528528741" xil_pn:start_ts="1403178945">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1403178562" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1403178562">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1403178945" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="4827024977271348342" xil_pn:start_ts="1403178945">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1403178562" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8977612015756273942" xil_pn:start_ts="1403178562">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1403178945" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="5846740595377177455" xil_pn:start_ts="1403178945">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1403191153" xil_pn:in_ck="3421263828097815189" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-6625536902338944578" xil_pn:start_ts="1403191126">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.lso"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.ngc"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.ngr"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.prj"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.stx"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.syr"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.xst"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1403179031" xil_pn:in_ck="6146364473366708253" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4236509491970888683" xil_pn:start_ts="1403179031">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1403191210" xil_pn:in_ck="8584820479105810958" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3754994444550759664" xil_pn:start_ts="1403191198">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.bld"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.ngd"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1403191251" xil_pn:in_ck="2364384138788788560" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="4245753365082497697" xil_pn:start_ts="1403191210">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.pcf"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04_map.map"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04_map.mrp"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04_map.ncd"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04_map.ngm"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04_map.xrpt"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04_summary.xml"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1403191306" xil_pn:in_ck="-7726524653210737598" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1403191251">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.ncd"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.pad"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.par"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.ptwx"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.unroutes"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.xpi"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04_pad.csv"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04_pad.txt"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1403191438" xil_pn:in_ck="8578483589104846507" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1403191399">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.bgn"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.bit"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.drc"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.ut"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1403191306" xil_pn:in_ck="-6641502256294077624" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1403191289">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.twr"/>
+      <outfile xil_pn:name="vtc_demo_top_level_v04.twx"/>
+    </transform>
+  </transforms>
+
+</generated_project>
