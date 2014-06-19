@@ -1,10 +1,5 @@
-Cristinel Ababei, October 2012
+Main capture code is in 'vgacapture.vhd'
 
-"vtc_demo_top_level.vhd" is the VHDL porting of the Verilog 
-"vtc_demo.v.original_do_not_use"
-
-"vtc_demo.vhd" describes in VHDL the top-level design entity
-that instantiates components described in Verilog in all other files.
-
-Open both files and follow through to see similarities/differences
-between VHDL and Verilog.
+Points:
+  1. Very good improvement in capture quality
+  2. Still quite a number of flickers
