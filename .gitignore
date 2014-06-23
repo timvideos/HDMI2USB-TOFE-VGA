@@ -46,3 +46,9 @@ HDMI_Test_v03/isim/VGA_Capture_isim_beh.exe.sim/isimkernel.log
 *.cmd
 HDMI_Test_v03/isim/pn_info
 HDMI_Test_v03/isim.log
+webtalk.log
+_ngo/
+_xmsgs/
+xst/
+xlnx_auto_0_xdb/
+iseconfig/
