@@ -10,5 +10,5 @@
 * ipcore_dir: For IP Cores
 * ise       : For all ise project files
 * ucf       : User constraints
-
+* i2c       : I2C Test codes for BeagleboneBlack
 
