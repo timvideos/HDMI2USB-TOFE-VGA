@@ -9,10 +9,10 @@ use UNISIM.VComponents.all;
 
 entity HDMI_Test_v06 is
 	generic (
-		DCM_CLK_IN         : string    := "SYSCLK";
-		DCM_CLKFX_DIVIDE	 : integer   := 10;
-		DCM_CLKFX_MULTIPLY : integer   := 13;
-		DCM_CLKIN_PERIOD   : real      := 20.000;
+		DCM_CLK_IN         : string    := "DATACK";
+		DCM_CLKFX_DIVIDE	 : integer   := 2;--10;
+		DCM_CLKFX_MULTIPLY : integer   := 2;--13;
+		DCM_CLKIN_PERIOD   : real      := 15.384;--20.000;
 		SAMPLING_MODE      : std_logic := '0'
 );
    port ( 
@@ -176,13 +176,14 @@ synchro_reset : entity work.synchroType2
 Inst_VGA_Capture: entity work.VGA_Capture 
 	PORT MAP(
 		Reset       => '0',
-		DATACK      => pllclk4x,
+		DATACK      => dataclk,
 		HSOUT       => HSOUT,
 		VSOUT       => VSOUT,
 		R_in        => R,
 		G_in 			=> G,
 		B_in 			=> B,
 		pclk_in 		=> pclk,
+		pclkx_in    => pllclk4x,
 		clk50m 		=> clk50m_bufg,
 		uart_tx     => uart_tx,
 		debug_sw    => SW,

@@ -1,14 +1,24 @@
 --STATUS: 1X or 2X clock....uart debug
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
-use ieee.numeric_std.all;
-use ieee.std_logic_unsigned.all;
+use IEEE.NUMERIC_STD.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+
 library UNISIM;
 use UNISIM.VComponents.all;
 
+
 entity VGA_Capture is
-	Port(
+	generic(
+		USE_CLOCK     : string    := "SYSCLK"; -- Use eihter SYSCLK or DATACK
+		SAMPLING_MODE : string    := "ON";      -- Oversampling? 1-Yes or 0-No
+		OVERSAMPLING  : integer   := 4;        -- Oversampling factor
+		DATACK_FREQ	  : integer   := 1;        -- DATACK Freq is 1x or 2x pixel clock
+		PATTERN		  : string    := "OFF"		-- Whether to use test pattern or instead vga capture
+);
+	port(
 		Reset 		: in std_logic;
 		
 		DATACK		: in std_logic;	-- 65MHz Pixel clock from AD9984A
@@ -20,6 +30,7 @@ entity VGA_Capture is
 		B_in			: in std_logic_vector(9 downto 0);
 		
 		pclk_in		: in std_logic;	--65MHz Pixel clock from DCM and PLL, different from DATACK
+		pclkx_in		: in std_logic; 	-- pclk_in x N oversampling clock
 		clk50m		: in std_logic;	--50 MHz clock
 		uart_tx		: out std_logic;
 		debug_sw    : in std_logic_vector ( 3 downto 0);
@@ -63,23 +74,39 @@ signal uart_data, r_data : std_logic_vector( 7 downto 0);
 
 signal num_columns	: integer; 
 signal num_rows	: integer; 
+signal MULTIPLIER  : integer;
+-- Configured clock as per generic's parameter. See generate statements
+signal CONF_CLK : std_logic; 
 
 
-COMPONENT uart
-	PORT(
-		clk : IN std_logic;
-		reset : IN std_logic;
-		rd_uart : IN std_logic;
-		wr_uart : IN std_logic;
-		rx : IN std_logic;
-		w_data : IN std_logic_vector(7 downto 0);          
-		tx_full : OUT std_logic;
-		rx_empty : OUT std_logic;
-		tx : OUT std_logic;
-		r_data : OUT std_logic_vector(7 downto 0)
-		);
-	END COMPONENT;
 begin
+
+CLK_Cfg_sysclk: if (USE_CLOCK = "SYSCLK" and SAMPLING_MODE = "OFF") generate
+	CONF_CLK   <= pclk_in;
+	MULTIPLIER <= 1;
+end generate;
+
+CLK_Cfg_sysclk_oversampling: if (USE_CLOCK = "SYSCLK" and SAMPLING_MODE = "ON") generate
+	CONF_CLK   <= pclkx_in;
+	MULTIPLIER <= OVERSAMPLING;
+end generate;
+
+CLK_Config_datack: if (USE_CLOCK = "DATACK") generate
+	CONF_CLK   <= DATACK;
+	MULTIPLIER <= DATACK_FREQ;
+end generate;
+
+pattern_on: if (PATTERN = "ON") generate
+--	Red_out 	 <= data(23 downto 16);
+--   Green_out <= data(15 downto 8);
+--   Blue_out  <= data(7 downto 0);
+end generate;
+
+capture_on: if (PATTERN = "OFF") generate
+--	Red_out 	 <= r_o;
+--   Green_out <= g_o;
+--   Blue_out  <= b_o;
+end generate;
 
 de <= vActive and hActive;
 
@@ -92,32 +119,39 @@ Red 	<= B_in;
 Green <= G_in;
 Blue 	<= R_in;
 
---Red_out 	 <= r_o;
---Green_out <= g_o;
---Blue_out  <= b_o;
+	Red_out 	 <= r_o when (debug_sw(3)='1') else data(23 downto 16);
+   Green_out <= g_o when (debug_sw(3)='1') else data(15 downto 8);
+   Blue_out  <= b_o when (debug_sw(3)='1') else data(7 downto 0);
 
 
-Red_out 	 <= data(23 downto 16);
-Green_out <= data(15 downto 8);
-Blue_out  <= data(7 downto 0);
+
 --counterX_unsigned <= conv_std_logic_vector(counterX, 16);
 --counterY_unsigned <= conv_std_logic_vector(counterY, 16);
 
 vsout_edge_detect_inst: entity work.rising_edge_detector 
-	PORT MAP( CLK => DATACK, SIGNAL_IN => VSOUT, OUTPUT => vsync_edge1);--_edge);
+	PORT MAP( CLK => CONF_CLK, SIGNAL_IN => VSOUT, OUTPUT => vsync_edge1);--_edge);
 
 hsout_edge_detect_inst: entity work.rising_edge_detector
-	PORT MAP( CLK => DATACK, SIGNAL_IN => HSOUT, OUTPUT => hsync_edge1);--_edge);
+	PORT MAP( CLK => CONF_CLK, SIGNAL_IN => HSOUT, OUTPUT => hsync_edge1);--_edge);
 
-
-process(reset, DATACK)
+-- Capture Data on rising edge of DATACK
+process(DATACK)
 begin
-
 	if rising_edge(DATACK) then
-	
 		r_o 	<= Red(9 downto 2);
 		g_o 	<= Green(9 downto 2);
 		b_o 	<= Blue(9 downto 2);
+	end if;
+end process;
+
+process(reset, CONF_CLK)
+begin
+
+	if rising_edge(CONF_CLK) then
+	
+--		r_o 	<= Red(9 downto 2);
+--		g_o 	<= Green(9 downto 2);
+--		b_o 	<= Blue(9 downto 2);
 		counterX_unsigned <= conv_std_logic_vector(counterX, 16);
 		counterY_unsigned <= conv_std_logic_vector(counterY, 16);
 		--counterX <= counterX + 1;  
@@ -180,30 +214,30 @@ begin
 			--vActive <= '0';
 		end if;
 		
-		if (counterX >= 0) and (counterX < 4*spX) then 
+		if (counterX >= 0) and (counterX < MULTIPLIER*spX) then 
 			hsync_i <= '1';
 			hActive <= '0';		
-		elsif (counterX >= 4*spX) and (counterX < 4*(spX + bpX)) then
+		elsif (counterX >= MULTIPLIER*spX) and (counterX < MULTIPLIER*(spX + bpX)) then
 			hsync_i <= '0';
-		elsif (counterX >= 4*( spX + bpX )) and (counterX < 4*(spX + bpX + resX)) then
+		elsif (counterX >= MULTIPLIER*( spX + bpX )) and (counterX < MULTIPLIER*(spX + bpX + resX)) then
 			hActive <= '1';		
-		elsif (counterX >= 4*( spX + bpX + resX )) and (counterX < 4*(spX + bpX + resX + fpX)) then
+		elsif (counterX >= MULTIPLIER*( spX + bpX + resX )) and (counterX < MULTIPLIER*(spX + bpX + resX + fpX)) then
 			hActive <= '0';		
-		elsif counterX = 4*( spX + bpX + resX + fpX ) then
+		elsif counterX = MULTIPLIER*( spX + bpX + resX + fpX ) then
 			--counterY <= counterY + 1;
 			--counterX <= 0;			
 		end if;
 		
 		if vActive = '1' and hActive = '1' then
 			data <= data + 1;
-			r_o 	<= Red(9 downto 2);
-			g_o 	<= Green(9 downto 2);
-			b_o 	<= Blue(9 downto 2);
+--			r_o 	<= Red(9 downto 2);
+--			g_o 	<= Green(9 downto 2);
+--			b_o 	<= Blue(9 downto 2);
 		else
 			--data <= (others => '0');
-		r_o 	<= (others => '0');
-		g_o 	<= (others => '0');
-		b_o 	<= (others => '0');
+--		r_o 	<= (others => '0');
+--		g_o 	<= (others => '0');
+--		b_o 	<= (others => '0');
 		end if;
 	end if;
 	
@@ -233,7 +267,7 @@ HSOUT_Align : SRL16E
 		A2=>'1',
 		A3=>'1',
 		CE=>'1',
-		CLK=>DATACK,
+		CLK=>CONF_CLK,
 		D=>hsync_edge1);
 HSOUT_Align2 : SRL16E 
 	generic map (
@@ -245,7 +279,7 @@ HSOUT_Align2 : SRL16E
 		A2=>'1',
 		A3=>'0',
 		CE=>'1',
-		CLK=>DATACK,
+		CLK=>CONF_CLK,
 		D=>hsync_edge_temp);
 		
 VSOUT_Align : SRL16E 
@@ -258,9 +292,9 @@ VSOUT_Align : SRL16E
 		A2=>'0',
 		A3=>'0',
 		CE=>'1',
-		CLK=>DATACK,
+		CLK=>CONF_CLK,
 		D=>vsync_edge1);
-inst_uart: uart PORT MAP(
+inst_uart: entity work.uart PORT MAP(
 		clk => clk50m,
 		reset => '0',
 		rd_uart => rd_uart,
