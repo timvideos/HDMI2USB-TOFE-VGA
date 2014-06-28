@@ -1,0 +1,28 @@
+Command line:
+   tb_delayer_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  64697
+
+Sun Jun 29 03:45:16 2014
+
+
+ Elaboration Time: 0.374402 sec
+
+ Current Memory Usage: 529.92 Meg
+
+ Total Signals          : 32
+ Total Nets             : 40
+ Total Signal Drivers   : 4
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 3
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 402
+
+ Total Simulation Time: 0.374402 sec
+
+ Current Memory Usage: 529.92 Meg
+
+Sun Jun 29 03:45:30 2014
+
