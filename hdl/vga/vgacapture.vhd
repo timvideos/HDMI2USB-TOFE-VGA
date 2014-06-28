@@ -13,7 +13,7 @@ use UNISIM.VComponents.all;
 entity VGA_Capture is
 	generic(
 		USE_CLOCK     : string    := "SYSCLK"; -- Use eihter SYSCLK or DATACK
-		SAMPLING_MODE : string    := "ON";      -- Oversampling? 1-Yes or 0-No
+		SAMPLING_MODE : string    := "OFF";      -- Oversampling? 1-Yes or 0-No
 		OVERSAMPLING  : integer   := 4;        -- Oversampling factor
 		DATACK_FREQ	  : integer   := 1;        -- DATACK Freq is 1x or 2x pixel clock
 		PATTERN		  : string    := "OFF"		-- Whether to use test pattern or instead vga capture
@@ -158,7 +158,7 @@ begin
 		
 		--counterX <= counterX + 1;		moved this to else condition of rising_edge.
 		
-		if hsync_edge1 = '1' then
+		if hsync_edge = '1' then
 			counterY <= counterY + 1;
 			if (tx_full = '0') and (debug_sw = "0101") then
 				uart_data <= counterX_unsigned(15 downto 8);
@@ -176,7 +176,7 @@ begin
 		end if;
 		
 		
-		if vsync_edge1 = '1' then
+		if vsync_edge = '1' then
 			if (tx_full = '0') and (debug_sw = "0001") then
 				uart_data <= counterX_unsigned(15 downto 8);
 				wr_uart <= '1';
@@ -257,54 +257,35 @@ end process;
 
 -- HSOUT is 2 clock cycles delayed from HSYNC and Data is 8 clock cycles delayed from HSYNC
 -- So to align HSOUT and Data, we need to delay HSOUT by 6 clock cycles
-HSOUT_Align : SRL16E 
+HSOUT_Align : entity work.delayer
 	generic map (
-		INIT => X"0000")
-	port map(
-		Q=>hsync_edge_temp,
-		A0=>'1',					-- A3:A2:A1:A0 = 0b(1111) = 15 = 16 clock cycles delay
-		A1=>'1',
-		A2=>'1',
-		A3=>'1',
-		CE=>'1',
-		CLK=>CONF_CLK,
-		D=>hsync_edge1);
-HSOUT_Align2 : SRL16E 
+		DELAY_AMOUNT => 200 * 1)
+	port map (
+		input  => hsync_edge1,
+		output => hsync_edge,
+		clk    => CONF_CLK );
+
+
+VSOUT_Align : entity work.delayer
 	generic map (
-		INIT => X"0000")
-	port map(
-		Q=>hsync_edge,
-		A0=>'1',					-- A3:A2:A1:A0 = 0b(0111) = 7 = 8 clock cycles delay
-		A1=>'1',
-		A2=>'1',
-		A3=>'0',
-		CE=>'1',
-		CLK=>CONF_CLK,
-		D=>hsync_edge_temp);
+		DELAY_AMOUNT => 7 * 1)
+	port map (
+		input  => vsync_edge1,
+		output => vsync_edge,
+		clk    => CONF_CLK );
 		
-VSOUT_Align : SRL16E 
-	generic map (
-		INIT => X"0000")
-	port map(
-		Q=>vsync_edge,
-		A0=>'1',					-- A3:A2:A1:A0 = 0b(0111) = 7 = 8 clock cycles delay
-		A1=>'0',
-		A2=>'0',
-		A3=>'0',
-		CE=>'1',
-		CLK=>CONF_CLK,
-		D=>vsync_edge1);
+
 inst_uart: entity work.uart PORT MAP(
-		clk => clk50m,
-		reset => '0',
-		rd_uart => rd_uart,
-		wr_uart => wr_uart,
-		rx => rx,
-		w_data => uart_data,
-		tx_full => tx_full,
+		clk      => clk50m,
+		reset    => '0',
+		rd_uart  => rd_uart,
+		wr_uart  => wr_uart,
+		rx       => rx,
+		w_data   => uart_data,
+		tx_full  => tx_full,
 		rx_empty => rx_empty,
-		tx => uart_tx,
-		r_data => r_data
-	);
+		tx       => uart_tx,
+		r_data   => r_data);
+		
 end Behavioral;
 
