@@ -24,6 +24,7 @@ entity VGA_Capture is
 		DATACK		: in std_logic;	-- 65MHz Pixel clock from AD9984A
 		HSOUT			: in std_logic;
 		VSOUT			: in std_logic;
+		SOGOUT      : in std_logic;
 		
 		R_in			: in std_logic_vector(9 downto 0);
 		G_in			: in std_logic_vector(9 downto 0);
@@ -113,7 +114,7 @@ de <= vActive and hActive;
 VSYNC	<= vsync_i;
 HSYNC	<= hsync_i;
 --VSYNC	<= VSOUT;
---HSYNC	<= HSOUT;
+--HSYNC	<= SOGOUT;
 
 Red 	<= B_in;
 Green <= G_in;
@@ -195,7 +196,7 @@ begin
 				wr_uart <= '0';
 			end if;
 			counterY <= 0;
-			--data <= (others => '0');
+			data <= (others => '0');
 			
 		end if;
 		
@@ -208,7 +209,7 @@ begin
 			vActive <= '1';		
 		elsif (counterY >= (spY + bpY + resY)) and (counterY < ( spY + bpY + resY + fpY)) then
 			vActive <= '0';		
-		elsif counterY = ( spY + bpY + resY + fpY ) then
+		else--if counterY = ( spY + bpY + resY + fpY ) then
 			data <= (others => '0');
 			--counterY  <= 0;
 			--vActive <= '0';
@@ -259,7 +260,7 @@ end process;
 -- So to align HSOUT and Data, we need to delay HSOUT by 6 clock cycles
 HSOUT_Align : entity work.delayer
 	generic map (
-		DELAY_AMOUNT => 200 * 1)
+		DELAY_AMOUNT => 6 * 1)
 	port map (
 		input  => hsync_edge1,
 		output => hsync_edge,

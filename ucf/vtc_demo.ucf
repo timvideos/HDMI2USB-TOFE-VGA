@@ -144,44 +144,44 @@ NET "TMDSB(3)"  LOC = "A6" | IOSTANDARD = TMDS_33 ;
 
  # onboard VHDCI
 # Channnel 1 connects to P signals, Channel 2 to N signals
- NET "VSOUT"  LOC = "U16"; # Bank = 2,  Pin name = IO_L2P_CMPCLK,       Sch name = EXP-IO1_P
- NET "HSOUT"  LOC = "U15"; # Bank = 2,  Pin name = *IO_L5P,        		Sch name = EXP-IO2_P
- #NET "SOGOUT"  LOC = "U13"; # Bank = 2,  Pin name = IO_L14P_D11,        Sch name = EXP-IO3_P
- NET "R<8>"  LOC = "M11"; # Bank = 2,  Pin name = *IO_L15P,        		Sch name = EXP-IO4_P
- NET "R<7>"  LOC = "R11"; # Bank = 2,  Pin name = IO_L16P,        		Sch name = EXP-IO5_P
- NET "R<6>"  LOC = "T12"; # Bank = 2,  Pin name = *IO_L19P,        		Sch name = EXP-IO6_P
- NET "R<5>"  LOC = "N10"; # Bank = 2,  Pin name = *IO_L20P,        		Sch name = EXP-IO7_P
- NET "R<3>"  LOC = "M10"; # Bank = 2,  Pin name = *IO_L22P,        		Sch name = EXP-IO8_P
- NET "R<2>"  LOC = "U11"; # Bank = 2,  Pin name = IO_L23P,        		Sch name = EXP-IO9_P
- NET "R<1>"  LOC = "R10"; # Bank = 2,  Pin name = IO_L29P_GCLK3,       	Sch name = EXP-IO10_P
- NET "R<0>" LOC = "U10"; # Bank = 2,  Pin name = IO_L30P_GCLK1_D13,   	Sch name = EXP-IO11_P
- NET "G<3>" LOC = "R8";  # Bank = 2,  Pin name = IO_L31P_GCLK31_D14,  	Sch name = EXP-IO12_P
- NET "G<2>" LOC = "M8";  # Bank = 2,  Pin name = *IO_L40P,        		Sch name = EXP-IO13_P
- NET "B<9>" LOC = "U8";  # Bank = 2,  Pin name = IO_L41P,        			Sch name = EXP-IO14_P
- NET "B<8>" LOC = "U7";  # Bank = 2,  Pin name = IO_L43P,        			Sch name = EXP-IO15_P
- NET "B<5>" LOC = "N7";  # Bank = 2,  Pin name = *IO_L44P,        		Sch name = EXP-IO16_P
- NET "B<4>" LOC = "T6";  # Bank = 2,  Pin name = IO_L45P,        			Sch name = EXP-IO17_P
- NET "B<1>" LOC = "R7";  # Bank = 2,  Pin name = IO_L46P,        			Sch name = EXP-IO18_P
- NET "B<0>" LOC = "N6";  # Bank = 2,  Pin name = *IO_L47P,        		Sch name = EXP-IO19_P
+ NET "VSOUT"  LOC = "U16" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L2P_CMPCLK,       Sch name = EXP-IO1_P
+ NET "HSOUT"  LOC = "U15" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L5P,        		Sch name = EXP-IO2_P
+ NET "SOGOUT"  LOC = "U13" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L14P_D11,        Sch name = EXP-IO3_P
+ NET "R<8>"  LOC = "M11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L15P,        		Sch name = EXP-IO4_P
+ NET "R<7>"  LOC = "R11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L16P,        		Sch name = EXP-IO5_P
+ NET "R<6>"  LOC = "T12" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L19P,        		Sch name = EXP-IO6_P
+ NET "R<5>"  LOC = "N10" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L20P,        		Sch name = EXP-IO7_P
+ NET "R<3>"  LOC = "M10" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L22P,        		Sch name = EXP-IO8_P
+ NET "R<2>"  LOC = "U11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L23P,        		Sch name = EXP-IO9_P
+ NET "R<1>"  LOC = "R10" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L29P_GCLK3,       	Sch name = EXP-IO10_P
+ NET "R<0>" LOC = "U10" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L30P_GCLK1_D13,   	Sch name = EXP-IO11_P
+ NET "G<3>" LOC = "R8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L31P_GCLK31_D14,  	Sch name = EXP-IO12_P
+ NET "G<2>" LOC = "M8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L40P,        		Sch name = EXP-IO13_P
+ NET "B<9>" LOC = "U8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L41P,        			Sch name = EXP-IO14_P
+ NET "B<8>" LOC = "U7" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L43P,        			Sch name = EXP-IO15_P
+ NET "B<5>" LOC = "N7" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L44P,        		Sch name = EXP-IO16_P
+ NET "B<4>" LOC = "T6" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L45P,        			Sch name = EXP-IO17_P
+ NET "B<1>" LOC = "R7" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L46P,        			Sch name = EXP-IO18_P
+ NET "B<0>" LOC = "N6" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L47P,        		Sch name = EXP-IO19_P
  #NET "SDA" LOC = "U5";  # Bank = 2,  Pin name = IO_49P_D3,        		Sch name = EXP-IO20_P
 
  #NET "OE_FIELD"  LOC = "V16"; # Bank = 2,  Pin name = IO_L2N_CMPMOSI,  Sch name = EXP-IO1_N
  #NET "PWRDWN"  LOC = "V15"; # Bank = 2,  Pin name = *IO_L5N,        	Sch name = EXP-IO2_N
- NET "R<9>"  LOC = "V13"; # Bank = 2,  Pin name = IO_L14N_D12,        	Sch name = EXP-IO3_N
- NET "G<9>"  LOC = "N11"; # Bank = 2,  Pin name = *IO_L15N,        		Sch name = EXP-IO4_N
- NET "G<8>"  LOC = "T11"; # Bank = 2,  Pin name = IO_L16N_VREF,        	Sch name = EXP-IO5_N
- NET "G<7>"  LOC = "V12"; # Bank = 2,  Pin name = *IO_L19N,        		Sch name = EXP-IO6_N
- NET "R<4>"  LOC = "P11"; # Bank = 2,  Pin name = *IO_L20N,        		Sch name = EXP-IO7_N
- NET "G<6>"  LOC = "N9";  # Bank = 2,  Pin name = *IO_L22N,        		Sch name = EXP-IO8_N
- NET "G<5>"  LOC = "V11"; # Bank = 2,  Pin name = IO_L23N,        		Sch name = EXP-IO9_N
- NET "DATACK"  LOC = "T10"; # Bank = 2,  Pin name = IO_L29N_GCLK2,      Sch name = EXP-IO10_N
- NET "G<4>" LOC = "V10"; # Bank = 2,  Pin name = IO_L30N_GCLK0_USERCCLK,Sch name = EXP-IO11_N
- NET "G<1>" LOC = "T8";  # Bank = 2,  Pin name = IO_L31N_GCLK30_D15,    Sch name = EXP-IO12_N
- NET "G<0>" LOC = "N8";  # Bank = 2,  Pin name = *IO_L40N,        		Sch name = EXP-IO13_N
- NET "B<6>" LOC = "V8";  # Bank = 2,  Pin name = IO_L41N_VREF,        	Sch name = EXP-IO14_N
- NET "B<7>" LOC = "V7";  # Bank = 2,  Pin name = IO_L43N,        			Sch name = EXP-IO15_N
- NET "B<3>" LOC = "P8";  # Bank = 2,  Pin name = *IO_L44N,        		Sch name = EXP-IO16_N
- NET "B<2>" LOC = "V6";  # Bank = 2,  Pin name = IO_L45N,        			Sch name = EXP-IO17_N
+ NET "R<9>"  LOC = "V13" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L14N_D12,        	Sch name = EXP-IO3_N
+ NET "G<9>"  LOC = "N11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L15N,        		Sch name = EXP-IO4_N
+ NET "G<8>"  LOC = "T11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L16N_VREF,        	Sch name = EXP-IO5_N
+ NET "G<7>"  LOC = "V12" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L19N,        		Sch name = EXP-IO6_N
+ NET "R<4>"  LOC = "P11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L20N,        		Sch name = EXP-IO7_N
+ NET "G<6>"  LOC = "N9" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L22N,        		Sch name = EXP-IO8_N
+ NET "G<5>"  LOC = "V11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L23N,        		Sch name = EXP-IO9_N
+ NET "DATACK"  LOC = "T10" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L29N_GCLK2,      Sch name = EXP-IO10_N
+ NET "G<4>" LOC = "V10" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L30N_GCLK0_USERCCLK,Sch name = EXP-IO11_N
+ NET "G<1>" LOC = "T8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L31N_GCLK30_D15,    Sch name = EXP-IO12_N
+ NET "G<0>" LOC = "N8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L40N,        		Sch name = EXP-IO13_N
+ NET "B<6>" LOC = "V8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L41N_VREF,        	Sch name = EXP-IO14_N
+ NET "B<7>" LOC = "V7" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L43N,        			Sch name = EXP-IO15_N
+ NET "B<3>" LOC = "P8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L44N,        		Sch name = EXP-IO16_N
+ NET "B<2>" LOC = "V6" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L45N,        			Sch name = EXP-IO17_N
  #NET "CLAMP" LOC = "T7";  # Bank = 2,  Pin name = IO_L46N,        		Sch name = EXP-IO18_N
  #NET "COAST" LOC = "P7";  # Bank = 2,  Pin name = *IO_L47N,        		Sch name = EXP-IO19_N
  #NET "SCL" LOC = "V5";  # Bank = 2,  Pin name = IO_49N_D4,        		Sch name = EXP-IO20_N 

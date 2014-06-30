@@ -35,6 +35,7 @@ entity HDMI_Test_v06 is
       B 				: in  STD_LOGIC_VECTOR (9 downto 0);
       DATACK 		: in  STD_LOGIC;
       HSOUT 		: in  STD_LOGIC;
+		SOGOUT      : in STD_LOGIC;
       VSOUT 		: in  STD_LOGIC
 );
 end HDMI_Test_v06;
@@ -179,6 +180,7 @@ Inst_VGA_Capture: entity work.VGA_Capture
 		DATACK      => dataclk,
 		HSOUT       => HSOUT,
 		VSOUT       => VSOUT,
+		SOGOUT      => SOGOUT,
 		R_in        => R,
 		G_in 			=> G,
 		B_in 			=> B,
