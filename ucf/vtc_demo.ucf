@@ -56,17 +56,22 @@ VCCAUX = 3.3;
 # Reset button and LEDs
 ########################################
 NET "RSTBTN"        LOC = "N4";
-NET "LED<0>"        LOC = "U18";
-NET "LED<1>"        LOC = "M14";
-NET "LED<2>"        LOC = "N14";
-NET "LED<3>"        LOC = "L14";
+NET "LED<0>"   LOC = "U18" |IOSTANDARD = LVCMOS33;
+NET "LED<1>"   LOC = "M14" |IOSTANDARD = LVCMOS33;
+NET "LED<2>"   LOC = "N14" |IOSTANDARD = LVCMOS33;
+NET "LED<3>"   LOC = "L14" |IOSTANDARD = LVCMOS33;
+NET "LED<4>"   LOC = "M13" |IOSTANDARD = LVCMOS33;
+NET "LED<5>"   LOC = "D4"  |IOSTANDARD = LVCMOS33;
+NET "LED<6>"   LOC = "P16" |IOSTANDARD = LVCMOS33;
+NET "LED<7>"   LOC = "N12" |IOSTANDARD = LVCMOS33;
 
 ##############################################################################
 # SYSCLK Input
 ##############################################################################
 
-NET "SYS_CLK"       LOC = "L15";
-
+NET "SYS_CLK"       LOC = "L15"|IOSTANDARD = LVCMOS33 ;
+#PIN "sysclk_BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "SYS_CLK_BUFGP/BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE; 
 ##############################################################################
 # Mechanical Switches (SW)
 #############################################################################
@@ -163,7 +168,7 @@ NET "TMDSB(3)"  LOC = "A6" | IOSTANDARD = TMDS_33 ;
  NET "B<4>" LOC = "T6" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L45P,        			Sch name = EXP-IO17_P
  NET "B<1>" LOC = "R7" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L46P,        			Sch name = EXP-IO18_P
  NET "B<0>" LOC = "N6" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L47P,        		Sch name = EXP-IO19_P
- #NET "SDA" LOC = "U5";  # Bank = 2,  Pin name = IO_49P_D3,        		Sch name = EXP-IO20_P
+ NET "SDA" LOC = "U5"| IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_49P_D3,        		Sch name = EXP-IO20_P
 
  #NET "OE_FIELD"  LOC = "V16"; # Bank = 2,  Pin name = IO_L2N_CMPMOSI,  Sch name = EXP-IO1_N
  #NET "PWRDWN"  LOC = "V15"; # Bank = 2,  Pin name = *IO_L5N,        	Sch name = EXP-IO2_N
@@ -184,7 +189,7 @@ NET "TMDSB(3)"  LOC = "A6" | IOSTANDARD = TMDS_33 ;
  NET "B<2>" LOC = "V6" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L45N,        			Sch name = EXP-IO17_N
  #NET "CLAMP" LOC = "T7";  # Bank = 2,  Pin name = IO_L46N,        		Sch name = EXP-IO18_N
  #NET "COAST" LOC = "P7";  # Bank = 2,  Pin name = *IO_L47N,        		Sch name = EXP-IO19_N
- #NET "SCL" LOC = "V5";  # Bank = 2,  Pin name = IO_49N_D4,        		Sch name = EXP-IO20_N 
+ NET "SCL" LOC = "V5"| IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_49N_D4,        		Sch name = EXP-IO20_N 
 
 
 

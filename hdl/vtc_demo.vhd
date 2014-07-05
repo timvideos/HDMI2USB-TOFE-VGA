@@ -9,10 +9,10 @@ use UNISIM.VComponents.all;
 
 entity HDMI_Test_v06 is
 	generic (
-		DCM_CLK_IN         : string    := "DATACK";
-		DCM_CLKFX_DIVIDE	 : integer   := 2;--10;
-		DCM_CLKFX_MULTIPLY : integer   := 2;--13;
-		DCM_CLKIN_PERIOD   : real      := 15.384;--20.000;
+		DCM_CLK_IN         : string    := "SYSCLK";
+		DCM_CLKFX_DIVIDE	 : integer   := 10;--2;--10;
+		DCM_CLKFX_MULTIPLY : integer   := 13;--2;--13;
+		DCM_CLKIN_PERIOD   : real      := 20.000;--15.384;--20.000;
 		SAMPLING_MODE      : std_logic := '0'
 );
    port ( 
@@ -24,10 +24,14 @@ entity HDMI_Test_v06 is
       TMDSB 		: out  STD_LOGIC_VECTOR (3 downto 0);
       
 		-- Debugging
-		LED 			: out  STD_LOGIC_VECTOR (3 downto 0);
+		LED 			: out  STD_LOGIC_VECTOR (7 downto 0);
       DEBUG 		: out  STD_LOGIC_VECTOR (1 downto 0);
 		SW    		: in std_logic_vector(3 downto 0);  
       uart_tx 		: out std_logic;
+		
+		-- I2C 
+		SDA         : inout std_logic;
+		SCL		   : out std_logic;
 		
 		-- VGA Capture Input Nets
 		R 				: in  STD_LOGIC_VECTOR (9 downto 0);
@@ -81,7 +85,10 @@ signal tmdsclk: std_logic;
 signal clk4xfbout : std_logic ; 
 signal clk4x, pllclk4x : std_logic; 
 signal reset : std_logic;
+signal i2c_clk, i2c_clk_buf, i2c_reset : std_logic;
+-- signals i2c
 
+signal done : std_logic;
 
 begin
 
@@ -97,6 +104,7 @@ hvsync_polarity <= '1';
 datack_bufg : BUFG port map( I=>DATACK, O=>dataclk);
 sysclk_buf : IBUF port map(I=>SYS_CLK, O=>sysclk);
 clk50m_bufgbufg : BUFG port map (I=>clk50m, O=>clk50m_bufg);
+i2c_clk_bufg : BUFG port map (I=>sysclk, O=>i2c_clk_buf);
 
 
 sysclk_div : BUFIO2
@@ -107,12 +115,19 @@ sysclk_div : BUFIO2
 		DIVCLK=>clk50m,
 		I=>sysclk);
 
-
+--i2cclk_div : BUFIO2
+--	generic map (
+--		DIVIDE_BYPASS=>FALSE, 
+--		DIVIDE=>2)
+--	port map (
+--		DIVCLK=>i2c_clk,
+--		I=>sysclk);
+		
 PCLK_GEN_INST : DCM_CLKGEN
 	generic map (
 		CLKFX_DIVIDE   => DCM_CLKFX_DIVIDE,
 		CLKFX_MULTIPLY => DCM_CLKFX_MULTIPLY,
-		CLKIN_PERIOD   => DCM_CLKIN_PERIOD)
+		CLKIN_PERIOD   => 20.000)--DCM_CLKIN_PERIOD)
    port map (
 		CLKFX     => clkfx,
 		LOCKED    => pclk_lckd,
@@ -120,7 +135,19 @@ PCLK_GEN_INST : DCM_CLKGEN
 		FREEZEDCM => '0',
 		RST       => '0');
 	
-
+--PCLK_GEN_INST : DCM_SP
+--	generic map (
+--		CLK_FEEDBACK  => "1X",
+--		CLKFX_DIVIDE   => DCM_CLKFX_DIVIDE,
+--		CLKFX_MULTIPLY => DCM_CLKFX_MULTIPLY,
+--		CLKIN_PERIOD   => DCM_CLKIN_PERIOD)
+--   port map (
+--		CLKFX      => clkfx,
+--		LOCKED    => pclk_lckd,
+--		CLKFB     => clkfx,
+--		CLKIN     => dcm_clkin,
+--		RST       => '0');
+		
 pclkbufg : BUFG port map (I=>pllclk1, O=>pclk);
 
 -- 2x pclk is going to be used to drive OSERDES2 on the GCLK side
@@ -152,7 +179,7 @@ PLL_OSERDES : PLL_BASE
 		CLKOUT0_DIVIDE =>1,
 		CLKOUT1_DIVIDE =>10,
 		CLKOUT2_DIVIDE =>5,
-		COMPENSATION   =>"INTERNAL")  
+		COMPENSATION   =>"INTERNAL") --"DCM2PLL" )--"INTERNAL")  
 	port map (
 		CLKFBOUT =>clkfbout,
 		CLKOUT0  =>pllclk0,
@@ -160,8 +187,8 @@ PLL_OSERDES : PLL_BASE
 		CLKOUT2  =>pllclk2,
 		LOCKED   =>pll_lckd,
 		CLKFBIN  =>clkfbout,
-		CLKIN    =>clkfx,
-		RST      =>not pclk_lckd);
+		CLKIN    =>clkfx, --dataclk,--clkfx,
+		RST      =>not '1' );--'pclk_lckd);
 
 
 ioclk_buf: BUFPLL 
@@ -290,6 +317,27 @@ DEBUG(0) <= VGA_HSYNC;
 DEBUG(1) <= VGA_VSYNC;
 
 -- LEDs
-LED <= bufpll_lock & RSTBTN & VGA_HSYNC & VGA_VSYNC;
+LED <= done & '0' & '0' & '0' & bufpll_lock & RSTBTN & VGA_HSYNC & VGA_VSYNC;
+	
+i2c_init: entity work.i2c_toplevel PORT MAP(
+		sda   => SDA,
+		scl   => SCL,
+		rst_n => i2c_reset,
+		done  => done,
+		clk   => i2c_clk_buf
+	);
+
+i2c_rst : SRL16E 
+	generic map (
+		INIT => X"0000")
+	port map(
+		Q=>i2c_reset,
+		A0=>'1',					-- A3:A2:A1:A0 = 0b(0111) = 7 = 8 clock cycles delay
+		A1=>'1',
+		A2=>'1',
+		A3=>'1',
+		CE=>'1',
+		CLK=>i2c_clk_buf,
+		D=>not RSTBTN);
 
 end Behavioral;
