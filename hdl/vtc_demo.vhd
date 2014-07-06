@@ -30,8 +30,8 @@ entity HDMI_Test_v06 is
       uart_tx 		: out std_logic;
 		
 		-- I2C 
-		SDA         : inout std_logic;
-		SCL		   : out std_logic;
+		--SDA         : inout std_logic;
+		--SCL		   : out std_logic;
 		
 		-- VGA Capture Input Nets
 		R 				: in  STD_LOGIC_VECTOR (9 downto 0);
@@ -319,25 +319,25 @@ DEBUG(1) <= VGA_VSYNC;
 -- LEDs
 LED <= done & '0' & '0' & '0' & bufpll_lock & RSTBTN & VGA_HSYNC & VGA_VSYNC;
 	
-i2c_init: entity work.i2c_toplevel PORT MAP(
-		sda   => SDA,
-		scl   => SCL,
-		rst_n => i2c_reset,
-		done  => done,
-		clk   => i2c_clk_buf
-	);
-
-i2c_rst : SRL16E 
-	generic map (
-		INIT => X"0000")
-	port map(
-		Q=>i2c_reset,
-		A0=>'1',					-- A3:A2:A1:A0 = 0b(0111) = 7 = 8 clock cycles delay
-		A1=>'1',
-		A2=>'1',
-		A3=>'1',
-		CE=>'1',
-		CLK=>i2c_clk_buf,
-		D=>not RSTBTN);
+--i2c_init: entity work.i2c_toplevel PORT MAP(
+--		sda   => SDA,
+--		scl   => SCL,
+--		rst_n => i2c_reset,
+--		done  => done,
+--		clk   => i2c_clk_buf
+--	);
+--
+--i2c_rst : SRL16E 
+--	generic map (
+--		INIT => X"0000")
+--	port map(
+--		Q=>i2c_reset,
+--		A0=>'1',					-- A3:A2:A1:A0 = 0b(0111) = 7 = 8 clock cycles delay
+--		A1=>'1',
+--		A2=>'1',
+--		A3=>'1',
+--		CE=>'1',
+--		CLK=>i2c_clk_buf,
+--		D=>not RSTBTN);
 
 end Behavioral;

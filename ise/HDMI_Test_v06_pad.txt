@@ -1,7 +1,7 @@
 Release 14.2 - par P.28xd (nt)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Sun Jul 06 03:41:17 2014
+Sun Jul 06 03:54:39 2014
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -312,7 +312,7 @@ Pinout by Pin Number:
 |U2        |           |IOBM     |IO_L32P_M3DQ14_3             |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |U3        |           |IOBM     |IO_L65P_INIT_B_2             |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |U4        |           |         |VCCO_2                       |         |           |2             |          |         |           |         |3.30     |          |           |                |
-|U5        |SDA        |IOB      |IO_L49P_D3_2                 |BIDIR    |LVCMOS33   |2             |12        |SLOW     |           |NONE     |         |LOCATED   |NO         |NONE            |
+|U5        |           |IOBM     |IO_L49P_D3_2                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |U6        |           |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |U7        |B<8>       |IOB      |IO_L43P_2                    |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |U8        |B<9>       |IOB      |IO_L41P_2                    |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
@@ -330,7 +330,7 @@ Pinout by Pin Number:
 |V2        |           |         |PROGRAM_B_2                  |         |           |              |          |         |           |         |         |          |           |                |
 |V3        |           |IOBS     |IO_L65N_CSO_B_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |V4        |           |IOBS     |IO_L63N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|V5        |SCL        |IOB      |IO_L49N_D4_2                 |TRISTATE |LVCMOS33   |2             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|V5        |           |IOBS     |IO_L49N_D4_2                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |V6        |B<2>       |IOB      |IO_L45N_2                    |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |V7        |B<7>       |IOB      |IO_L43N_2                    |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |V8        |B<6>       |IOB      |IO_L41N_VREF_2               |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
