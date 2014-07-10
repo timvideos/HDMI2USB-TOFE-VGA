@@ -1,1 +1,1 @@
-VGA inuput board for Atlys 
+VGA Capture Expansion Board for HDMI2USB
