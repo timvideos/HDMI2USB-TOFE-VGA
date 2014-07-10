@@ -342,6 +342,28 @@ F 3 "~" H 10050 4500 60  0000 C CNN
 	1    10050 4500
 	1    0    0    -1  
 $EndComp
+Text Label 7450 5100 0    60   ~ 0
+GND
+Text Label 6700 4250 0    60   ~ 0
+VCC
+Text Label 10300 4300 0    60   ~ 0
+VD
+Text HLabel 6700 4250 0    60   Input ~ 0
+VCC
+Text HLabel 3650 4050 2    60   Output ~ 0
+OVDD
+Text HLabel 7450 2150 2    60   Output ~ 0
+PVD
+Text HLabel 10450 4300 2    60   Output ~ 0
+VD
+Text HLabel 1700 5350 2    47   Input ~ 0
+GND
+Text HLabel 3150 4650 2    47   Input ~ 0
+GND
+Text HLabel 5050 3050 2    47   Input ~ 0
+GND
+Text HLabel 7450 5150 2    47   Input ~ 0
+GND
 Wire Wire Line
 	1050 4750 1600 4750
 Wire Wire Line
@@ -369,7 +391,7 @@ Connection ~ 3450 4050
 Wire Wire Line
 	1050 5150 2450 5150
 Wire Wire Line
-	1700 4750 1700 5300
+	1700 4750 1700 5350
 Wire Wire Line
 	2450 5150 2450 4450
 Connection ~ 1700 5150
@@ -378,7 +400,7 @@ Wire Wire Line
 Connection ~ 3050 4450
 Connection ~ 3250 4450
 Wire Wire Line
-	3150 4550 3150 4450
+	3150 4450 3150 4650
 Connection ~ 3150 4450
 Wire Wire Line
 	5600 1950 6500 1950
@@ -412,7 +434,7 @@ Connection ~ 6750 2550
 Wire Wire Line
 	6500 2850 6500 2550
 Wire Wire Line
-	5050 2950 5050 2850
+	5050 2850 5050 3050
 Connection ~ 5050 2850
 Connection ~ 7150 2150
 Wire Wire Line
@@ -447,10 +469,8 @@ Wire Wire Line
 	6850 4950 6850 5000
 Connection ~ 7400 5000
 Wire Wire Line
-	7450 5100 7450 5000
+	7450 5000 7450 5150
 Connection ~ 7450 5000
-Text Label 7450 5100 0    60   ~ 0
-GND
 Wire Wire Line
 	6850 4250 6850 4550
 Wire Wire Line
@@ -459,19 +479,7 @@ Wire Wire Line
 	7000 4400 6850 4400
 Connection ~ 6850 4400
 Connection ~ 6850 4250
-Text Label 6700 4250 0    60   ~ 0
-VCC
 Connection ~ 10050 4300
-Text Label 10300 4300 0    60   ~ 0
-VD
-Text HLabel 6700 4250 0    60   Input ~ 0
-VCC
-Text HLabel 3650 4050 2    60   Output ~ 0
-OVDD
-Text HLabel 7450 2150 2    60   Output ~ 0
-PVD
-Text HLabel 10450 4300 2    60   Output ~ 0
-VD
 Wire Wire Line
 	6200 2050 6250 2050
 Wire Wire Line
@@ -494,4 +502,5 @@ Wire Wire Line
 Connection ~ 8100 4100
 Wire Wire Line
 	8950 4300 10450 4300
+NoConn ~ 8000 4400
 $EndSCHEMATC

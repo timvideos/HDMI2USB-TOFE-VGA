@@ -66,7 +66,7 @@ Text HLabel 8550 4200 3    60   Input ~ 0
 GND
 Text HLabel 2900 4350 0    60   BiDi ~ 0
 SCL_VGA_RX_BUF
-Text HLabel 2900 4500 0    60   BiDi ~ 0
+Text HLabel 2850 4500 0    60   BiDi ~ 0
 SDA_VGA_RX_BUF
 Text HLabel 2900 5250 0    60   BiDi ~ 0
 SCL_VGA_TX_BUF
@@ -122,9 +122,7 @@ Wire Wire Line
 Wire Wire Line
 	8550 2550 8550 2900
 Wire Wire Line
-	8550 3900 8550 4050
-Wire Wire Line
-	8550 4050 8550 4200
+	8550 3900 8550 4200
 Wire Wire Line
 	7850 3600 7850 4050
 Wire Wire Line
@@ -134,8 +132,6 @@ Wire Wire Line
 	2900 4200 3100 4200
 Wire Wire Line
 	2900 4350 3100 4350
-Wire Wire Line
-	2900 4500 3100 4500
 Wire Wire Line
 	2900 4650 3100 4650
 Wire Wire Line
@@ -156,4 +152,22 @@ Wire Wire Line
 	4700 5250 4900 5250
 Wire Wire Line
 	4700 5400 4900 5400
+Text HLabel 4900 4200 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	4900 4200 4700 4200
+Text HLabel 7600 3200 0    60   Input ~ 0
+OVDD
+Text HLabel 7600 3300 0    60   Input ~ 0
+OVDD
+Text HLabel 7600 3400 0    60   Input ~ 0
+GND
+Wire Wire Line
+	7600 3200 7850 3200
+Wire Wire Line
+	7600 3300 7850 3300
+Wire Wire Line
+	7600 3400 7850 3400
+Wire Wire Line
+	3100 4500 2850 4500
 $EndSCHEMATC
