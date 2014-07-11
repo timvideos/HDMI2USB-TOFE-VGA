@@ -1,4 +1,4 @@
-update=10/07/2014 6:05:44 PM
+update=11/07/2014 6:48:41 PM
 last_client=eeschema
 [cvpcb]
 version=1
@@ -87,3 +87,4 @@ LibName29=contrib
 LibName30=valves
 LibName31=24AA014
 LibName32=vmodvga
+LibName33=testpoint
