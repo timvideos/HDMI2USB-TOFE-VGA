@@ -69,8 +69,7 @@ NET "LED<7>"   LOC = "N12" |IOSTANDARD = LVCMOS33;
 # SYSCLK Input
 ##############################################################################
 
-
-NET "HSOUT" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "DATACK" CLOCK_DEDICATED_ROUTE = FALSE;
 
 NET "SYS_CLK"       LOC = "L15"|IOSTANDARD = LVCMOS33 ;
 #PIN "sysclk_BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE;

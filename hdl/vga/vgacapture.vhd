@@ -13,7 +13,7 @@ use UNISIM.VComponents.all;
 entity VGA_Capture is
 	generic(
 		USE_CLOCK     : string    := "SYSCLK"; -- Use eihter SYSCLK or DATACK
-		SAMPLING_MODE : string    := "ON";      -- Oversampling? 1-Yes or 0-No
+		SAMPLING_MODE : string    := "OFF";      -- Oversampling? 1-Yes or 0-No
 		OVERSAMPLING  : integer   := 6;        -- Oversampling factor
 		DATACK_FREQ	  : integer   := 1;        -- DATACK Freq is 1x or 2x pixel clock
 		PATTERN		  : string    := "OFF"		-- Whether to use test pattern or instead vga capture
