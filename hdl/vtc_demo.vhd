@@ -9,10 +9,10 @@ use UNISIM.VComponents.all;
 
 entity HDMI_Test_v06 is
 	generic (
-		DCM_CLK_IN         : string    := "SYSCLK";
-		DCM_CLKFX_DIVIDE	 : integer   := 10;--2;--10;
-		DCM_CLKFX_MULTIPLY : integer   := 13;--2;--13;
-		DCM_CLKIN_PERIOD   : real      := 20.000;--15.384;--20.000;
+		DCM_CLK_IN         : string    := "DATACK";
+		DCM_CLKFX_DIVIDE	 : integer   := 2;--10;--2;--10;
+		DCM_CLKFX_MULTIPLY : integer   := 2;--13;--2;--13;
+		DCM_CLKIN_PERIOD   : real      := 15.384;--20.000;
 		SAMPLING_MODE      : std_logic := '0'
 );
    port ( 
@@ -59,7 +59,7 @@ signal dcm_clkin : std_logic;
 -- signals - Pixel Rate clock buffer 
 signal pllclk0, pllclk1, pllclk2 : std_logic;
 signal pclkx2, pclkx10, pll_lckd : std_logic;
-signal clkfbout 						: std_logic;
+signal clkfbout,clkfbin 						: std_logic;
 signal serdesstrobe 					: std_logic;
 signal bufpll_lock 					: std_logic; 
 
@@ -76,19 +76,15 @@ signal dataclk, dataclk_oversample : std_logic;
 signal red_data, green_data, blue_data : std_logic_vector(7 downto 0);
 
 -- signals - DVI Encoder  
-signal tmds_data0, tmds_data1, tmds_data2: std_logic_vector(4 downto 0);
-signal tmdsint: std_logic_vector(2 downto 0);
-signal serdes_rst: std_logic; 
-signal tmdsclkint: std_logic_vector(4 downto 0) := "00000";
-signal toggle: std_logic := '0';
-signal tmdsclk: std_logic;
 signal clk4xfbout : std_logic ; 
 signal clk4x, pllclk4x : std_logic; 
 signal reset : std_logic;
 signal i2c_clk, i2c_clk_buf, i2c_reset : std_logic;
 -- signals i2c
 
+--signal datack_pll
 signal done : std_logic;
+signal pll_dataclk_out2, out3, out4, out5, out6 : std_logic;
 
 begin
 
@@ -127,26 +123,18 @@ PCLK_GEN_INST : DCM_CLKGEN
 	generic map (
 		CLKFX_DIVIDE   => DCM_CLKFX_DIVIDE,
 		CLKFX_MULTIPLY => DCM_CLKFX_MULTIPLY,
-		CLKIN_PERIOD   => 20.000)--DCM_CLKIN_PERIOD)
+		--DFS_OSCILLATOR_MODE => "PHASE_FREQ_LOCK",
+		CLKIN_PERIOD   => DCM_CLKIN_PERIOD)--20.000)--DCM_CLKIN_PERIOD)
    port map (
 		CLKFX     => clkfx,
 		LOCKED    => pclk_lckd,
 		CLKIN     => dcm_clkin,
-		FREEZEDCM => '0',
 		RST       => '0');
+
+
+
 	
---PCLK_GEN_INST : DCM_SP
---	generic map (
---		CLK_FEEDBACK  => "1X",
---		CLKFX_DIVIDE   => DCM_CLKFX_DIVIDE,
---		CLKFX_MULTIPLY => DCM_CLKFX_MULTIPLY,
---		CLKIN_PERIOD   => DCM_CLKIN_PERIOD)
---   port map (
---		CLKFX      => clkfx,
---		LOCKED    => pclk_lckd,
---		CLKFB     => clkfx,
---		CLKIN     => dcm_clkin,
---		RST       => '0');
+
 		
 pclkbufg : BUFG port map (I=>pllclk1, O=>pclk);
 
@@ -155,11 +143,14 @@ pclkx2bufg : BUFG port map (I=>pllclk2, O=>pclkx2);
 
 --clk4xbufg : BUFG port map(I => pllclk4x, O => clk4x);
 
+--DataCk_pll : PLL_BASE
+--	generic map(
+--		
 
 PLL_4x : PLL_BASE
 	generic map(
 		CLKIN_PERIOD   => 15.384,
-		CLKFBOUT_MULT  => 8, 			--set VCO to 10x of CLKIN
+		CLKFBOUT_MULT  => 12, 			--set VCO to 10x of CLKIN
 		CLKOUT0_DIVIDE => 2,
 		COMPENSATION   => "INTERNAL")  
 	port map (
@@ -174,22 +165,23 @@ PLL_4x : PLL_BASE
 -- can be used by OSERDES2
 PLL_OSERDES : PLL_BASE
 	generic map (
-		CLKIN_PERIOD   =>15.384,
-		CLKFBOUT_MULT  =>10, 	--set VCO to 10x of CLKIN
-		CLKOUT0_DIVIDE =>1,
-		CLKOUT1_DIVIDE =>10,
-		CLKOUT2_DIVIDE =>5,
-		COMPENSATION   =>"INTERNAL") --"DCM2PLL" )--"INTERNAL")  
+		CLKIN_PERIOD   => 10.000, --15.384,
+		CLKFBOUT_MULT  => 10, 	--set VCO to 10x of CLKIN
+		CLKOUT0_DIVIDE => 1,
+		CLKOUT1_DIVIDE => 10,
+		CLKOUT2_DIVIDE => 5,
+		COMPENSATION   => "DCM2PLL" )--"SYSTEM_SYNCHRONOUS")--"SOURCE_SYNCHRONOUS") --"DCM2PLL" )--"INTERNAL")  
 	port map (
-		CLKFBOUT =>clkfbout,
-		CLKOUT0  =>pllclk0,
-		CLKOUT1  =>pllclk1,
-		CLKOUT2  =>pllclk2,
-		LOCKED   =>pll_lckd,
-		CLKFBIN  =>clkfbout,
-		CLKIN    =>clkfx, --dataclk,--clkfx,
-		RST      =>not '1' );--'pclk_lckd);
+		CLKFBOUT => clkfbout,
+		CLKOUT0  => pllclk0,
+		CLKOUT1  => pllclk1,
+		CLKOUT2  => pllclk2,
+		LOCKED   => pll_lckd,
+		CLKFBIN  => clkfbin,
+		CLKIN    => clkfx, --DATACK, --dataclk,--clkfx,
+		RST      => RSTBTN );--'pclk_lckd);
 
+clkfb : BUFG port map( I=> clkfbout, O=> clkfbin);
 
 ioclk_buf: BUFPLL 
 	generic map (DIVIDE=>5) 
@@ -197,9 +189,9 @@ ioclk_buf: BUFPLL
       IOCLK=>pclkx10, SERDESSTROBE=>serdesstrobe, LOCK=>bufpll_lock);
 
 
-synchro_reset : entity work.synchroType2 
-   port map (async => not pll_lckd, sync => reset, clk => pclk);
-  
+--synchro_reset : entity work.synchroType2 
+--   port map (async => not pll_lckd, sync => reset, clk => pclk);
+reset <= RSTBTN;
   
 Inst_VGA_Capture: entity work.VGA_Capture 
 	PORT MAP(
@@ -223,6 +215,23 @@ Inst_VGA_Capture: entity work.VGA_Capture
 		Green_out   => green_data,
 		Blue_out    => blue_data);
 
+
+dvi_tx: entity work.dvi_encoder_top PORT MAP(
+		pclk         => pclk,
+		pclkx2       => pclkx2,
+		pclkx10      => pclkx10,
+		serdesstrobe => serdesstrobe,
+		rstin        => reset,
+		blue_din     => blue_data,
+		green_din    => green_data,
+		red_din      => red_data,
+		hsync        => VGA_HSYNC,
+		vsync        => VGA_VSYNC,
+		de           => de,
+		TMDS         => TMDS,
+		TMDSB        => TMDSB 
+	);
+
 --process (pclk)
 --begin
 --	if rising_edge (pclk) then
@@ -235,89 +244,17 @@ Inst_VGA_Capture: entity work.VGA_Capture
 --	end if;
 --end process;
 
-enc0 : entity work.dvi_encoder  port map (
-	clkin      => pclk,
-	clkx2in    => pclkx2,
-	rstin      => reset,
-	blue_din   => blue_data,
-	green_din  => green_data,
-	red_din    => red_data,
-	hsync      => VGA_HSYNC,
-	vsync      => VGA_VSYNC,
-	de         => de,
-	tmds_data0 => tmds_data0,
-	tmds_data1 => tmds_data1,
-	tmds_data2 => tmds_data2);
 
-serdes_rst <= RSTBTN or not(bufpll_lock);
+--
+--serdes_rst <= RSTBTN or not(bufpll_lock);
 
-oserdes0 : entity work.serdes_n_to_1 
-	port map(
-		ioclk        => pclkx10,
-		serdesstrobe => serdesstrobe,
-		reset        => serdes_rst,
-		gclk         => pclkx2,
-		datain       => tmds_data0,
-		iob_data_out => tmdsint(0));
-		
-oserdes1 : entity work.serdes_n_to_1 
-	port map(
-		ioclk        => pclkx10,
-		serdesstrobe => serdesstrobe,
-		reset        => serdes_rst,
-		gclk         => pclkx2,
-		datain       => tmds_data1,
-		iob_data_out => tmdsint(1));
-		
-oserdes2 : entity work.serdes_n_to_1 
-	port map(
-		ioclk        => pclkx10,
-		serdesstrobe => serdesstrobe,
-		reset        => serdes_rst,
-		gclk         => pclkx2,
-		datain       => tmds_data2,
-		iob_data_out => tmdsint(2));		
-
-TMDS0 : OBUFDS port map (I=>tmdsint(0), O=>TMDS(0), OB=>TMDSB(0));
-TMDS1 : OBUFDS port map (I=>tmdsint(1), O=>TMDS(1), OB=>TMDSB(1));
-TMDS2 : OBUFDS port map (I=>tmdsint(2), O=>TMDS(2), OB=>TMDSB(2));
-  
-process (pclkx2, serdes_rst)
-begin
-	if serdes_rst = '1' then
-		toggle <= '0';
-	elsif rising_edge(pclkx2) then
-		toggle <= not(toggle);	
-	end if;
-end process;
-
-process (pclkx2)
-begin
-	if rising_edge(pclkx2) then
-		if (toggle = '1') then
-			tmdsclkint <= "11111";
-		else
-			tmdsclkint <= "00000";
-		end if;
-	end if;
-end process;
-
-clkout : entity work.serdes_n_to_1 port map (
-	iob_data_out => tmdsclk,
-	ioclk        => pclkx10,
-	serdesstrobe => serdesstrobe,
-	gclk         => pclkx2,
-	reset        => serdes_rst,
-	datain       => tmdsclkint);
-
-TMDS3 : OBUFDS port map (I=>tmdsclk, O=>TMDS(3), OB=>TMDSB(3)); -- clock
 
 -- Debug Ports 
 DEBUG(0) <= VGA_HSYNC;
 DEBUG(1) <= VGA_VSYNC;
 
 -- LEDs
-LED <= done & '0' & '0' & '0' & bufpll_lock & RSTBTN & VGA_HSYNC & VGA_VSYNC;
+LED <= pll_lckd & '0' & '0' & '0' & bufpll_lock & RSTBTN & VGA_HSYNC & VGA_VSYNC;
 	
 --i2c_init: entity work.i2c_toplevel PORT MAP(
 --		sda   => SDA,

@@ -13,8 +13,8 @@ use UNISIM.VComponents.all;
 entity VGA_Capture is
 	generic(
 		USE_CLOCK     : string    := "SYSCLK"; -- Use eihter SYSCLK or DATACK
-		SAMPLING_MODE : string    := "OFF";      -- Oversampling? 1-Yes or 0-No
-		OVERSAMPLING  : integer   := 4;        -- Oversampling factor
+		SAMPLING_MODE : string    := "ON";      -- Oversampling? 1-Yes or 0-No
+		OVERSAMPLING  : integer   := 6;        -- Oversampling factor
 		DATACK_FREQ	  : integer   := 1;        -- DATACK Freq is 1x or 2x pixel clock
 		PATTERN		  : string    := "OFF"		-- Whether to use test pattern or instead vga capture
 );
@@ -120,9 +120,9 @@ Red 	<= B_in;
 Green <= G_in;
 Blue 	<= R_in;
 
-	Red_out 	 <= r_o when (debug_sw(3)='1') else data(23 downto 16);
-   Green_out <= g_o when (debug_sw(3)='1') else data(15 downto 8);
-   Blue_out  <= b_o when (debug_sw(3)='1') else data(7 downto 0);
+Red_out 	 <= r_o when (debug_sw(3)='1') else data(23 downto 16);
+Green_out <= g_o when (debug_sw(3)='1') else data(15 downto 8);
+Blue_out  <= b_o when (debug_sw(3)='1') else data(7 downto 0);
 
 
 
@@ -145,7 +145,9 @@ begin
 	end if;
 end process;
 
-process(reset, CONF_CLK)
+--process(reset, CONF_CLK)
+process(reset, CONF_CLK, HSOUT, VSOUT)
+
 begin
 
 	if rising_edge(CONF_CLK) then
@@ -212,7 +214,7 @@ begin
 		else--if counterY = ( spY + bpY + resY + fpY ) then
 			data <= (others => '0');
 			--counterY  <= 0;
-			--vActive <= '0';
+			vActive <= '0';
 		end if;
 		
 		if (counterX >= 0) and (counterX < MULTIPLIER*spX) then 
@@ -241,6 +243,18 @@ begin
 --		b_o 	<= (others => '0');
 		end if;
 	end if;
+	
+--	-- Below part added on 11th July 2014
+--	if rising_edge(HSOUT) then
+--		counterY <= counterY + 1;
+--		counterX <= 0;
+--	end if;
+--	
+--	if rising_edge(VSOUT) then
+--		counterY <= 0;
+--		data <= (others => '0');
+--		counterX <= 0;
+--	end if;
 	
 end process;
 

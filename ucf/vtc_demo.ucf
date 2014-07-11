@@ -69,6 +69,9 @@ NET "LED<7>"   LOC = "N12" |IOSTANDARD = LVCMOS33;
 # SYSCLK Input
 ##############################################################################
 
+
+NET "HSOUT" CLOCK_DEDICATED_ROUTE = FALSE;
+
 NET "SYS_CLK"       LOC = "L15"|IOSTANDARD = LVCMOS33 ;
 #PIN "sysclk_BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE;
 #PIN "SYS_CLK_BUFGP/BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE; 
@@ -98,25 +101,27 @@ NET "uart_tx" LOC = "B16"	| IOSTANDARD = LVCMOS33;
 ###########################################
 # Timing Constraints
 ###########################################
-#NET "dataclk" TNM_NET = "TNM_DATACK";
-#TIMESPEC "TS_DATACK" = PERIOD "TNM_DATACK" 15.384 ns HIGH 50 % PRIORITY 0 ;
+NET "dataclk" TNM_NET = "TNM_DATACK";
+TIMESPEC "TS_DATACK" = PERIOD "TNM_DATACK" 15.384 ns HIGH 50 % PRIORITY 0 ;
 
 NET "pclk" TNM_NET = "TNM_PCLK";
 TIMESPEC "TS_PCLK" = PERIOD "TNM_PCLK" 15.384 ns HIGH 50 % PRIORITY 0 ;
-
-NET "pclkx2" TNM_NET = "TNM_PCLKX2";
-TIMESPEC "TS_PCLKX2" = PERIOD "TNM_PCLKX2" TS_PCLK * 2;
-
-NET "pclkx10" TNM_NET = "TNM_PCLKX10";
-TIMESPEC "TS_PCLKX10" = PERIOD "TNM_PCLKX10" TS_PCLK * 10;
+#
+#NET "pclkx2" TNM_NET = "TNM_PCLKX2";
+#TIMESPEC "TS_PCLKX2" = PERIOD "TNM_PCLKX2" TS_PCLK * 2;
+#
+#NET "pclkx10" TNM_NET = "TNM_PCLKX10";
+#TIMESPEC "TS_PCLKX10" = PERIOD "TNM_PCLKX10" TS_PCLK * 10;
 
 #
 # Multi-cycle paths
 #
-TIMEGRP "bramgrp" = RAMS(enc0/pixel2x/dataint<*>);  
-TIMEGRP "fddbgrp" = FFS(enc0/pixel2x/db<*>);
-TIMEGRP "bramra" = FFS(enc0/pixel2x/ra<*>);
-
+TIMEGRP "bramgrp" = RAMS(dvi_tx/pixel2x/dataint<*>);  
+TIMEGRP "fddbgrp" = FFS(dvi_tx/pixel2x/db<*>);
+TIMEGRP "bramra" = FFS(dvi_tx/pixel2x/ra<*>);
+#TIMEGRP "bramgrp" = RAMS(enc0/pixel2x/dataint<*>);  
+#TIMEGRP "fddbgrp" = FFS(enc0/pixel2x/db<*>);
+#TIMEGRP "bramra" = FFS(enc0/pixel2x/ra<*>);
 TIMESPEC "TS_ramdo" = FROM "bramgrp" TO "fddbgrp" TS_PCLK;
 TIMESPEC "TS_ramra" = FROM "bramra" TO "fddbgrp" TS_PCLK;
 

@@ -1,0 +1,85 @@
+#:C29    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.28xd
+#Current Working Directory:
+#:D   G:\Rohit\Rohit\Projects\TI_ADC_2014\GSoC\HDL\HDMI_Test_v06\ise
+#Date/Time:
+#:T   Sun Jul 06 03:05:48 2014
+#------------------------------
+	#Reading HDMI_Test_v06.ncd...
+	#Loading device for application Rf_Device from file '6slx45.nph' in environment G:\Xilinx\14.2\ISE_DS\ISE\.
+	#   "HDMI_Test_v06" is an NCD, version 3.2, device xc6slx45, package csg324, speed -3
+	#Design creation date: 2014.07.05.21.29.43
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select -k comp 'i3c2_controller/currentInsn_arg_2'
+	#3
+unselect comp 'i3c2_controller/currentInsn_arg_2'
+	#4
+select -k comp 'i3c2_controller/currentInsn_data[7]_BUS_0028_equal_13_o81'
+	#5
+unselect comp 'i3c2_controller/currentInsn_data[7]_BUS_0028_equal_13_o81'
+	#6
+select -k comp 'i3c2_controller/currentInsn_data_3'
+	#7
+unselect comp 'i3c2_controller/currentInsn_data_3'
+	#8
+select -k comp 'i2c_clk_bufg'
+	#9
+unselect comp 'i2c_clk_bufg'
+	#10
+select -k comp 'i3c2_controller/GND_49_o_delayTimer[16]_equal_53_o<16>1'
+	#11
+unselect comp 'i3c2_controller/GND_49_o_delayTimer[16]_equal_53_o<16>1'
+	#12
+select -k comp 'i3c2_controller/i2c_dataBus2Mstr<3>'
+	#13
+unselect comp 'i3c2_controller/i2c_dataBus2Mstr<3>'
+	#14
+select -k comp 'i3c2_controller/GND_49_o_delayTimer[16]_equal_53_o<16>'
+	#15
+unselect comp 'i3c2_controller/GND_49_o_delayTimer[16]_equal_53_o<16>'
+	#16
+select -k comp 'i3c2_controller/i2c_operation<2>'
+	#17
+unselect comp 'i3c2_controller/i2c_operation<2>'
+	#18
+select -k comp 'i3c2_controller/Mram__n0803'
+	#19
+unselect comp 'i3c2_controller/Mram__n0803'
+	#20
+select -k comp 'i3c2_controller/n0199<0>'
+	#21
+unselect comp 'i3c2_controller/n0199<0>'
+	#22
+select -k comp 'i3c2_controller/Mram__n0803'
+	#23
+unselect -all
+	#24
+select net 'i3c2_controller/_n0803<0>'
+	#net "i3c2_controller/_n0803<0>"
+	#25
+unselect -all
+	#26
+select net 'i3c2_controller/_n0803<10>'
+	#net "i3c2_controller/_n0803<10>"
+	#27
+unselect -all
+	#28
+select comp 'i3c2_controller/Mram__n0803'
+	#comp "i3c2_controller/Mram__n0803",  site "RAMB8_X1Y16",  type = RAMB8BWER  (RPM grid X50Y128)
+	#29
+unselect -all
+	#30
+select comp 'i3c2_controller/Mram__n0803'
+	#comp "i3c2_controller/Mram__n0803",  site "RAMB8_X1Y16",  type = RAMB8BWER  (RPM grid X50Y128)
+	#31
+post block
+	#<RAMB8BWER>; bel <i3c2_controller/Mram__n0803>.
+	#<RAMB8BWER>; bel <i3c2_controller/Mram__n0803>.
+	#<RAMB8BWER>; bel <i3c2_controller/Mram__n0803>.
+	#<RAMB8BWER>; bel <i3c2_controller/Mram__n0803>.
