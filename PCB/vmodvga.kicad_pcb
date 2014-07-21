@@ -3,7 +3,7 @@
   (general
     (links 253)
     (no_connects 2)
-    (area 46.3975 49.249999 167.950001 168.4525)
+    (area 87.849999 49.249999 209.9023 109.450001)
     (thickness 1.6)
     (drawings 7)
     (tracks 1075)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.13)
+    (last_trace_width 0.125)
     (user_trace_width 0.13)
     (user_trace_width 0.25)
     (user_trace_width 0.5)
@@ -3990,7 +3990,7 @@
   (gr_line (start 87.9 49.35) (end 87.9 109.35) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 167.9 109.35) (end 167.9 49.35) (angle 90) (layer Edge.Cuts) (width 0.1))
   (target plus (at 87.9 109.25) (size 0.005) (width 0.1) (layer Edge.Cuts))
-  (target plus (at 46.4 168.45) (size 0.005) (width 0.1) (layer Edge.Cuts))
+  (target plus (at 209.8998 79.4484) (size 0.005) (width 0.1) (layer Edge.Cuts))
 
   (segment (start 106.65 87.2) (end 106.65 89.24) (width 0.25) (layer F.Cu) (net 1))
   (segment (start 104.57 91.32) (end 95.05 91.32) (width 0.25) (layer F.Cu) (net 1) (tstamp 51F5247E) (status 20))
@@ -4315,9 +4315,9 @@
   (segment (start 94.45 70.89) (end 94.27 70.71) (width 0.13) (layer B.Cu) (net 23) (tstamp 51F52E5A))
   (segment (start 94.27 70.71) (end 94.12 70.56) (width 0.13) (layer B.Cu) (net 23))
   (segment (start 92.97 70.92) (end 92.7 70.92) (width 0.13) (layer B.Cu) (net 23) (tstamp 51F52E68) (status 30))
-  (segment (start 93.9 87.32) (end 93.9 86.88) (width 0.13) (layer F.Cu) (net 24) (status C00000))
-  (segment (start 92.7 85.68) (end 92.7 85.32) (width 0.13) (layer F.Cu) (net 24) (tstamp 51F6E364) (status C00000))
-  (segment (start 93.9 86.88) (end 92.7 85.68) (width 0.13) (layer F.Cu) (net 24) (tstamp 51F6E361) (status C00000))
+  (segment (start 93.9 87.32) (end 93.9 86.88) (width 0.13) (layer F.Cu) (net 24))
+  (segment (start 92.7 85.68) (end 92.7 85.32) (width 0.13) (layer F.Cu) (net 24) (tstamp 51F6E364))
+  (segment (start 93.9 86.88) (end 92.7 85.68) (width 0.13) (layer F.Cu) (net 24) (tstamp 51F6E361))
   (segment (start 118.938 96.51) (end 118.45 96.51) (width 0.125) (layer B.Cu) (net 24))
   (segment (start 118.45 96.51) (end 118.42 96.48) (width 0.125) (layer B.Cu) (net 24) (tstamp 51F5B305))
   (segment (start 95.05 76.92) (end 95.07 76.94) (width 0.25) (layer B.Cu) (net 24))
