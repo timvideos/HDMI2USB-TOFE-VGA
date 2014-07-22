@@ -32,7 +32,7 @@
   )
 
   (setup
-    (last_trace_width 0.125)
+    (last_trace_width 1)
     (user_trace_width 0.13)
     (user_trace_width 0.25)
     (user_trace_width 0.5)
@@ -4030,12 +4030,12 @@
     )
   )
 
-  (module OSHW-logo_silkscreen-back_10mm (layer B.Cu) (tedit 53CD7B1A) (tstamp 53D0D299)
+  (module OSHW-logo_silkscreen-back_10mm (layer B.Cu) (tedit 53CD7B2C) (tstamp 53D0D299)
     (at 140.37056 82.9818 90)
-    (fp_text reference G*** (at 0 -5.30352 90) (layer B.SilkS) hide
+    (fp_text reference "" (at 0 -5.30352 90) (layer B.SilkS) hide
       (effects (font (size 0.45466 0.45466) (thickness 0.0889)) (justify mirror))
     )
-    (fp_text value OSHW-logo_silkscreen-back_10mm (at 0 5.30352 90) (layer B.SilkS) hide
+    (fp_text value "" (at 0 5.30352 90) (layer B.SilkS) hide
       (effects (font (size 0.45466 0.45466) (thickness 0.0889)) (justify mirror))
     )
     (fp_poly (pts (xy 3.03022 4.49072) (xy 2.97942 4.46278) (xy 2.86004 4.38912) (xy 2.69494 4.2799)
@@ -4919,10 +4919,10 @@
   (via (at 126.1364 51.5366) (size 0.45) (layers F.Cu B.Cu) (net 40))
   (segment (start 126.1364 51.5366) (end 128.54002 53.94022) (width 1) (layer B.Cu) (net 40) (tstamp 53F27FD4))
   (segment (start 93.9 79.32) (end 94.25 79.32) (width 0.125) (layer F.Cu) (net 40))
-  (segment (start 94.25 79.32) (end 95.05 80.12) (width 0.125) (layer F.Cu) (net 40) (tstamp 53F27D1E))
-  (segment (start 92.7 80.52) (end 93.9 79.32) (width 0.125) (layer F.Cu) (net 40))
-  (segment (start 91.55 79.72) (end 91.9 79.72) (width 0.125) (layer F.Cu) (net 40))
-  (segment (start 91.9 79.72) (end 92.7 80.52) (width 0.125) (layer F.Cu) (net 40) (tstamp 53F27D19))
+  (segment (start 94.25 79.32) (end 95.05 80.12) (width 0.5) (layer F.Cu) (net 40) (tstamp 53F27D1E))
+  (segment (start 92.7 80.52) (end 93.9 79.32) (width 0.5) (layer F.Cu) (net 40))
+  (segment (start 91.55 79.72) (end 91.9 79.72) (width 0.5) (layer F.Cu) (net 40))
+  (segment (start 91.9 79.72) (end 92.7 80.52) (width 0.5) (layer F.Cu) (net 40) (tstamp 53F27D19))
   (segment (start 125.9459 99.949) (end 125.9459 100.6221) (width 0.125) (layer F.Cu) (net 40))
   (segment (start 129.5273 101.2063) (end 129.9337 100.7999) (width 0.25) (layer F.Cu) (net 40) (tstamp 53F27D0C))
   (segment (start 126.5301 101.2063) (end 129.5273 101.2063) (width 0.25) (layer F.Cu) (net 40) (tstamp 53F27D0A))
