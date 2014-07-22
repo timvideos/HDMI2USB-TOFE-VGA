@@ -32,7 +32,7 @@
   )
 
   (setup
-    (last_trace_width 1)
+    (last_trace_width 0.125)
     (user_trace_width 0.13)
     (user_trace_width 0.25)
     (user_trace_width 0.5)
@@ -67,7 +67,7 @@
     (visible_elements 7FFFFFFF)
     (pcbplotparams
       (layerselection 3178497)
-      (usegerberextensions true)
+      (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.150000)
       (plotframeref false)
@@ -88,7 +88,7 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
       (outputdirectory ""))
   )
