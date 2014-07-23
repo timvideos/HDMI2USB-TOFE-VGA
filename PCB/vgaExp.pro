@@ -1,4 +1,4 @@
-update=22/07/2014 2:12:59 AM
+update=24/07/2014 2:38:59 AM
 last_client=pcbnew
 [cvpcb]
 version=1
@@ -51,10 +51,10 @@ LibName33=testpoint
 version=1
 LastNetListRead=vgaExp_v01_LongerPads.net
 UseCmpFile=1
-PadDrill=0.000000000000
-PadDrillOvalY=0.000000000000
-PadSizeH=3.799840000000
-PadSizeV=1.399540000000
+PadDrill=3.500000000000
+PadDrillOvalY=3.500000000000
+PadSizeH=4.000000000000
+PadSizeV=4.000000000000
 PcbTextSizeV=1.500000000000
 PcbTextSizeH=1.500000000000
 PcbTextThickness=0.300000000000
