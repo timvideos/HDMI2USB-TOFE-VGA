@@ -39,7 +39,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 3
 Title ""
-Date "21 jul 2014"
+Date "24 jul 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -679,9 +679,9 @@ Text Label 6100 1750 1    47   ~ 0
 SCL
 NoConn ~ 1500 1400
 NoConn ~ 1500 3100
-Text Label 10700 1200 0    47   ~ 0
-SDA_VGA_RX_BUF
 Text Label 10700 1000 0    47   ~ 0
+SDA_VGA_RX_BUF
+Text Label 10700 1200 0    47   ~ 0
 SCL_VGA_RX_BUF
 Text Label 10700 4000 0    47   ~ 0
 SCL_VGA_TX_BUF
