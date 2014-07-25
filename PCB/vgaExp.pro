@@ -1,5 +1,5 @@
-update=24/07/2014 2:38:59 AM
-last_client=pcbnew
+update=25/07/2014 7:00:01 PM
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -88,3 +88,5 @@ LibName17=analog-devices2
 LibName18=ref-packages
 LibName19=vga
 LibName20=vmodvga
+[general]
+version=1
