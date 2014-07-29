@@ -6,7 +6,7 @@
     (area 54.348284 17.969177 168.150001 110.947)
     (thickness 1.6)
     (drawings 68)
-    (tracks 4410)
+    (tracks 4425)
     (zones 0)
     (modules 83)
     (nets 72)
@@ -21,7 +21,7 @@
     (18 B.Paste user)
     (19 F.Paste user)
     (20 B.SilkS user)
-    (21 F.SilkS user hide)
+    (21 F.SilkS user)
     (22 B.Mask user)
     (23 F.Mask user)
     (24 Dwgs.User user)
@@ -61,8 +61,8 @@
     (mod_edge_width 0.15)
     (mod_text_size 1 1)
     (mod_text_width 0.15)
-    (pad_size 3.5 3.5)
-    (pad_drill 3)
+    (pad_size 4.5 4.5)
+    (pad_drill 3.96)
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFFFF)
@@ -639,7 +639,7 @@
     (fp_text reference FB6 (at 2.3142 -0.131 360) (layer F.SilkS)
       (effects (font (size 0.8 0.8) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 0.381 270) (layer F.SilkS)
+    (fp_text value FILTER (at 0 0.381 270) (layer F.SilkS)
       (effects (font (size 0.50038 0.50038) (thickness 0.10922)))
     )
     (fp_circle (center -1.651 0.762) (end -1.651 0.635) (layer F.SilkS) (width 0.09906))
@@ -671,7 +671,7 @@
     (fp_text reference FB5 (at 2.3242 0.0222 360) (layer F.SilkS)
       (effects (font (size 0.8 0.8) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 0.381 270) (layer F.SilkS)
+    (fp_text value FILTER (at 0 0.381 270) (layer F.SilkS)
       (effects (font (size 0.50038 0.50038) (thickness 0.10922)))
     )
     (fp_circle (center -1.651 0.762) (end -1.651 0.635) (layer F.SilkS) (width 0.09906))
@@ -767,7 +767,7 @@
     (fp_text reference R14 (at -1.28 1.43 180) (layer B.SilkS)
       (effects (font (size 0.8 0.8) (thickness 0.1524)) (justify mirror))
     )
-    (fp_text value 147K (at 2.21 1.42 180) (layer B.SilkS)
+    (fp_text value R147K (at 2.21 1.42 180) (layer B.SilkS)
       (effects (font (size 0.7 0.7) (thickness 0.1524)) (justify mirror))
     )
     (fp_circle (center -1.651 -0.762) (end -1.651 -0.635) (layer B.SilkS) (width 0.09906))
@@ -799,7 +799,7 @@
     (fp_text reference FB4 (at 2.3542 -0.0024 360) (layer F.SilkS)
       (effects (font (size 0.8 0.8) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 0.381 270) (layer F.SilkS)
+    (fp_text value FILTER (at 0 0.381 270) (layer F.SilkS)
       (effects (font (size 0.50038 0.50038) (thickness 0.10922)))
     )
     (fp_circle (center -1.651 0.762) (end -1.651 0.635) (layer F.SilkS) (width 0.09906))
@@ -1152,7 +1152,7 @@
     (fp_text reference P6 (at -2.11 0) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 -1.905) (layer F.SilkS) hide
+    (fp_text value CONN_1 (at 0 -1.905) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -1178,7 +1178,7 @@
     (fp_text reference P5 (at -2.07 -0.05) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 -1.905) (layer F.SilkS) hide
+    (fp_text value CONN_1 (at 0 -1.905) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -1196,7 +1196,7 @@
     )
   )
 
-  (module DE-15 (layer F.Cu) (tedit 53D27181) (tstamp 53CE6301)
+  (module DE-15 (layer F.Cu) (tedit 53D72722) (tstamp 53CE6301)
     (at 110.7 24.5 180)
     (path /537296BF)
     (fp_text reference J2 (at -10.5 -5.5 180) (layer F.SilkS)
@@ -1266,7 +1266,7 @@
       (net 31 "/I2C/DDC Section/SCL_VGA_RX")
     )
     (pad "" thru_hole circle (at 12.595 -2 180) (size 4.5 4.5) (drill 3.96)
-      (layers *.Cu F.SilkS)
+      (layers *.Cu *.Mask F.SilkS)
       (zone_connect 0)
     )
     (pad "" thru_hole circle (at -12.595 -2 180) (size 4.5 4.5) (drill 3.96)
@@ -2171,7 +2171,7 @@
     (fp_text reference TP12 (at 0 -1.905 90) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 -1.905 90) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at 0 -1.905 90) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2197,7 +2197,7 @@
     (fp_text reference TP13 (at 0 -1.905 90) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 -1.905 90) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at 0 -1.905 90) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2223,7 +2223,7 @@
     (fp_text reference TP1 (at -0.01 -2.03 180) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 -1.905 180) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at 0 -1.905 180) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2249,7 +2249,7 @@
     (fp_text reference TP11 (at 0 -1.905) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 -1.905) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at 0 -1.905) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2275,7 +2275,7 @@
     (fp_text reference TP10 (at 0.02 -2.75 180) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 -1.905 90) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at 0 -1.905 90) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2301,7 +2301,7 @@
     (fp_text reference TP7 (at 2.42 0.8 180) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 -1.905 180) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at 0 -1.905 180) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2327,7 +2327,7 @@
     (fp_text reference TP8 (at 2.42 -0.93 180) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 -1.905 180) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at 0 -1.905 180) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2353,7 +2353,7 @@
     (fp_text reference TP9 (at -2.09 0.07 180) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 -1.905 90) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at 0 -1.905 90) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2379,7 +2379,7 @@
     (fp_text reference TP6 (at 1.97 0 90) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0.13 -3.27) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at 0.13 -3.27) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2405,7 +2405,7 @@
     (fp_text reference TP5 (at -0.04 1.97 90) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0.73 0.13 180) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at 0.73 0.13 180) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2431,7 +2431,7 @@
     (fp_text reference TP4 (at 0.02 1.97 90) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at -1.81 0.13 180) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at -1.81 0.13 180) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2457,7 +2457,7 @@
     (fp_text reference TP3 (at 1.97 0.15 90) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0.13 -5.82) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at 0.13 -5.82) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2483,7 +2483,7 @@
     (fp_text reference TP2 (at 0.16 1.97 180) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
-    (fp_text value "" (at 0 -1.905 180) (layer F.SilkS) hide
+    (fp_text value TESTPOINT (at 0 -1.905 180) (layer F.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.1524)))
     )
     (fp_line (start 1.27 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.1524))
@@ -2509,7 +2509,7 @@
     (fp_text reference P7 (at -6.66 -2.46 270) (layer F.SilkS)
       (effects (font (size 1.016 1.016) (thickness 0.2032)))
     )
-    (fp_text value "" (at -8.64 -0.06 360) (layer F.SilkS) hide
+    (fp_text value CONN_6 (at -8.64 -0.06 360) (layer F.SilkS) hide
       (effects (font (size 1.016 0.889) (thickness 0.2032)))
     )
     (fp_line (start -7.62 1.27) (end -7.62 -1.27) (layer F.SilkS) (width 0.3048))
@@ -4158,9 +4158,24 @@
   (segment (start 94.85 88.92) (end 94.49 88.56) (width 0.125) (layer B.Cu) (net 5) (tstamp 53D01658))
   (segment (start 101.875 88.92) (end 101.85 88.92) (width 0.125) (layer B.Cu) (net 5) (tstamp 53D71618))
   (segment (start 101.85 88.92) (end 94.85 88.92) (width 0.125) (layer B.Cu) (net 5) (tstamp 53D71639))
+  (segment (start 112.825 87.775) (end 113.05 87.775) (width 0.125) (layer F.Cu) (net 6))
+  (segment (start 111.65 87.775) (end 112.825 87.775) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71A87))
+  (segment (start 112.7 88.05) (end 111.65 88.05) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71ABC))
+  (segment (start 115.025 87.495) (end 108.38 87.495) (width 0.125) (layer F.Cu) (net 6))
+  (segment (start 107.425 88.92) (end 93.9 88.92) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71A4D))
+  (segment (start 108.295 88.05) (end 107.425 88.92) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71A73))
+  (segment (start 111.65 88.05) (end 108.295 88.05) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71A8B))
+  (segment (start 108.375 87.775) (end 111.65 87.775) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71A65))
+  (segment (start 108.3 87.7) (end 108.375 87.775) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71A63))
+  (segment (start 108.3 87.575) (end 108.3 87.7) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71A60))
+  (segment (start 108.38 87.495) (end 108.3 87.575) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71A5C))
+  (segment (start 113.05 88.05) (end 112.7 88.05) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71ADC))
+  (segment (start 113.125 87.975) (end 113.05 88.05) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71ADB))
+  (segment (start 113.125 87.85) (end 113.125 87.975) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71ADA))
+  (segment (start 113.05 87.775) (end 113.125 87.85) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71AD8))
   (segment (start 121.0245 64.2) (end 121.0245 81.4955) (width 0.125) (layer F.Cu) (net 6))
-  (segment (start 113.6 88.92) (end 93.9 88.92) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D01615))
-  (segment (start 121.0245 81.4955) (end 113.6 88.92) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D015FD))
+  (segment (start 121.0245 81.4955) (end 115.025 87.495) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D015FD))
+  (segment (start 115.025 87.495) (end 115.05 87.47) (width 0.125) (layer F.Cu) (net 6) (tstamp 53D71A5A))
   (segment (start 114.55 86.525) (end 114.65 86.525) (width 0.125) (layer F.Cu) (net 7))
   (segment (start 114.45 86.8) (end 114.1 86.8) (width 0.125) (layer F.Cu) (net 7) (tstamp 53D719AF))
   (segment (start 107.03 88.12) (end 108.35 86.8) (width 0.125) (layer F.Cu) (net 7) (tstamp 53D71982))

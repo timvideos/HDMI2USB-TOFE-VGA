@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  24/07/2014 3:55:01 AM
+PCBNEW-LibModule-V1  29/07/2014 10:17:46 AM
 # encoding utf-8
 Units mm
 $INDEX
@@ -10,82 +10,82 @@ STAND-OFF
 VHDCI
 $EndINDEX
 $MODULE DE-15
-Po 0 0 0 15 51F2F959 00000000 ~~
+Po 0 0 0 15 53D7276C 00000000 ~~
 Li DE-15
 Sc 0
-AR /51EE8492
+AR /537296BF
 Op 0 0 0
-T0 -12.66 -5.7 1 1 0 0.15 N V 21 N "J1"
-T1 12.27 -5.98 1 1 0 0.15 N V 21 N "DE-15"
+T0 -10.5 -5.5 1 1 0 0.15 N V 21 N "J2"
+T1 -0.5 -5.8 1 1 0 0.15 N V 21 N "DE-15"
 T2 -10.2 2.55 1 1 0 0.15 N V 21 N "Front"
 $PAD
 Sh "6" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 1 "/GND"
+Ne 4 "/I2C/DDC Section/GND"
 Po -5.725 -2
 $EndPAD
 $PAD
 Sh "7" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 1 "/GND"
+Ne 4 "/I2C/DDC Section/GND"
 Po -3.435 -2
 $EndPAD
 $PAD
 Sh "8" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 1 "/GND"
+Ne 4 "/I2C/DDC Section/GND"
 Po -1.145 -2
 $EndPAD
 $PAD
 Sh "9" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 1 "/GND"
+Ne 0 ""
 Po 1.145 -2
 $EndPAD
 $PAD
 Sh "10" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 4 "/I2C/DDC Section/GND"
 Po 3.435 -2
 $EndPAD
 $PAD
 Sh "1" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 6 "N-0000017"
+Ne 7 "/R"
 Po -4.58 -3.98
 $EndPAD
 $PAD
 Sh "2" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 5 "N-0000016"
+Ne 2 "/G"
 Po -2.29 -3.98
 $EndPAD
 $PAD
 Sh "3" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 4 "N-0000015"
+Ne 1 "/B"
 Po 0 -3.98
 $EndPAD
 $PAD
 Sh "4" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 1 "/GND"
+Ne 0 ""
 Po 2.29 -3.98
 $EndPAD
 $PAD
 Sh "5" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 1 "/GND"
+Ne 4 "/I2C/DDC Section/GND"
 Po 4.58 -3.98
 $EndPAD
 $PAD
@@ -99,34 +99,34 @@ $PAD
 Sh "12" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 6 "/I2C/DDC Section/SDA_VGA_RX"
 Po -2.29 -0.02
 $EndPAD
 $PAD
 Sh "13" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 2 "/HSYNC1"
+Ne 3 "/HSYNC0"
 Po 0 -0.02
 $EndPAD
 $PAD
 Sh "14" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 3 "/VSYNC1"
+Ne 8 "/VSYNC0"
 Po 2.29 -0.02
 $EndPAD
 $PAD
 Sh "15" C 1.5 1.5 0 0 0
 Dr 1.05 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 5 "/I2C/DDC Section/SCL_VGA_RX"
 Po 4.58 -0.02
 $EndPAD
 $PAD
 Sh "" C 4.5 4.5 0 0 0
 Dr 3.96 0 0
-At STD N 0020FFFF
+At STD N 00E0FFFF
 Ne 0 ""
 Po 12.595 -2
 .ZoneConnection 0
@@ -134,7 +134,7 @@ $EndPAD
 $PAD
 Sh "" C 4.5 4.5 0 0 0
 Dr 3.96 0 0
-At STD N 0020FFFF
+At STD N 00E0FFFF
 Ne 0 ""
 Po -12.595 -2
 $EndPAD
