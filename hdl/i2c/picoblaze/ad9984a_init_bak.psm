@@ -1,0 +1,104 @@
+;CONSTANT AD9984A_ADDRESS, 4C  ;May need to uncomment this
+
+
+namereg s6, i2c_reg_adr
+namereg s7, i2c_reg_data
+namereg s8, AD9984A_ADDRESS ; May need to comment this line
+
+
+;start: JUMP start
+
+                       CALL I2C_initialise
+                       LOAD AD9984A_ADDRESS, 4C   ; May need to comment this line
+
+                       
+forever:               CALL I2C_start
+                       LOAD s5, 38       ;7-bit slave address IC1
+                       SL0 s5                       ;Write operation signified by LSB = 0
+                       CALL I2C_Tx_byte
+                       CALL I2C_Rx_ACK
+                       
+                       
+                       LOAD s5, AA
+                       CALL I2C_Tx_byte
+                       CALL I2C_Rx_ACK
+                       CALL I2C_stop    
+                       
+                       CALL I2C_start
+                       LOAD s5, 39       ;7-bit slave address IC2
+                       SL0 s5                       ;Write operation signified by LSB = 0
+                       CALL I2C_Tx_byte
+                       CALL I2C_Rx_ACK
+                       
+                       
+                       LOAD s5, 55
+                       CALL I2C_Tx_byte
+                       CALL I2C_Rx_ACK
+                       CALL I2C_stop    
+                       
+                       CALL delay_20ms
+                       CALL delay_20ms
+                       
+                      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ; Now alternate LEDs
+                       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       
+                       CALL I2C_start
+                       LOAD s5, 38       ;7-bit slave address IC1
+                       SL0 s5                       ;Write operation signified by LSB = 0
+                       CALL I2C_Tx_byte
+                       CALL I2C_Rx_ACK
+                       
+                       
+                       LOAD s5, 55
+                       CALL I2C_Tx_byte
+                       CALL I2C_Rx_ACK
+                       CALL I2C_stop    
+                       
+                       CALL I2C_start
+                       LOAD s5, 39       ;7-bit slave address IC2
+                       SL0 s5                       ;Write operation signified by LSB = 0
+                       CALL I2C_Tx_byte
+                       CALL I2C_Rx_ACK
+                       
+                       
+                       LOAD s5, AA
+                       CALL I2C_Tx_byte
+                       CALL I2C_Rx_ACK
+                       CALL I2C_stop
+                       
+                       CALL delay_20ms
+                       CALL delay_20ms
+                       
+                       JUMP forever
+    
+    
+i2c_write_AD9984A:
+    
+    ; I2C START Signal
+    CALL I2C_start
+    
+    ; I2C Write device address with write-bit(LSB=0) set
+    LOAD s5, AD9984A_ADDRESS       ;7-bit I2C device address of AD9984A 
+    SL0 s5                         ;Write operation signified by LSB = 0
+    CALL I2C_Tx_byte
+    CALL I2C_Rx_ACK
+    
+    ; Write AD9984A Register Address
+    LOAD s5, i2c_reg_adr
+    CALL I2C_Tx_byte
+    CALL I2C_Rx_ACK
+    
+    ; Write AD9984A Register Data
+    LOAD s5, i2c_reg_adr
+    CALL I2C_Tx_byte
+    CALL I2C_Rx_ACK
+    
+    ; I2C STOP Signal
+    CALL I2C_stop
+    
+    RETURN
+
+                       
+INCLUDE "soft_delays_100mhz.psm"
+INCLUDE "i2c_routines.psm"                       

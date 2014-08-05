@@ -27,7 +27,7 @@ entity i2c_toplevel is
 			  clk : in  STD_LOGIC);
 end i2c_toplevel;
 
-	architecture Behavioral of i2c_toplevel is
+architecture Behavioral of i2c_toplevel is
 
 constant I2C_PROG : I2C_CONTROLLER_PROG(0 to 167) := (
  (op => DELAY,              arg => b"011",    data => x"E8"),   -- 0:  Startup Delay (1s)
@@ -352,8 +352,8 @@ done <= held;
 
 i3c2_controller: I2CController 
 generic map(
-	CLK_FREQ		 => 100000000, --50000000, --100000000,
-	I2C_TICK_NUM => 248, --123, --248, -- 100KHz, 100MHZ clock
+	CLK_FREQ		 => 100000000,
+	I2C_TICK_NUM => 248, -- 100KHz, 100MHZ clock
 	PROGRAM => I2C_PROG)
 port map(
 	clk 			=> clk,
