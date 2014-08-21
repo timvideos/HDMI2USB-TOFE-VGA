@@ -2,36 +2,15 @@
                    NAMEREG s6, i2c_reg_adr
                    NAMEREG s7, i2c_reg_data
                    NAMEREG s8, AD9984A_ADDRESS ; May need to comment this line
-                   ;start: JUMP start
+            start: ;JUMP start
                    ; Slight delay for startup
                    CALL delay_20ms
                    CALL delay_20ms
                    CALL I2C_initialise
                    LOAD AD9984A_ADDRESS, 4C    ; May need to comment this line
                    CALL AD9984A_init
-          forever: LOAD AD9984A_ADDRESS, 38
-                   LOAD i2c_reg_adr, 00
-                   LOAD i2c_reg_data, AA
-                   CALL i2c_write_AD9984A
-                   LOAD AD9984A_ADDRESS, 39
-                   LOAD i2c_reg_adr, 00
-                   LOAD i2c_reg_data, 55
-                   CALL i2c_write_AD9984A
-                   CALL delay_20ms
-                   CALL delay_20ms
-                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-                   ; Now alternate LEDs
-                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-                   LOAD AD9984A_ADDRESS, 38
-                   LOAD i2c_reg_adr, 00
-                   LOAD i2c_reg_data, 55
-                   CALL i2c_write_AD9984A
-                   LOAD AD9984A_ADDRESS, 39
-                   LOAD i2c_reg_adr, 00
-                   LOAD i2c_reg_data, AA
-                   CALL i2c_write_AD9984A
-                   CALL delay_20ms
-                   CALL delay_20ms
+          forever: 
+                   ;CALL pcf8574a_led_test
                    JUMP forever
      AD9984A_init: 
                    ;--------------------------------
@@ -204,6 +183,31 @@ i2c_write_AD9984A:
                    CALL I2C_Rx_ACK
                    ; I2C STOP Signal
                    CALL I2C_stop
+                   RETURN 
+pcf8574a_led_test: 
+                   LOAD AD9984A_ADDRESS, 38
+                   LOAD i2c_reg_adr, 00
+                   LOAD i2c_reg_data, AA
+                   CALL i2c_write_AD9984A
+                   LOAD AD9984A_ADDRESS, 39
+                   LOAD i2c_reg_adr, 00
+                   LOAD i2c_reg_data, 55
+                   CALL i2c_write_AD9984A
+                   CALL delay_20ms
+                   CALL delay_20ms
+                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                   ; Now alternate LEDs
+                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                   LOAD AD9984A_ADDRESS, 38
+                   LOAD i2c_reg_adr, 00
+                   LOAD i2c_reg_data, 55
+                   CALL i2c_write_AD9984A
+                   LOAD AD9984A_ADDRESS, 39
+                   LOAD i2c_reg_adr, 00
+                   LOAD i2c_reg_data, AA
+                   CALL i2c_write_AD9984A
+                   CALL delay_20ms
+                   CALL delay_20ms
                    RETURN 
                    INCLUDE "soft_delays_100mhz.psm"
                    INCLUDE "i2c_routines.psm"
