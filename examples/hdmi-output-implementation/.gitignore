@@ -1,5 +1,7 @@
 build/
 isim/
+tmp/
+sdsd/
 *.lnk
 /.project
 *.xmsgs
