@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\Rohit\Rohit\Projects\TI_ADC_2014\GSoC\HDL\Ad9984A_Test_v02\ad9984a_v02.ncd
+OUTFILE=G:\Rohit\Rohit\Projects\TI_ADC_2014\GSoC\HDL\Ad9984A_Test_v02\ad9984a_v02.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=G:\Rohit\Rohit\Projects\TI_ADC_2014\GSoC\HDL\Ad9984A_Test_v02
+LICENSE=WebPack
+USER_INFO=__0_0_0
