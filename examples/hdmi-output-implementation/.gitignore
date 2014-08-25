@@ -2,6 +2,7 @@ build/
 isim/
 tmp/
 sdsd/
+*.out
 *.lnk
 /.project
 *.xmsgs
