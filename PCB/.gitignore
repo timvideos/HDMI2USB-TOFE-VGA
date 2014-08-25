@@ -1,0 +1,7 @@
+*.bak
+*.bck
+PCB/vmodvga.kicad_pcb-bak
+*.ps
+*.db
+GSoC_Designs/$i2c.sch
+GSoC_Designs/$vgaExp.sch
