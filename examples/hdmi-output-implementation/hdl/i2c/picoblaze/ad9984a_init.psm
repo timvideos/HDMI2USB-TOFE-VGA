@@ -1,0 +1,292 @@
+;CONSTANT AD9984A_ADDRESS, 4C  ;May need to uncomment this
+
+
+namereg s6, i2c_reg_adr
+namereg s7, i2c_reg_data
+namereg s8, AD9984A_ADDRESS ; May need to comment this line
+
+
+start: ;JUMP start
+    
+    ; Slight delay for startup
+    CALL delay_20ms
+    CALL delay_20ms
+    
+    CALL I2C_initialise
+    LOAD AD9984A_ADDRESS, 4C   ; May need to comment this line
+    CALL AD9984A_init
+                       
+forever:               
+     ;CALL pcf8574a_led_test
+     JUMP forever
+    
+AD9984A_init:
+    
+    
+    ;--------------------------------
+    ; Input and Output Configuration
+    ;--------------------------------
+    
+    ; 0x1E: Input select=0, PWRDWN Polarity to 1 (+) instead of (-) hence B4 instead of B0
+    LOAD i2c_reg_adr,  1E
+    LOAD i2c_reg_data, B4
+    CALL i2c_write_AD9984A
+    
+    ; 0x1F: Output Sel 1
+    LOAD i2c_reg_adr,  1F
+    LOAD i2c_reg_data, 94
+    CALL i2c_write_AD9984A
+    
+    ; 0x20: Output Sel 2 #Enabled Filter with 0x07 [alt: 0x05]
+    LOAD i2c_reg_adr,  20
+    LOAD i2c_reg_data, 07
+    CALL i2c_write_AD9984A
+    
+    
+    ;-----------------
+    ; Analog settings
+    ;-----------------
+    
+    ; 0x05: red gain[8:2]
+    LOAD i2c_reg_adr,  05
+    LOAD i2c_reg_data, 40
+    CALL i2c_write_AD9984A
+    
+    ; 0x06: red gain[1:0]
+    LOAD i2c_reg_adr,  06
+    LOAD i2c_reg_data, 00
+    CALL i2c_write_AD9984A
+    
+    ; 0x07: grn gain[8:2]
+    LOAD i2c_reg_adr,  07
+    LOAD i2c_reg_data, 40
+    CALL i2c_write_AD9984A
+    
+    ; 0x08: grn gain[1:0]
+    LOAD i2c_reg_adr,  08
+    LOAD i2c_reg_data, 00
+    CALL i2c_write_AD9984A
+    
+    ; 0x09: blu gain[8:2]
+    LOAD i2c_reg_adr,  09
+    LOAD i2c_reg_data, 40
+    CALL i2c_write_AD9984A
+    
+    ; 0x0A: blu gain[1:0]
+    LOAD i2c_reg_adr,  0A
+    LOAD i2c_reg_data, 00
+    CALL i2c_write_AD9984A
+    
+    ; 0x0B: red offset[10:3] #[Alt: 0x00]
+    LOAD i2c_reg_adr,  0B
+    LOAD i2c_reg_data, FF
+    CALL i2c_write_AD9984A
+    
+    ; 0x0C: red offset[2:0] #[Alt: 0x80]
+    LOAD i2c_reg_adr,  0C
+    LOAD i2c_reg_data, FF
+    CALL i2c_write_AD9984A
+    
+    ; 0x0D: grn offset[10:3] #[Alt: 0x00]
+    LOAD i2c_reg_adr,  0D
+    LOAD i2c_reg_data, FF
+    CALL i2c_write_AD9984A
+    
+    ; 0x0E: grn offset[2:0] #[Alt: 0x80]
+    LOAD i2c_reg_adr,  0E
+    LOAD i2c_reg_data, FF
+    CALL i2c_write_AD9984A
+    
+    ; 0x0F: blu offset[10:3] #[Alt: 0x00]
+    LOAD i2c_reg_adr,  0F
+    LOAD i2c_reg_data, FF
+    CALL i2c_write_AD9984A
+    
+    ; 0x10: blu offset[2:0] #[Alt: 0x80]
+    LOAD i2c_reg_adr,  10
+    LOAD i2c_reg_data, FF
+    CALL i2c_write_AD9984A
+    
+    ; 0x1B: Clamp and offset, Turn on auto offset with 0x3B #Disable auto-offset with 0x1B [alt:0x2B]
+    LOAD i2c_reg_adr,  1B
+    LOAD i2c_reg_data, 1B
+    CALL i2c_write_AD9984A
+    
+    ; 0x3C: Auto Gain, Enable auto gain matching
+    LOAD i2c_reg_adr,  3C
+    LOAD i2c_reg_data, 0E
+    CALL i2c_write_AD9984A
+    
+    
+    ;-------------------------------
+    ; Required Test Register Writes
+    ;-------------------------------
+        
+    ; 0x2D: 
+    LOAD i2c_reg_adr,  2D
+    LOAD i2c_reg_data, E8
+    CALL i2c_write_AD9984A
+    
+    ; 0x2E: 
+    LOAD i2c_reg_adr,  2E
+    LOAD i2c_reg_data, E0
+    CALL i2c_write_AD9984A
+    
+    ; 0x28:
+    LOAD i2c_reg_adr,  28
+    LOAD i2c_reg_data, BF
+    CALL i2c_write_AD9984A
+    
+    ; 0x29:
+    LOAD i2c_reg_adr,  29
+    LOAD i2c_reg_data, 02
+    CALL i2c_write_AD9984A
+    
+    
+    ;-----------------
+    ; Timing Settings
+    ;-----------------
+    
+    ; 0x01: PLLDIV[11:4]
+    LOAD i2c_reg_adr,  01
+    LOAD i2c_reg_data, 54
+    CALL i2c_write_AD9984A
+    
+    ; 0x02: PLLDIV[3:0]
+    LOAD i2c_reg_adr,  02
+    LOAD i2c_reg_data, 00
+    CALL i2c_write_AD9984A
+    
+    ; 0x03: VCO Ctrl
+    LOAD i2c_reg_adr,  03
+    LOAD i2c_reg_data, A0
+    CALL i2c_write_AD9984A
+    
+    ; 0x04: Phase adjust
+    LOAD i2c_reg_adr,  04
+    LOAD i2c_reg_data, 80
+    CALL i2c_write_AD9984A
+    
+    ; 0x13: HS width = 136 pixel clks = 0x88
+    LOAD i2c_reg_adr,  13
+    LOAD i2c_reg_data, 88
+    CALL i2c_write_AD9984A
+    
+    ; 0x19: Clamp Placement [alt: 0x04]
+    LOAD i2c_reg_adr,  19
+    LOAD i2c_reg_data, 01
+    CALL i2c_write_AD9984A
+    
+    ; 0x1A: Clamp duration [alt: 0x82]
+    LOAD i2c_reg_adr,  1A
+    LOAD i2c_reg_data, 8C
+    CALL i2c_write_AD9984A
+    
+    
+    ;-----------------
+    ; VSYNC Control
+    ;-----------------
+    
+    ; 0x14: Enable VSYNC Filter
+    LOAD i2c_reg_adr,  14
+    LOAD i2c_reg_data, 1C
+    CALL i2c_write_AD9984A
+    
+    ; 0x15: Set VSYNC duration to 6 HSYNCs
+    LOAD i2c_reg_adr,  15
+    LOAD i2c_reg_data, 06
+    CALL i2c_write_AD9984A
+    
+    ; 0x16: Precoast
+    LOAD i2c_reg_adr,  16
+    LOAD i2c_reg_data, 03
+    CALL i2c_write_AD9984A
+    
+    ; 0x17: Postcoast
+    LOAD i2c_reg_adr,  17
+    LOAD i2c_reg_data, 06
+    CALL i2c_write_AD9984A
+    
+    
+    ;-----------------
+    ; SOG Control
+    ;-----------------
+    
+    ; 0x1D: Enable Raw HSYNCs on SOGOUT 
+    LOAD i2c_reg_adr,  1D
+    LOAD i2c_reg_data, 7D
+    CALL i2c_write_AD9984A
+    
+    ;All Done! Now return to calling part
+    RETURN
+
+    
+    
+    
+    
+i2c_write_AD9984A:
+    
+    ; I2C START Signal
+    CALL I2C_start
+    
+    ; I2C Write device address with write-bit(LSB=0) set
+    LOAD s5, AD9984A_ADDRESS       ;7-bit I2C device address of AD9984A 
+    SL0 s5                         ;Write operation signified by LSB = 0
+    CALL I2C_Tx_byte
+    CALL I2C_Rx_ACK
+    
+    ; Write AD9984A Register Address
+    LOAD s5, i2c_reg_adr
+    CALL I2C_Tx_byte
+    CALL I2C_Rx_ACK
+    
+    ; Write AD9984A Register Data
+    LOAD s5, i2c_reg_data
+    CALL I2C_Tx_byte
+    CALL I2C_Rx_ACK
+    
+    ; I2C STOP Signal
+    CALL I2C_stop
+    
+    RETURN
+
+pcf8574a_led_test:
+    
+    LOAD AD9984A_ADDRESS, 38
+    LOAD i2c_reg_adr, 00
+    LOAD i2c_reg_data, AA
+    CALL i2c_write_AD9984A
+    
+    LOAD AD9984A_ADDRESS, 39
+    LOAD i2c_reg_adr, 00
+    LOAD i2c_reg_data, 55
+    CALL i2c_write_AD9984A
+    
+                       
+    CALL delay_20ms
+    CALL delay_20ms
+           
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ; Now alternate LEDs
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       
+    LOAD AD9984A_ADDRESS, 38
+    LOAD i2c_reg_adr, 00
+    LOAD i2c_reg_data, 55
+    CALL i2c_write_AD9984A
+                       
+    LOAD AD9984A_ADDRESS, 39
+    LOAD i2c_reg_adr, 00
+    LOAD i2c_reg_data, AA
+    CALL i2c_write_AD9984A
+                       
+    CALL delay_20ms
+    CALL delay_20ms
+    
+    RETURN
+    
+    
+    
+    
+INCLUDE "soft_delays_100mhz.psm"
+INCLUDE "i2c_routines.psm"                       

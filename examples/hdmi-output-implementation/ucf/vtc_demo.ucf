@@ -1,0 +1,202 @@
+##############################################################################
+## Copyright (c) 2009 Xilinx, Inc.
+## This design is confidential and proprietary of Xilinx, All Rights Reserved.
+##############################################################################
+##   ____  ____
+##  /   /\/   /
+## /___/  \  /   Vendor:        Xilinx
+## \   \   \/    Version:       1.0.0
+##  \   \        Filename:      vtc_demo.ucf
+##  /   /        Date Created:  April, 2009
+## /___/   /\    
+## \   \  /  \
+##  \___\/\___\
+##
+## Devices:   Spartan-36Generation FPGA
+## Purpose:   Constraint file for programmable video timing controller
+## Contact:   bob.feng@xilinx.com
+## Reference: None
+##
+## Revision History:
+## 
+##
+##############################################################################
+##
+## LIMITED WARRANTY AND DISCLAIMER. These designs are provided to you "as is".
+## Xilinx and its licensors make and you receive no warranties or conditions,
+## express, implied, statutory or otherwise, and Xilinx specifically disclaims
+## any implied warranties of merchantability, non-infringement, or fitness for
+## a particular purpose. Xilinx does not warrant that the functions contained
+## in these designs will meet your requirements, or that the operation of
+## these designs will be uninterrupted or error free, or that defects in the
+## designs will be corrected. Furthermore, Xilinx does not warrant or make any
+## representations regarding use or the results of the use of the designs in
+## terms of correctness, accuracy, reliability, or otherwise.
+##
+## LIMITATION OF LIABILITY. In no event will Xilinx or its licensors be liable
+## for any loss of data, lost profits, cost or procurement of substitute goods
+## or services, or for any special, incidental, consequential, or indirect
+## damages arising from the use or operation of the designs or accompanying
+## documentation, however caused and on any theory of liability. This
+## limitation will apply even if Xilinx has been advised of the possibility
+## of such damage. This limitation shall apply not-withstanding the failure
+## of the essential purpose of any limited remedies herein.
+##
+##############################################################################
+## Copyright (c) 2009 Xilinx, Inc.
+## This design is confidential and proprietary of Xilinx, All Rights Reserved.
+##############################################################################
+
+###########################################
+# Setting VCCAUX for different SP601 board
+###########################################
+VCCAUX = 3.3;
+
+########################################
+# Reset button and LEDs
+########################################
+NET "RSTBTN"        LOC = "N4";
+NET "LED<0>"   LOC = "U18" |IOSTANDARD = LVCMOS33;
+NET "LED<1>"   LOC = "M14" |IOSTANDARD = LVCMOS33;
+NET "LED<2>"   LOC = "N14" |IOSTANDARD = LVCMOS33;
+NET "LED<3>"   LOC = "L14" |IOSTANDARD = LVCMOS33;
+NET "LED<4>"   LOC = "M13" |IOSTANDARD = LVCMOS33;
+NET "LED<5>"   LOC = "D4"  |IOSTANDARD = LVCMOS33;
+NET "LED<6>"   LOC = "P16" |IOSTANDARD = LVCMOS33;
+NET "LED<7>"   LOC = "N12" |IOSTANDARD = LVCMOS33;
+
+##############################################################################
+# SYSCLK Input
+##############################################################################
+
+NET "DATACK" CLOCK_DEDICATED_ROUTE = FALSE;
+
+NET "SYS_CLK"       LOC = "L15"|IOSTANDARD = LVCMOS33 ;
+#PIN "sysclk_BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "SYS_CLK_BUFGP/BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE; 
+##############################################################################
+# Mechanical Switches (SW)
+#############################################################################
+
+NET "SW<0>"         LOC = "A10" | IOSTANDARD = LVCMOS33 ;
+NET "SW<1>"         LOC = "D14" | IOSTANDARD = LVCMOS33 ;
+NET "SW<2>"         LOC = "C14" | IOSTANDARD = LVCMOS33 ;
+NET "SW<3>"         LOC = "P15" | IOSTANDARD = LVCMOS33 ;
+
+##############################################################################
+# Debug Port # JA1
+##############################################################################
+NET "DEBUG[0]" LOC = "B12" | IOSTANDARD = LVCMOS33;
+NET "DEBUG[1]" LOC = "B11" | IOSTANDARD = LVCMOS33;
+
+NET "uart_tx" LOC = "B16"	| IOSTANDARD = LVCMOS33;
+##############################################################################
+# DCM/PLL/BUFPLL positions
+##############################################################################
+#INST "PCLK_GEN_INST" LOC = "DCM_X0Y3"; 
+#INST "PLL_OSERDES"   LOC = "PLL_ADV_X0Y1";
+#INST "ioclk_buf"     LOC = "BUFPLL_X1Y0";
+
+###########################################
+# Timing Constraints
+###########################################
+NET "dataclk" TNM_NET = "TNM_DATACK";
+TIMESPEC "TS_DATACK" = PERIOD "TNM_DATACK" 15.384 ns HIGH 50 % PRIORITY 0 ;
+
+NET "pclk" TNM_NET = "TNM_PCLK";
+TIMESPEC "TS_PCLK" = PERIOD "TNM_PCLK" 15.384 ns HIGH 50 % PRIORITY 0 ;
+#
+#NET "pclkx2" TNM_NET = "TNM_PCLKX2";
+#TIMESPEC "TS_PCLKX2" = PERIOD "TNM_PCLKX2" TS_PCLK * 2;
+#
+#NET "pclkx10" TNM_NET = "TNM_PCLKX10";
+#TIMESPEC "TS_PCLKX10" = PERIOD "TNM_PCLKX10" TS_PCLK * 10;
+
+#
+# Multi-cycle paths
+#
+TIMEGRP "bramgrp" = RAMS(dvi_tx/pixel2x/dataint<*>);  
+TIMEGRP "fddbgrp" = FFS(dvi_tx/pixel2x/db<*>);
+TIMEGRP "bramra" = FFS(dvi_tx/pixel2x/ra<*>);
+#TIMEGRP "bramgrp" = RAMS(enc0/pixel2x/dataint<*>);  
+#TIMEGRP "fddbgrp" = FFS(enc0/pixel2x/db<*>);
+#TIMEGRP "bramra" = FFS(enc0/pixel2x/ra<*>);
+TIMESPEC "TS_ramdo" = FROM "bramgrp" TO "fddbgrp" TS_PCLK;
+TIMESPEC "TS_ramra" = FROM "bramra" TO "fddbgrp" TS_PCLK;
+
+############################
+# TMDS pairs on the top
+############################
+#NET "TMDS(0)"  	LOC = "C7" | IOSTANDARD = TMDS_33 ; # Blue
+#NET "TMDSB(0)"  LOC = "A7" | IOSTANDARD = TMDS_33 ;
+#NET "TMDS(1)"  	LOC = "D8" | IOSTANDARD = TMDS_33 ; # Red
+#NET "TMDSB(1)"  LOC = "C8" | IOSTANDARD = TMDS_33 ;
+#NET "TMDS(2)"  	LOC = "B6" | IOSTANDARD = TMDS_33 ; # Green
+#NET "TMDSB(2)"  LOC = "A6" | IOSTANDARD = TMDS_33 ;
+#NET "TMDS(3)"  	LOC = "B8" | IOSTANDARD = TMDS_33 ; # Clock
+#NET "TMDSB(3)"  LOC = "A8" | IOSTANDARD = TMDS_33 ;
+
+NET "TMDS(0)"  	LOC = "D8" | IOSTANDARD = TMDS_33 ; # Blue
+NET "TMDSB(0)"  LOC = "C8" | IOSTANDARD = TMDS_33 ;
+NET "TMDS(1)"  	LOC = "C7" | IOSTANDARD = TMDS_33 ; # Red
+NET "TMDSB(1)"  LOC = "A7" | IOSTANDARD = TMDS_33 ;
+NET "TMDS(2)"  	LOC = "B8" | IOSTANDARD = TMDS_33 ; # Green
+NET "TMDSB(2)"  LOC = "A8" | IOSTANDARD = TMDS_33 ;
+NET "TMDS(3)"  	LOC = "B6" | IOSTANDARD = TMDS_33 ; # Clock
+NET "TMDSB(3)"  LOC = "A6" | IOSTANDARD = TMDS_33 ;
+
+#############################################################################
+#ADDED Constraints for vMod-VGA
+#NET "VSOUT" CLOCK_DEDICATED_ROUTE = FALSE;
+#NET "HSOUT" CLOCK_DEDICATED_ROUTE = FALSE;
+
+
+ # onboard VHDCI
+# Channnel 1 connects to P signals, Channel 2 to N signals
+ NET "VSOUT"  LOC = "U16" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L2P_CMPCLK,       Sch name = EXP-IO1_P
+ NET "HSOUT"  LOC = "U15" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L5P,        		Sch name = EXP-IO2_P
+ NET "SOGOUT"  LOC = "U13" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L14P_D11,        Sch name = EXP-IO3_P
+ NET "R<8>"  LOC = "M11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L15P,        		Sch name = EXP-IO4_P
+ NET "R<7>"  LOC = "R11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L16P,        		Sch name = EXP-IO5_P
+ NET "R<6>"  LOC = "T12" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L19P,        		Sch name = EXP-IO6_P
+ NET "R<5>"  LOC = "N10" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L20P,        		Sch name = EXP-IO7_P
+ NET "R<3>"  LOC = "M10" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L22P,        		Sch name = EXP-IO8_P
+ NET "R<2>"  LOC = "U11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L23P,        		Sch name = EXP-IO9_P
+ NET "R<1>"  LOC = "R10" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L29P_GCLK3,       	Sch name = EXP-IO10_P
+ NET "R<0>" LOC = "U10" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L30P_GCLK1_D13,   	Sch name = EXP-IO11_P
+ NET "G<3>" LOC = "R8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L31P_GCLK31_D14,  	Sch name = EXP-IO12_P
+ NET "G<2>" LOC = "M8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L40P,        		Sch name = EXP-IO13_P
+ NET "B<9>" LOC = "U8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L41P,        			Sch name = EXP-IO14_P
+ NET "B<8>" LOC = "U7" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L43P,        			Sch name = EXP-IO15_P
+ NET "B<5>" LOC = "N7" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L44P,        		Sch name = EXP-IO16_P
+ NET "B<4>" LOC = "T6" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L45P,        			Sch name = EXP-IO17_P
+ NET "B<1>" LOC = "R7" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L46P,        			Sch name = EXP-IO18_P
+ NET "B<0>" LOC = "N6" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L47P,        		Sch name = EXP-IO19_P
+ NET "SDA" LOC = "U5"| IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_49P_D3,        		Sch name = EXP-IO20_P
+
+ #NET "OE_FIELD"  LOC = "V16"; # Bank = 2,  Pin name = IO_L2N_CMPMOSI,  Sch name = EXP-IO1_N
+ #NET "PWRDWN"  LOC = "V15"; # Bank = 2,  Pin name = *IO_L5N,        	Sch name = EXP-IO2_N
+ NET "R<9>"  LOC = "V13" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L14N_D12,        	Sch name = EXP-IO3_N
+ NET "G<9>"  LOC = "N11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L15N,        		Sch name = EXP-IO4_N
+ NET "G<8>"  LOC = "T11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L16N_VREF,        	Sch name = EXP-IO5_N
+ NET "G<7>"  LOC = "V12" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L19N,        		Sch name = EXP-IO6_N
+ NET "R<4>"  LOC = "P11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = *IO_L20N,        		Sch name = EXP-IO7_N
+ NET "G<6>"  LOC = "N9" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L22N,        		Sch name = EXP-IO8_N
+ NET "G<5>"  LOC = "V11" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L23N,        		Sch name = EXP-IO9_N
+ NET "DATACK"  LOC = "T10" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L29N_GCLK2,      Sch name = EXP-IO10_N
+ NET "G<4>" LOC = "V10" |IOSTANDARD = LVCMOS33 ; # Bank = 2,  Pin name = IO_L30N_GCLK0_USERCCLK,Sch name = EXP-IO11_N
+ NET "G<1>" LOC = "T8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L31N_GCLK30_D15,    Sch name = EXP-IO12_N
+ NET "G<0>" LOC = "N8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L40N,        		Sch name = EXP-IO13_N
+ NET "B<6>" LOC = "V8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L41N_VREF,        	Sch name = EXP-IO14_N
+ NET "B<7>" LOC = "V7" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L43N,        			Sch name = EXP-IO15_N
+ NET "B<3>" LOC = "P8" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = *IO_L44N,        		Sch name = EXP-IO16_N
+ NET "B<2>" LOC = "V6" |IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_L45N,        			Sch name = EXP-IO17_N
+ #NET "CLAMP" LOC = "T7";  # Bank = 2,  Pin name = IO_L46N,        		Sch name = EXP-IO18_N
+ #NET "COAST" LOC = "P7";  # Bank = 2,  Pin name = *IO_L47N,        		Sch name = EXP-IO19_N
+ NET "SCL" LOC = "V5"| IOSTANDARD = LVCMOS33 ;  # Bank = 2,  Pin name = IO_49N_D4,        		Sch name = EXP-IO20_N 
+
+
+
+
+
+##############################################################################
