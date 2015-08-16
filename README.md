@@ -1,10 +1,22 @@
 # HDMI2USB-vmodvga
 
-
 VGA capture expansion board for HDMI2USB (or Digilent Atlys prototype board).
 
-## GSoC Project Report: VGA capture expansion board for HDMI2USB on Digilent Atlys
 
+## Documentation
+
+ * [Project blog](https://dreamsxtrinsic.blogspot.com/) for weekly and daily updates
+ * [vMod-VGA Code Block Diagram](https://docs.google.com/drawings/d/1-_QcqhuEnqGTb0JCZim7DaP1v0BfKb7fcv-28n1iaC0/edit?usp=sharing)
+ * [Code structure explained in this document](https://docs.google.com/document/d/11dfCeLtNUrjcst97REtgqLIln-_pKwHgGT3xKjOamxs/edit?usp=sharing)
+ * [vMod-VGA VHDCI Pin Usage](https://docs.google.com/spreadsheets/d/1f-rBfR98f_ZZNIB7GFV79CGSHQNpj47uOU0JDwOJnV8/edit?usp=sharing)
+ * [AD9984A Register Settings](https://docs.google.com/spreadsheets/d/1GH8NDtB8ceGhJEVZQujcXdxDPSw_wLqhg_3s436kkSs/edit?usp=sharing) for easier register settings
+ * [Code Test points](https://docs.google.com/spreadsheets/d/12sMpliuKs6eSY12Fc8JHHKd0Y-Cz1OmEMRZJ5Vne3Vg/edit?usp=sharing) I compiled during whole project during
+ * [Autodetection guidelines](https://docs.google.com/document/d/1ZhDz50rve5UmnmyKynxySLHqfFuOwBPM7pYFoHo9uvs/edit?usp=sharing)
+ * [I2C Tools & Debugging](https://docs.google.com/document/d/1rNem5J1_V4QUOei_MHRzZVJfjsTon8fnE3eTlhzsrj8/edit?usp=sharing)
+ * [PCB v02 Requirements Doc](https://docs.google.com/document/d/1EVi7m_RxV2RLTFDjguj92tawxPkJdG1kjHW0T4Z_cDw/edit?usp=sharing)
+
+
+# GSoC Project Report: VGA capture expansion board for HDMI2USB on Digilent Atlys
 
 By Rohit | Published [Saturday, August 30,
 2014](http://dreamsxtrinsic.blogspot.de/2014/08/gsoc-project-report-vga-capture.html "2014-08-30T17:25:00+05:30")
@@ -77,9 +89,10 @@ bridge, EDID hacking & logging and test infrastructure (not yet
 ## How to replicate results
 
 Required:
-1.  Digilent Atlys
-2.  Properly set up Xilinx and Digilent toolchain. Refer to [HDMI2USB Wiki](https://github.com/timvideos/HDMI2USB/wiki) for this
-3.  VGA Capture Expansion PCB
+
+ 1. Digilent Atlys
+ 2. Properly set up Xilinx and Digilent toolchain. Refer to [HDMI2USB Wiki](https://github.com/timvideos/HDMI2USB/wiki) for this
+ 3. VGA Capture Expansion PCB
 
 Repository Link:
 [https://github.com/rohit91/HDMI2USB-vmodvga](https://github.com/rohit91/HDMI2USB-vmodvga)
@@ -131,17 +144,6 @@ Minor:
  * Add Autodetection code.
  * Add UART-I2C bridge
 
-## Documentation
-
- * [Project blog](https://dreamsxtrinsic.blogspot.com/) for weekly and daily updates
- * [vMod-VGA Code Block Diagram](https://docs.google.com/drawings/d/1-_QcqhuEnqGTb0JCZim7DaP1v0BfKb7fcv-28n1iaC0/edit?usp=sharing)
- * [Code structure explained in this document](https://docs.google.com/document/d/11dfCeLtNUrjcst97REtgqLIln-_pKwHgGT3xKjOamxs/edit?usp=sharing)
- * [vMod-VGA VHDCI Pin Usage](https://docs.google.com/spreadsheets/d/1f-rBfR98f_ZZNIB7GFV79CGSHQNpj47uOU0JDwOJnV8/edit?usp=sharing)
- * [AD9984A Register Settings](https://docs.google.com/spreadsheets/d/1GH8NDtB8ceGhJEVZQujcXdxDPSw_wLqhg_3s436kkSs/edit?usp=sharing) for easier register settings
- * [Code Test points](https://docs.google.com/spreadsheets/d/12sMpliuKs6eSY12Fc8JHHKd0Y-Cz1OmEMRZJ5Vne3Vg/edit?usp=sharing) I compiled during whole project during
- * [Autodetection guidelines](https://docs.google.com/document/d/1ZhDz50rve5UmnmyKynxySLHqfFuOwBPM7pYFoHo9uvs/edit?usp=sharing)
- * [I2C Tools & Debugging](https://docs.google.com/document/d/1rNem5J1_V4QUOei_MHRzZVJfjsTon8fnE3eTlhzsrj8/edit?usp=sharing)
- * [PCB v02 Requirements Doc](https://docs.google.com/document/d/1EVi7m_RxV2RLTFDjguj92tawxPkJdG1kjHW0T4Z_cDw/edit?usp=sharing)
 
 ## Learnings
 
