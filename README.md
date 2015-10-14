@@ -28,6 +28,14 @@ following image for the many potential designs;
 For full details on the TOFE mechanical specification, see the
 [mechanical](http://hdmi2usb.tv/tofe#mechanical) part of the specification.
 
+#### Full Height Board
+
+![TOFE Examples Diagram](img/tofe-full-height.png)
+
+#### Half Height Board
+
+![TOFE Examples Diagram](img/tofe-half-height.png)
+
 ## KiCad
 
 The design in this repository was made using [KiCad](http://www.kicad-pcb.org/)
