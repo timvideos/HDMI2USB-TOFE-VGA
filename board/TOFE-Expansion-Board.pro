@@ -62,3 +62,5 @@ LibName9=adc-dac
 LibName10=memory
 LibName11=xilinx
 LibName12=TOFE
+LibName13=EEPROM
+LibName14=TOFE-Expansion-Board-cache
