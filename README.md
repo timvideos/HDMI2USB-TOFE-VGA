@@ -12,6 +12,7 @@ For the [KiCad website](http://kicad-pcb.org/) for more information on using it.
  2. Rename your repository in the GitHub settings.
  3. Create your schematic based on provided KiCad schematic.
  4. Choose either the full height or half height ("low profile") PCB layout.
+ 5. (optional) Send [mithro](mailto:mithro@mithis.com) about your awesome work!
 
  * Your schematic should include an EEPROM (either real or emulated) on the
    ID_CLK and ID_DAT lines.
