@@ -1,5 +1,5 @@
 
-# TOFE Expansion Board Template for KiCad
+# TOFE Expansion Board template for KiCad
 
 This repository contains a template for creating TOFE expansion boards.
 
