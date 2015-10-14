@@ -17,6 +17,16 @@ For the [KiCad website](http://kicad-pcb.org/) for more information on using it.
    ID_CLK and ID_DAT lines.
  * Your schematic should include a TOFE header.
 
+## Board Design
+
+The TOFE specification is very flexible regarding board shape. See the
+following image for the many potential designs;
+
+![TOFE Examples Diagram](http://hdmi2usb.tv/img/tofe/tofe-examples-full-height.png)
+
+For full details on the TOFE mechanical specification, see the
+[mechanical](http://hdmi2usb.tv/tofe#mechanical) part of the specification.
+
 ## KiCad
 
 The design in this repository was made using [KiCad](http://www.kicad-pcb.org/)
