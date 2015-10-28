@@ -1,7 +1,30 @@
-# HDMI2USB-vmodvga
+# VGA TOFE Expansion Board
 
-VGA capture expansion board for HDMI2USB (or Digilent Atlys prototype board).
+This repository contains a TOFE board for VGA capture based on 
+[Rohit's vmodvga board](https://github.com/timvideos/HDMI2USB-vmodvga).
 
+For [more information on the TOFE interface, see the HDMI2USB website](http://hdmi2usb.tv/tofe).
+For the [KiCad website](http://kicad-pcb.org/) for more information on using it.
+
+## License
+
+The contents of this repository excluding "third_party" folder is released
+under your choice of the following two licences:
+
+ * the "Creative Commons Attribution-ShareAlike 4.0 International License" (CC
+   BY-SA 4.0) full text of this license is included in the LICENSE file and a
+   copy can also be found at http://creativecommons.org/licenses/by-sa/4.0/
+
+ * the "TAPR Open Hardware License" full text of this license is included in
+   the LICENSE file and a copy can also be found at http://www.tapr.org/OHL
+
+Both these licenses are "share and share alike" licenses and require **any**
+derivative work to also be released. Please read the license fully to make sure
+you comply with all your obligations.  
+
+----
+
+Original documentation from vmodvga board.
 
 ## Documentation
 
