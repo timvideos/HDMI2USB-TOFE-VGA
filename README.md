@@ -49,6 +49,10 @@ version **4.0.0-rc1-stable**
 ([this version is the current stable release candidate](http://kicad-pcb.org/download/) 
 as of 2015-10-29).
 
+A version for the older KiCad found in Ubuntu Trusty can be found in the
+[for-kicad-2013-07-07-BZR-4022](https://github.com/timvideos/HDMI2USB-TOFE-kicad-template/tree/for-kicad-2013-07-07-BZR-4022)
+branch.
+
 ## License
 
 TOFE Expansion Board template for KiCad by Numato Systems Pvt. Ltd
