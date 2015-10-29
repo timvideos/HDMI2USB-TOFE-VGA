@@ -45,8 +45,9 @@ For full details on the TOFE mechanical specification, see the
 ## KiCad
 
 The design in this repository was made using [KiCad](http://www.kicad-pcb.org/)
-version **2013-07-07 BZR 4022**
-([the version is Ubuntu Trusty](http://packages.ubuntu.com/trusty/kicad)).
+version **4.0.0-rc1-stable**
+([this version is the current stable release candidate](http://kicad-pcb.org/download/) 
+as of 2015-10-29).
 
 ## License
 
