@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:TOFE-VGA-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -13,8 +14,7 @@ LIBS:xilinx
 LIBS:TOFE
 LIBS:EEPROM
 LIBS:TOFE-VGA-cache
-LIBS:TOFE-VGA-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -29,7 +29,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L TOFE-8X U1
+L TOFE-8X U8
 U 1 1 561CABB0
 P 5450 5200
 F 0 "U8" H 5450 2350 60  0000 C CNN
@@ -94,7 +94,7 @@ F 3 "" H 6250 2100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R22
+L R-RESCUE-TOFE-VGA R22
 U 1 1 561E30B1
 P 3950 9000
 F 0 "R22" V 4030 9000 40  0000 C CNN
@@ -105,7 +105,7 @@ F 3 "~" H 3950 9000 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R15
+L R-RESCUE-TOFE-VGA R15
 U 1 1 561E30BD
 P 3750 9000
 F 0 "R15" V 3830 9000 40  0000 C CNN
@@ -118,7 +118,7 @@ $EndComp
 Text Label 6000 9350 2    60   ~ 12
 GND
 $Comp
-L C C29
+L C-RESCUE-TOFE-VGA C29
 U 1 1 561E3D38
 P 6000 9900
 F 0 "C29" H 6000 10000 40  0000 L CNN

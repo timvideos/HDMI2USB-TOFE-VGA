@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:vgaExp-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -10,7 +11,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -29,11 +29,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:24AA014
-LIBS:vmodvga
-LIBS:testpoint
 LIBS:vgaExp-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -48,9 +45,11 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ADP3303-3V3 U1
+L ADP3303-3v3 U1
 U 1 1 53727ED8
 P 1700 4150
+AR Path="/53727ED8" Ref="U1"  Part="1" 
+AR Path="/53727A78/53727ED8" Ref="U1"  Part="1" 
 F 0 "U1" H 1800 3800 60  0000 C CNN
 F 1 "ADP3303-3V3" H 1750 4550 60  0000 C CNN
 F 2 "~" H 1500 4300 60  0000 C CNN
@@ -81,7 +80,7 @@ F 3 "~" H 7300 4450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L C-RESCUE-vgaExp C2
 U 1 1 53727F7A
 P 2800 4250
 F 0 "C2" H 2800 4350 40  0000 L CNN
@@ -92,7 +91,7 @@ F 3 "~" H 2800 4250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1 Cp1
+L CP1-RESCUE-vgaExp Cp1
 U 1 1 53727FAC
 P 1050 4950
 F 0 "Cp1" H 1100 5050 50  0000 L CNN
@@ -103,7 +102,7 @@ F 3 "~" H 1050 4950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1 Cp5
+L CP1-RESCUE-vgaExp Cp5
 U 1 1 53727FC3
 P 2450 4250
 F 0 "Cp5" H 2500 4350 50  0000 L CNN
@@ -114,7 +113,7 @@ F 3 "~" H 2450 4250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C3
+L C-RESCUE-vgaExp C3
 U 1 1 53727FE7
 P 3050 4250
 F 0 "C3" H 3050 4350 40  0000 L CNN
@@ -125,7 +124,7 @@ F 3 "~" H 3050 4250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L C-RESCUE-vgaExp C4
 U 1 1 53727FED
 P 3250 4250
 F 0 "C4" H 3250 4350 40  0000 L CNN
@@ -136,7 +135,7 @@ F 3 "~" H 3250 4250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C5
+L C-RESCUE-vgaExp C5
 U 1 1 53727FF3
 P 3450 4250
 F 0 "C5" H 3450 4350 40  0000 L CNN
@@ -159,7 +158,7 @@ GND
 NoConn ~ 2200 3900
 NoConn ~ 2200 4200
 $Comp
-L CP1 Cp2
+L CP1-RESCUE-vgaExp Cp2
 U 1 1 537281B1
 P 4500 2650
 F 0 "Cp2" H 4550 2750 50  0000 L CNN
@@ -170,7 +169,7 @@ F 3 "~" H 4500 2650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1 Cp3
+L CP1-RESCUE-vgaExp Cp3
 U 1 1 537281B7
 P 6500 2350
 F 0 "Cp3" H 6550 2450 50  0000 L CNN
@@ -181,7 +180,7 @@ F 3 "~" H 6500 2350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C17
+L C-RESCUE-vgaExp C17
 U 1 1 537281BD
 P 6750 2350
 F 0 "C17" H 6750 2450 40  0000 L CNN
@@ -192,7 +191,7 @@ F 3 "~" H 6750 2350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C18
+L C-RESCUE-vgaExp C18
 U 1 1 537281C3
 P 6950 2350
 F 0 "C18" H 6950 2450 40  0000 L CNN
@@ -203,7 +202,7 @@ F 3 "~" H 6950 2350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C19
+L C-RESCUE-vgaExp C19
 U 1 1 537281C9
 P 7150 2350
 F 0 "C19" H 7150 2450 40  0000 L CNN
@@ -214,7 +213,7 @@ F 3 "~" H 7150 2350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R13
+L R-RESCUE-vgaExp R13
 U 1 1 537281D1
 P 5950 2050
 F 0 "R13" V 6030 2050 40  0000 C CNN
@@ -225,7 +224,7 @@ F 3 "~" H 5950 2050 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R14
+L R-RESCUE-vgaExp R14
 U 1 1 537281E8
 P 6250 2400
 F 0 "R14" V 6330 2400 40  0000 C CNN
@@ -245,7 +244,7 @@ GND
 Text Label 7250 2150 0    60   ~ 0
 PVD
 $Comp
-L CP1 Cp4
+L CP1-RESCUE-vgaExp Cp4
 U 1 1 5372878B
 P 6850 4750
 F 0 "Cp4" H 6900 4850 50  0000 L CNN
@@ -256,7 +255,7 @@ F 3 "~" H 6850 4750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R17
+L R-RESCUE-vgaExp R17
 U 1 1 53728791
 P 8350 4200
 F 0 "R17" V 8430 4200 40  0000 C CNN
@@ -267,7 +266,7 @@ F 3 "~" H 8350 4200 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R18
+L R-RESCUE-vgaExp R18
 U 1 1 53728797
 P 8700 4550
 F 0 "R18" V 8780 4550 40  0000 C CNN
@@ -278,7 +277,7 @@ F 3 "~" H 8700 4550 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L CP1 Cp6
+L CP1-RESCUE-vgaExp Cp6
 U 1 1 5372879D
 P 8950 4500
 F 0 "Cp6" H 9000 4600 50  0000 L CNN
@@ -289,7 +288,7 @@ F 3 "~" H 8950 4500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C21
+L C-RESCUE-vgaExp C21
 U 1 1 537287A3
 P 9250 4500
 F 0 "C21" H 9250 4600 40  0000 L CNN
@@ -300,7 +299,7 @@ F 3 "~" H 9250 4500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C22
+L C-RESCUE-vgaExp C22
 U 1 1 537287A9
 P 9450 4500
 F 0 "C22" H 9450 4600 40  0000 L CNN
@@ -311,7 +310,7 @@ F 3 "~" H 9450 4500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C23
+L C-RESCUE-vgaExp C23
 U 1 1 537287AF
 P 9650 4500
 F 0 "C23" H 9650 4600 40  0000 L CNN
@@ -322,7 +321,7 @@ F 3 "~" H 9650 4500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C24
+L C-RESCUE-vgaExp C24
 U 1 1 537287B5
 P 9850 4500
 F 0 "C24" H 9850 4600 40  0000 L CNN
@@ -333,7 +332,7 @@ F 3 "~" H 9850 4500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C25
+L C-RESCUE-vgaExp C25
 U 1 1 537287BB
 P 10050 4500
 F 0 "C25" H 10050 4600 40  0000 L CNN

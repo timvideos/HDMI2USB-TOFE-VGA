@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:vgaExp-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -10,7 +11,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -29,11 +29,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:24AA014
-LIBS:vmodvga
-LIBS:testpoint
 LIBS:vgaExp-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -121,7 +118,7 @@ VCC
 Text HLabel 8150 4250 0    60   Input ~ 0
 GND
 $Comp
-L R R5
+L R-RESCUE-vgaExp R5
 U 1 1 53C86281
 P 2650 2900
 F 0 "R5" V 2730 2900 40  0000 C CNN
@@ -132,7 +129,7 @@ F 3 "~" H 2650 2900 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L R-RESCUE-vgaExp R1
 U 1 1 53C8628E
 P 2450 2900
 F 0 "R1" V 2530 2900 40  0000 C CNN
@@ -143,7 +140,7 @@ F 3 "~" H 2450 2900 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R25
+L R-RESCUE-vgaExp R25
 U 1 1 53C86295
 P 5600 2850
 F 0 "R25" V 5680 2850 40  0000 C CNN
@@ -154,7 +151,7 @@ F 3 "~" H 5600 2850 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R26
+L R-RESCUE-vgaExp R26
 U 1 1 53C8629B
 P 5750 2850
 F 0 "R26" V 5830 2850 40  0000 C CNN
@@ -165,7 +162,7 @@ F 3 "~" H 5750 2850 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L R-RESCUE-vgaExp R3
 U 1 1 53C862A1
 P 2500 5000
 F 0 "R3" V 2580 5000 40  0000 C CNN
@@ -176,7 +173,7 @@ F 3 "~" H 2500 5000 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R23
+L R-RESCUE-vgaExp R23
 U 1 1 53C862A7
 P 2700 5000
 F 0 "R23" V 2780 5000 40  0000 C CNN
@@ -187,7 +184,7 @@ F 3 "~" H 2700 5000 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R24
+L R-RESCUE-vgaExp R24
 U 1 1 53C862AD
 P 5550 5050
 F 0 "R24" V 5630 5050 40  0000 C CNN
@@ -198,7 +195,7 @@ F 3 "~" H 5550 5050 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R27
+L R-RESCUE-vgaExp R27
 U 1 1 53C862B3
 P 5750 5050
 F 0 "R27" V 5830 5050 40  0000 C CNN
