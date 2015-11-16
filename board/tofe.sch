@@ -23,7 +23,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 5
 Title "TOFE VGA Expansion Board - TOFE"
-Date "2015-11-13"
+Date "2015-11-16"
 Rev "1.0"
 Comp "Kenny Duffus <kenny@duffus.org>"
 Comment1 "License: CC BY"
@@ -35,6 +35,8 @@ $Comp
 L TOFE-8X P301
 U 1 1 561CABB0
 P 5900 4350
+AR Path="/561CABB0" Ref="P301"  Part="1" 
+AR Path="/563EE495/561CABB0" Ref="P301"  Part="1" 
 F 0 "P301" H 5900 1500 60  0000 C CNN
 F 1 "TOFE-8X" H 5250 1500 60  0000 C CNN
 F 2 "~" H 4600 4050 60  0000 C CNN
@@ -213,12 +215,9 @@ Connection ~ 4500 4350
 Wire Wire Line
 	4500 4750 4600 4750
 Connection ~ 4500 4450
-Wire Wire Line
-	4500 5150 4600 5150
 Connection ~ 4500 4750
 Wire Wire Line
 	4500 5450 4600 5450
-Connection ~ 4500 5150
 Wire Wire Line
 	4500 5550 4600 5550
 Connection ~ 4500 5450
@@ -602,4 +601,7 @@ Wire Bus Line
 	6700 5450 6700 3250
 Wire Bus Line
 	6700 3250 6800 3250
+Wire Wire Line
+	4600 5050 4500 5050
+Connection ~ 4500 5050
 $EndSCHEMATC
