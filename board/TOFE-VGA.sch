@@ -21,9 +21,9 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 6
 Title "TOFE VGA Expansion Board"
-Date "2015-11-13"
+Date "2015-11-25"
 Rev "1.0"
 Comp "Kenny Duffus <kenny@duffus.org>"
 Comment1 "License: CC BY"
@@ -163,4 +163,13 @@ Wire Bus Line
 	6550 4100 5550 4100
 Wire Bus Line
 	5550 4200 6550 4200
+$Sheet
+S 3200 5900 2350 800 
+U 56559E6B
+F0 "TOFE-VGA/Component" 60
+F1 "component.sch" 60
+F2 "COMP_Y" I L 3200 6100 60 
+F3 "COMP_Pb" I L 3200 6200 60 
+F4 "COMP_Pr" I L 3200 6300 60 
+$EndSheet
 $EndSCHEMATC
