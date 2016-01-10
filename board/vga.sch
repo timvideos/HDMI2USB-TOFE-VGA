@@ -46,7 +46,6 @@ F 3 "" H 6000 5100 60  0000 C CNN
 	1    5750 5000
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6550 5200
 Wire Wire Line
 	6550 4750 7250 4750
 Wire Wire Line
@@ -97,7 +96,7 @@ Connection ~ 8300 5550
 Wire Wire Line
 	7750 4850 7750 4900
 Wire Wire Line
-	7750 5050 7750 5150
+	7750 5150 7750 5050
 Text HLabel 8300 6050 0    60   BiDi ~ 0
 VGA_B
 Text HLabel 8300 6150 0    60   BiDi ~ 0
@@ -195,7 +194,7 @@ Connection ~ 4000 5050
 Wire Wire Line
 	7750 4900 6550 4900
 Wire Wire Line
-	6550 5050 7750 5050
+	7750 5050 6550 5050
 Wire Wire Line
 	7650 4800 7650 5050
 Connection ~ 7650 5050
@@ -235,7 +234,6 @@ F 3 "" H 6000 2000 60  0000 C CNN
 	1    5750 1900
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6550 2100
 Wire Wire Line
 	6550 1650 7250 1650
 Wire Wire Line
@@ -569,4 +567,12 @@ Wire Wire Line
 Connection ~ 7150 4750
 Connection ~ 7050 4900
 Connection ~ 6950 5050
+Text HLabel 6550 2200 3    60   Input ~ 0
+EN_VGA_RX
+Wire Wire Line
+	6550 2100 6550 2200
+Text HLabel 6550 5300 3    60   Input ~ 0
+EN_VGA_TX
+Wire Wire Line
+	6550 5300 6550 5200
 $EndSCHEMATC
