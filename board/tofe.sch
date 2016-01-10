@@ -21,7 +21,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 5
+Sheet 3 6
 Title "TOFE VGA Expansion Board - TOFE"
 Date "2015-11-16"
 Rev "1.0"
