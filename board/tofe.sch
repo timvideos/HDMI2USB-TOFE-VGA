@@ -23,7 +23,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 6
 Title "TOFE VGA Expansion Board - TOFE"
-Date "2015-11-16"
+Date "2016-01-10"
 Rev "1.0"
 Comp "Kenny Duffus <kenny@duffus.org>"
 Comment1 "License: CC BY"
@@ -44,7 +44,6 @@ F 3 "~" H 4600 4050 60  0000 C CNN
 	1    5900 4350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6300 5250
 Text Notes 5400 1000 0    60   ~ 12
 TOFE-8x
 $Comp
@@ -104,11 +103,11 @@ F 3 "~" H 4000 1250 60  0000 C CNN
 	1    4000 1250
 	1    0    0    -1  
 $EndComp
-Text HLabel 4100 3650 0    60   Input ~ 0
+Text HLabel 4100 2350 0    60   Input ~ 0
 R[0..9]
-Text HLabel 4100 5950 0    60   Input ~ 0
+Text HLabel 4100 5150 0    60   Input ~ 0
 G[0..9]
-Text HLabel 6800 3250 2    60   Input ~ 0
+Text HLabel 6800 4250 2    60   Input ~ 0
 B[0..9]
 Text HLabel 6800 2050 2    60   BiDi ~ 0
 SCL_VGA_TX
@@ -173,17 +172,17 @@ F 3 "" H 6700 1250 60  0000 C CNN
 	1    6700 1250
 	1    0    0    -1  
 $EndComp
-Text HLabel 6800 3050 2    60   BiDi ~ 0
+Text HLabel 6800 3350 2    60   BiDi ~ 0
 SDA_AD9984
-Text HLabel 6800 3150 2    60   BiDi ~ 0
+Text HLabel 6800 3450 2    60   BiDi ~ 0
 SCL_AD9984
-Text HLabel 4100 2450 0    60   Input ~ 0
+Text HLabel 4100 6550 0    60   Input ~ 0
 VSOUT
-Text HLabel 4100 2650 0    60   Input ~ 0
+Text HLabel 4100 6450 0    60   Input ~ 0
 HSOUT
-Text HLabel 4100 2950 0    60   Input ~ 0
+Text HLabel 4100 4650 0    60   Input ~ 0
 SOGOUT
-Text HLabel 4100 3150 0    60   Output ~ 0
+Text HLabel 4100 4550 0    60   Output ~ 0
 DATACK
 Wire Wire Line
 	4600 1950 4500 1950
@@ -382,6 +381,16 @@ Wire Wire Line
 Wire Wire Line
 	6300 1650 6800 1650
 Entry Wire Line
+	4200 2350 4300 2450
+Entry Wire Line
+	4200 2550 4300 2650
+Entry Wire Line
+	4200 2850 4300 2950
+Entry Wire Line
+	4200 3050 4300 3150
+Entry Wire Line
+	4200 3150 4300 3250
+Entry Wire Line
 	4200 3650 4300 3750
 Entry Wire Line
 	4200 3750 4300 3850
@@ -390,65 +399,35 @@ Entry Wire Line
 Entry Wire Line
 	4200 4150 4300 4250
 Entry Wire Line
-	4200 4450 4300 4550
-Entry Wire Line
-	4200 4550 4300 4650
-Entry Wire Line
-	4200 5150 4300 5250
-Entry Wire Line
-	4200 5250 4300 5350
-Entry Wire Line
-	4200 5550 4300 5650
-Entry Wire Line
-	4200 5650 4300 5750
-Wire Wire Line
-	4300 3750 4600 3750
-Wire Wire Line
-	4600 3850 4300 3850
-Wire Wire Line
-	4300 4150 4600 4150
-Wire Wire Line
-	4600 4250 4300 4250
-Wire Wire Line
-	4300 4550 4600 4550
-Wire Wire Line
-	4300 4650 4600 4650
-Wire Wire Line
-	4300 5250 4600 5250
-Wire Wire Line
-	4600 5350 4300 5350
-Wire Wire Line
-	4300 5650 4600 5650
-Wire Wire Line
-	4600 5750 4300 5750
-Text Label 4300 5750 0    60   ~ 0
+	4200 4750 4300 4850
+Text Label 4300 4850 0    60   ~ 0
 R9
-Text Label 4300 3750 0    60   ~ 0
+Text Label 4300 2450 0    60   ~ 0
 R0
-Text Label 4300 3850 0    60   ~ 0
+Text Label 4300 2650 0    60   ~ 0
 R1
-Text Label 4300 4150 0    60   ~ 0
+Text Label 4300 2950 0    60   ~ 0
 R2
-Text Label 4300 4250 0    60   ~ 0
+Text Label 4300 3150 0    60   ~ 0
 R3
-Text Label 4300 4550 0    60   ~ 0
+Text Label 4300 3250 0    60   ~ 0
 R4
-Text Label 4300 4650 0    60   ~ 0
+Text Label 4300 3750 0    60   ~ 0
 R5
-Text Label 4300 5250 0    60   ~ 0
+Text Label 4300 3850 0    60   ~ 0
 R6
-Text Label 4300 5350 0    60   ~ 0
+Text Label 4300 4150 0    60   ~ 0
 R7
-Text Label 4300 5650 0    60   ~ 0
+Text Label 4300 4250 0    60   ~ 0
 R8
 Wire Wire Line
-	4100 3150 4600 3150
+	4100 4550 4600 4550
 Wire Wire Line
-	4100 2950 4600 2950
+	4100 4650 4600 4650
 Wire Wire Line
-	4100 2650 4600 2650
+	4100 6450 4600 6450
 Wire Wire Line
-	4100 2450 4600 2450
+	4100 6550 4600 6550
 Wire Wire Line
 	6300 2050 6800 2050
 Wire Wire Line
@@ -457,42 +436,32 @@ Wire Wire Line
 	6300 2250 6800 2250
 Wire Wire Line
 	6300 2350 6800 2350
-Wire Wire Line
-	6300 3050 6800 3050
-Wire Wire Line
-	6300 3150 6800 3150
 Entry Wire Line
-	4200 5950 4300 6050
+	4200 5150 4300 5250
+Entry Wire Line
+	4200 5250 4300 5350
+Entry Wire Line
+	4200 5650 4300 5750
+Entry Wire Line
+	4200 5550 4300 5650
+Text Label 4300 5250 0    60   ~ 0
+G9
+Text Label 4300 5350 0    60   ~ 0
+G8
+Text Label 4300 5650 0    60   ~ 0
+G7
+Text Label 4300 5750 0    60   ~ 0
+G6
+Text HLabel 6800 6150 2    60   Output ~ 0
+G[0..9]
 Entry Wire Line
 	4200 6050 4300 6150
 Entry Wire Line
-	4200 6450 4300 6550
-Entry Wire Line
-	4200 6350 4300 6450
-Wire Wire Line
-	4300 6050 4600 6050
-Wire Wire Line
-	4600 6150 4300 6150
-Wire Wire Line
-	4300 6450 4600 6450
-Wire Wire Line
-	4600 6550 4300 6550
-Text Label 4300 6050 0    60   ~ 0
-G9
-Text Label 4300 6150 0    60   ~ 0
-G8
-Text Label 4300 6450 0    60   ~ 0
-G7
-Text Label 4300 6550 0    60   ~ 0
-G6
-Text HLabel 6800 5750 2    60   Output ~ 0
-G[0..9]
-Entry Wire Line
-	6600 6650 6700 6550
-Entry Wire Line
-	6600 6650 6700 6550
+	4200 5950 4300 6050
 Entry Wire Line
 	6600 6750 6700 6650
+Entry Wire Line
+	6600 6650 6700 6550
 Entry Wire Line
 	6600 6350 6700 6250
 Entry Wire Line
@@ -506,6 +475,10 @@ Entry Wire Line
 Entry Wire Line
 	6600 5450 6700 5350
 Entry Wire Line
+	6600 5250 6700 5150
+Entry Wire Line
+	6600 5050 6700 4950
+Entry Wire Line
 	6600 4850 6700 4750
 Entry Wire Line
 	6600 4750 6700 4650
@@ -513,38 +486,38 @@ Entry Wire Line
 	6600 4450 6700 4350
 Entry Wire Line
 	6600 4350 6700 4250
-Entry Wire Line
-	6600 4050 6700 3950
-Entry Wire Line
-	6600 3950 6700 3850
-Entry Wire Line
-	6600 3450 6700 3350
-Entry Wire Line
-	6600 3350 6700 3250
 Wire Bus Line
-	4100 3650 4200 3650
+	4100 2350 4200 2350
 Wire Bus Line
-	4200 3650 4200 5650
+	4200 2350 4200 4750
 Wire Bus Line
-	4100 5950 4200 5950
+	4100 5150 4200 5150
 Wire Bus Line
-	4200 5950 4200 6450
+	4200 5150 4200 6050
+Wire Wire Line
+	4600 6050 4300 6050
+Wire Wire Line
+	4300 6150 4600 6150
 Wire Wire Line
 	6600 6750 6300 6750
 Wire Wire Line
 	6300 6650 6600 6650
 Wire Wire Line
-	6600 6350 6300 6350
+	6300 6350 6600 6350
 Wire Wire Line
-	6300 6250 6600 6250
+	6600 6250 6300 6250
 Wire Wire Line
 	6300 5950 6600 5950
 Wire Wire Line
 	6600 5850 6300 5850
 Wire Wire Line
-	6300 5550 6600 5550
+	6600 5550 6300 5550
 Wire Wire Line
-	6600 5450 6300 5450
+	6300 5450 6600 5450
+Wire Wire Line
+	6600 5250 6300 5250
+Wire Wire Line
+	6300 5050 6600 5050
 Wire Wire Line
 	6600 4850 6300 4850
 Wire Wire Line
@@ -553,55 +526,86 @@ Wire Wire Line
 	6600 4450 6300 4450
 Wire Wire Line
 	6300 4350 6600 4350
-Wire Wire Line
-	6600 4050 6300 4050
-Wire Wire Line
-	6300 3950 6600 3950
-Wire Wire Line
-	6600 3450 6300 3450
-Wire Wire Line
-	6300 3350 6600 3350
-Text Label 6600 3350 2    60   ~ 0
-B0
-Text Label 6600 3450 2    60   ~ 0
-B1
-Text Label 6600 3950 2    60   ~ 0
-B2
-Text Label 6600 4050 2    60   ~ 0
-B3
 Text Label 6600 4350 2    60   ~ 0
-B4
+B0
 Text Label 6600 4450 2    60   ~ 0
-B5
+B1
 Text Label 6600 4750 2    60   ~ 0
-B6
+B2
 Text Label 6600 4850 2    60   ~ 0
-B7
+B3
+Text Label 6600 5050 2    60   ~ 0
+B4
+Text Label 6600 5250 2    60   ~ 0
+B5
 Text Label 6600 5450 2    60   ~ 0
-B8
+B6
 Text Label 6600 5550 2    60   ~ 0
-B9
+B7
 Text Label 6600 5850 2    60   ~ 0
-G0
+B8
 Text Label 6600 5950 2    60   ~ 0
-G1
+B9
 Text Label 6600 6250 2    60   ~ 0
-G2
+G0
 Text Label 6600 6350 2    60   ~ 0
-G3
+G1
 Text Label 6600 6650 2    60   ~ 0
-G4
+G2
 Text Label 6600 6750 2    60   ~ 0
+G3
+Text Label 4400 6150 2    60   ~ 0
+G4
+Text Label 4400 6050 2    60   ~ 0
 G5
 Wire Bus Line
-	6800 5750 6700 5750
+	6800 6150 6700 6150
 Wire Bus Line
-	6700 5750 6700 6650
-Wire Bus Line
-	6700 5450 6700 3250
-Wire Bus Line
-	6700 3250 6800 3250
+	6700 4250 6800 4250
 Wire Wire Line
 	4600 5050 4500 5050
 Connection ~ 4500 5050
+NoConn ~ 6300 3050
+NoConn ~ 6300 3150
+NoConn ~ 4600 3450
+NoConn ~ 4600 4950
+Wire Wire Line
+	4600 2450 4300 2450
+Wire Wire Line
+	4600 2650 4300 2650
+Wire Wire Line
+	4600 2950 4300 2950
+Wire Wire Line
+	4300 3150 4600 3150
+Wire Wire Line
+	4600 3250 4300 3250
+Wire Wire Line
+	4300 3750 4600 3750
+Wire Wire Line
+	4600 3850 4300 3850
+Wire Wire Line
+	4300 4150 4600 4150
+Wire Wire Line
+	4300 4250 4600 4250
+Wire Wire Line
+	4300 4850 4600 4850
+Wire Wire Line
+	4300 5250 4600 5250
+Wire Wire Line
+	4300 5350 4600 5350
+Wire Wire Line
+	4300 5650 4600 5650
+Wire Wire Line
+	4600 5750 4300 5750
+Wire Bus Line
+	6700 6150 6700 6650
+Wire Bus Line
+	6700 5850 6700 4250
+Wire Wire Line
+	6300 3350 6800 3350
+Wire Wire Line
+	6800 3450 6300 3450
+NoConn ~ 6300 3750
+NoConn ~ 6300 3950
+NoConn ~ 6300 4050
 $EndSCHEMATC
