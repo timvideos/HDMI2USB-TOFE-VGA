@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name TOFE_8X_FullHeight)(type KiCad)(uri ${KIPRJMOD}/../libraries/TOFE_8X_FullHeight)(options "")(descr ""))
   (lib (name TOFE_8X_HalfHeight)(type KiCad)(uri ${KIPRJMOD}/../libraries/TOFE_8X_HalfHeight)(options "")(descr ""))
+  (lib (name analog-devices2)(type Legacy)(uri ${KIPRJMOD}/../libraries/analog-devices2.mod)(options "")(descr ""))
 )
