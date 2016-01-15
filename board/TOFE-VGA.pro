@@ -1,4 +1,4 @@
-update=Tue 10 Nov 2015 04:11:18 GMT
+update=Fri 15 Jan 2016 13:02:02 GMT
 version=1
 last_client=kicad
 [cvpcb]
@@ -68,3 +68,4 @@ LibName15=analog-devices2
 LibName16=vmodvga
 LibName17=testpoint
 LibName18=ad9984-power
+LibName19=3-rca

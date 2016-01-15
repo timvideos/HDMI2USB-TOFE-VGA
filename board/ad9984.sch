@@ -17,6 +17,7 @@ LIBS:analog-devices2
 LIBS:vmodvga
 LIBS:testpoint
 LIBS:ad9984-power
+LIBS:3-rca
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
