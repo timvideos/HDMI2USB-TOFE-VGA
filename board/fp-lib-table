@@ -2,4 +2,6 @@
   (lib (name TOFE_8X_FullHeight)(type KiCad)(uri ${KIPRJMOD}/../libraries/TOFE_8X_FullHeight)(options "")(descr ""))
   (lib (name TOFE_8X_HalfHeight)(type KiCad)(uri ${KIPRJMOD}/../libraries/TOFE_8X_HalfHeight)(options "")(descr ""))
   (lib (name analog-devices2)(type Legacy)(uri ${KIPRJMOD}/../libraries/analog-devices2.mod)(options "")(descr ""))
+  (lib (name CON-4X1-2.54)(type KiCad)(uri ${KIPRJMOD}/../libraries/CON-4X1-2.54.pretty)(options "")(descr ""))
+  (lib (name CON-2X1-2.54)(type KiCad)(uri ${KIPRJMOD}/../libraries/CON-2X1-2.54.pretty)(options "")(descr ""))
 )
