@@ -5,4 +5,5 @@
   (lib (name CON-SMD-2.54)(type KiCad)(uri ${KIPRJMOD}/../libraries/CON-SMD-2.54.pretty)(options "")(descr ""))
   (lib (name DE-15)(type KiCad)(uri ${KIPRJMOD}/../libraries/DE-15.pretty)(options "")(descr ""))
   (lib (name 3-RCA)(type KiCad)(uri ${KIPRJMOD}/../libraries/3-RCA.pretty)(options "")(descr ""))
+  (lib (name 2MM-TESTPOINT)(type KiCad)(uri ${KIPRJMOD}/../libraries/2MM-TESTPOINT.pretty)(options "")(descr ""))
 )
