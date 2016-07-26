@@ -700,17 +700,6 @@ Connection ~ 9050 2000
 Wire Wire Line
 	9050 3100 9050 2850
 Connection ~ 8650 3100
-$Comp
-L VDD #PWR014
-U 1 1 56929F70
-P 5300 2000
-F 0 "#PWR014" H 5300 1850 50  0001 C CNN
-F 1 "VDD" H 5300 2150 50  0000 C CNN
-F 2 "" H 5300 2000 50  0000 C CNN
-F 3 "" H 5300 2000 50  0000 C CNN
-	1    5300 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3550 2950 3550 2650
 Wire Wire Line
@@ -790,7 +779,7 @@ F 3 "" H 4800 2500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4050 2350 4050 2050
+	4050 2050 4050 2350
 Connection ~ 4050 2050
 Wire Wire Line
 	4050 2650 4050 2950
@@ -799,7 +788,7 @@ Wire Wire Line
 	4300 2650 4300 3050
 Connection ~ 4300 2950
 Wire Wire Line
-	4300 2350 4300 2050
+	4300 2050 4300 2350
 Connection ~ 4300 2050
 Wire Wire Line
 	4550 2050 4550 2350
@@ -810,7 +799,7 @@ Connection ~ 4550 2950
 Wire Wire Line
 	4800 2950 4800 2650
 Wire Wire Line
-	4800 2350 4800 2050
+	4800 2050 4800 2350
 Connection ~ 4800 2050
 $Comp
 L R R204
@@ -838,16 +827,15 @@ Wire Wire Line
 	5200 2600 5200 2500
 Wire Wire Line
 	5200 2050 5200 2100
-Connection ~ 5200 2050
 Wire Wire Line
 	5200 2950 5200 2900
 Connection ~ 4800 2950
 Wire Wire Line
 	3450 2000 3450 2050
 Wire Wire Line
-	3450 2050 5300 2050
-Wire Wire Line
-	5300 2050 5300 2000
-Wire Wire Line
 	3550 2950 5200 2950
+Wire Wire Line
+	3450 2050 5200 2050
+Text Notes 9390 1890 0    60   ~ 12
+5v0
 $EndSCHEMATC
