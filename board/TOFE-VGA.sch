@@ -22,9 +22,9 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 6
 Title "TOFE VGA Expansion Board"
-Date "2016-01-20"
+Date "2016-01-10"
 Rev "1.0"
 Comp "Kenny Duffus <kenny@duffus.org>"
 Comment1 "License: CC BY"
@@ -78,6 +78,9 @@ F12 "HSYNC0" I L 3200 4550 60
 F13 "SDA_AD9984" B R 5550 4850 60 
 F14 "SCL_AD9984" B R 5550 4950 60 
 F15 "VSOUT" O R 5550 4400 60 
+F16 "COMP_Y" I L 3200 5250 60 
+F17 "COMP_Pb" I L 3200 5150 60 
+F18 "COMP_Pr" I L 3200 5050 60 
 $EndSheet
 $Sheet
 S 5100 2150 1900 1250
@@ -158,6 +161,15 @@ Wire Bus Line
 	6550 4100 5550 4100
 Wire Bus Line
 	5550 4200 6550 4200
+$Sheet
+S 3200 5900 2350 800 
+U 56559E6B
+F0 "TOFE-VGA/Component" 60
+F1 "component.sch" 60
+F2 "COMP_Y" I L 3200 6100 60 
+F3 "COMP_Pb" I L 3200 6200 60 
+F4 "COMP_Pr" I L 3200 6300 60 
+$EndSheet
 Wire Wire Line
 	3200 4550 2600 4550
 Wire Wire Line
@@ -166,6 +178,24 @@ Wire Wire Line
 	2500 2350 2500 4650
 Wire Wire Line
 	2600 4550 2600 2450
+Wire Wire Line
+	3200 5250 3000 5250
+Wire Wire Line
+	3000 5250 3000 6100
+Wire Wire Line
+	3000 6100 3200 6100
+Wire Wire Line
+	3200 6200 2900 6200
+Wire Wire Line
+	2900 6200 2900 5150
+Wire Wire Line
+	2900 5150 3200 5150
+Wire Wire Line
+	3200 5050 2800 5050
+Wire Wire Line
+	2800 5050 2800 6300
+Wire Wire Line
+	2800 6300 3200 6300
 Wire Wire Line
 	5550 4700 6550 4700
 Wire Wire Line
