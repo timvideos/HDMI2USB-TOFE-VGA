@@ -22,7 +22,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 6
+Sheet 2 5
 Title "TOFE VGA Expansion Board - Power"
 Date "2016-01-12"
 Rev ""
@@ -91,12 +91,12 @@ Connection ~ 2900 4300
 $Comp
 L GND #PWR2
 U 1 1 563F0C8E
-P 2300 5250
-F 0 "#PWR2" H 2300 5000 50  0001 C CNN
-F 1 "GND" H 2300 5100 50  0000 C CNN
-F 2 "" H 2300 5250 60  0000 C CNN
-F 3 "" H 2300 5250 60  0000 C CNN
-	1    2300 5250
+P 2300 5300
+F 0 "#PWR2" H 2300 5050 50  0001 C CNN
+F 1 "GND" H 2300 5150 50  0000 C CNN
+F 2 "" H 2300 5300 60  0000 C CNN
+F 3 "" H 2300 5300 60  0000 C CNN
+	1    2300 5300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -304,12 +304,12 @@ Connection ~ 8050 4300
 $Comp
 L GND #PWR10
 U 1 1 56420FD1
-P 7450 5250
-F 0 "#PWR10" H 7450 5000 50  0001 C CNN
-F 1 "GND" H 7450 5100 50  0000 C CNN
-F 2 "" H 7450 5250 60  0000 C CNN
-F 3 "" H 7450 5250 60  0000 C CNN
-	1    7450 5250
+P 7450 5300
+F 0 "#PWR10" H 7450 5050 50  0001 C CNN
+F 1 "GND" H 7450 5150 50  0000 C CNN
+F 2 "" H 7450 5300 60  0000 C CNN
+F 3 "" H 7450 5300 60  0000 C CNN
+	1    7450 5300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -838,4 +838,16 @@ Wire Wire Line
 	3450 2050 5200 2050
 Text Notes 9390 1890 0    60   ~ 12
 5v0
+Text Notes 5490 3760 0    60   ~ 0
+1V8 - VD - Analog side 1V8 supply\n1V8 - PVD - Digital side 1V8 supply\n3V3 - +3.3V - IO Level
+Text Notes 2910 5560 0    60   ~ 0
+Analog VGA Signals\nNoise Sensitive\n
+Wire Notes Line
+	1340 3910 1340 5750
+Wire Notes Line
+	1340 5750 5880 5750
+Wire Notes Line
+	5880 5750 5880 3910
+Wire Notes Line
+	5880 3910 1340 3910
 $EndSCHEMATC

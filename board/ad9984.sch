@@ -22,7 +22,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 4 5
 Title "TOFE VGA Expansion Board - AD9984"
 Date "2015-11-25"
 Rev "1.0"
@@ -1220,6 +1220,22 @@ F 3 "" H 9100 3650 60  0000 C CNN
 $EndComp
 Text Notes 3870 2340 0    60   ~ 0
 1V8 - VD - Analog side 1V8 supply\n1V8 - PVD - Digital side 1V8 supply\n3V3 - +3.3V - IO Level
+Wire Notes Line
+	4620 2500 6020 2500
+Wire Notes Line
+	6020 2500 6020 4970
+Wire Notes Line
+	6020 4970 5550 4970
+Wire Notes Line
+	5550 4970 5550 6310
+Wire Notes Line
+	5550 6310 1270 6310
+Wire Notes Line
+	1270 6310 1270 2500
+Wire Notes Line
+	1270 2500 4610 2500
+Text Notes 1360 2710 0    60   ~ 0
+Analog VGA Signals\nNoise sensitive!
 Wire Wire Line
 	4000 5650 3990 5650
 $EndSCHEMATC

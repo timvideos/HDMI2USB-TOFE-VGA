@@ -22,7 +22,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 6
+Sheet 5 5
 Title "TOFE VGA Expansion Board - VGA"
 Date "2016-01-10"
 Rev ""
@@ -576,4 +576,78 @@ Text HLabel 6550 5300 3    60   Input ~ 0
 EN_VGA_TX
 Wire Wire Line
 	6550 5300 6550 5200
+Wire Notes Line
+	7640 5180 7640 6400
+Wire Notes Line
+	7640 6400 9060 6400
+Wire Notes Line
+	9060 6400 9060 5180
+Wire Notes Line
+	9060 5180 7640 5180
+Wire Notes Line
+	9060 2080 7640 2080
+Wire Notes Line
+	7640 2080 7640 3360
+Wire Notes Line
+	7640 3360 9070 3360
+Wire Notes Line
+	9070 3360 9070 2080
+Text Notes 7870 3290 1    60   ~ 0
+Analog VGA Signals\nNoise Sensitive
+Text Notes 7840 6360 1    60   ~ 0
+Analog VGA Signals\nNoise Sensitive
+Text HLabel 10210 3290 2    60   Input ~ 0
+COMP_Y
+Text HLabel 10210 3640 2    60   Input ~ 0
+COMP_Pb
+Text HLabel 10210 3990 2    60   Input ~ 0
+COMP_Pr
+$Comp
+L GNDA #PWR?
+U 1 1 579715ED
+P 9760 4290
+F 0 "#PWR?" H 9760 4040 50  0001 C CNN
+F 1 "GNDA" H 9760 4140 50  0000 C CNN
+F 2 "" H 9760 4290 60  0000 C CNN
+F 3 "" H 9760 4290 60  0000 C CNN
+	1    9760 4290
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9960 3490 9760 3490
+Wire Wire Line
+	10110 3290 10210 3290
+Wire Wire Line
+	10110 3640 10210 3640
+Wire Wire Line
+	10110 3990 10210 3990
+$Comp
+L 3-RCA P601
+U 1 1 579715F7
+P 9960 3640
+F 0 "P601" H 9960 4190 50  0000 C CNN
+F 1 "3-RCA" V 10160 3590 50  0001 C CNN
+F 2 "3-RCA:MR-100H" H 9960 3290 50  0001 C CNN
+F 3 "" H 9960 3290 50  0000 C CNN
+	1    9960 3640
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9960 4190 9760 4190
+Wire Wire Line
+	9760 3490 9760 4290
+Wire Wire Line
+	9960 3840 9760 3840
+Connection ~ 9760 4190
+Connection ~ 9760 3840
+Text Notes 9580 4140 1    60   ~ 0
+Analog VGA Signals\nNoise Sensitive
+Wire Notes Line
+	9260 2990 9260 4570
+Wire Notes Line
+	9260 4570 10770 4570
+Wire Notes Line
+	10770 4570 10770 2980
+Wire Notes Line
+	10770 2980 9260 2980
 $EndSCHEMATC
