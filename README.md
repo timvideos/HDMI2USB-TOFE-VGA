@@ -6,6 +6,13 @@ This repository contains a TOFE board for VGA capture based on
 For [more information on the TOFE interface, see the HDMI2USB website](http://hdmi2usb.tv/tofe).
 For the [KiCad website](http://kicad-pcb.org/) for more information on using it.
 
+## Parts
+
+The RCA Jack is a little hard to find, but it can be found at the following
+locations (it is also totally optional);
+
+ * [Element14](http://au.element14.com/pro-signal/mr-100h/socket-phono-pcb/dp/1267381) - Order Code: 1267381
+
 ## License
 
 The contents of this repository excluding "third_party" folder is released
