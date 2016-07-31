@@ -302,11 +302,11 @@ Wire Wire Line
 	8850 4300 8850 4600
 Connection ~ 8050 4300
 $Comp
-L GND #PWR11
+L GNDA #PWR11
 U 1 1 56420FD1
 P 7450 5300
 F 0 "#PWR11" H 7450 5050 50  0001 C CNN
-F 1 "GND" H 7450 5150 50  0000 C CNN
+F 1 "GNDA" H 7450 5150 50  0000 C CNN
 F 2 "" H 7450 5300 60  0000 C CNN
 F 3 "" H 7450 5300 60  0000 C CNN
 	1    7450 5300
@@ -838,16 +838,6 @@ Wire Wire Line
 	3450 2050 5200 2050
 Text Notes 9390 1890 0    60   ~ 12
 5v0
-Text Notes 5490 3760 0    60   ~ 0
-1V8 - VD - Analog side 1V8 supply\n1V8 - PVD - Digital side 1V8 supply\n3V3 - +3.3V - IO Level
-Text Notes 2910 5560 0    60   ~ 0
-Analog VGA Signals\nNoise Sensitive\n
-Wire Notes Line
-	1340 3910 1340 5750
-Wire Notes Line
-	1340 5750 5880 5750
-Wire Notes Line
-	5880 5750 5880 3910
-Wire Notes Line
-	5880 3910 1340 3910
+Text Notes 4270 6720 0    60   ~ 0
+Analog supplies\n----------------\n1V8 - PVD - Clock/PLL supply - Very noise sensitive\n1V8 - VD - Main power supply - Noise sensitive\n\nDigital Supplies\n----------------\n3V3 - VDD - Output power supply\n1V8 - DAVDD - Digital supply\n\n------------\n\nVD and DAVDD are connected
 $EndSCHEMATC
