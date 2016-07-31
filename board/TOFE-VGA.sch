@@ -24,10 +24,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 5
 Title "TOFE VGA Expansion Board"
-Date "2016-01-10"
+Date "$Id$"
 Rev "1.0"
 Comp "Kenny Duffus <kenny@duffus.org>"
-Comment1 "License: CC BY"
+Comment1 "License: CC BY SA 4.0 or TAPR"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -123,10 +123,10 @@ F 3 "" H 4725 1765 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR1
+L GND #PWR01
 U 1 1 579D1C68
 P 5015 3215
-F 0 "#PWR1" H 5015 2965 50  0001 C CNN
+F 0 "#PWR01" H 5015 2965 50  0001 C CNN
 F 1 "GND" H 5015 3065 50  0000 C CNN
 F 2 "" H 5015 3215 50  0000 C CNN
 F 3 "" H 5015 3215 50  0000 C CNN
