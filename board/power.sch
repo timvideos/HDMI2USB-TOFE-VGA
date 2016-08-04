@@ -868,4 +868,6 @@ Text Label 9100 4300 0    60   ~ 0
 PVD
 Text Label 4950 4300 0    60   ~ 0
 VD
+Text Notes 4900 3670 0    60   ~ 0
+Place 1v8 supplies (UPV1 and UVD1) as close to \nthe AD9938 as possible without introducing noise.
 $EndSCHEMATC

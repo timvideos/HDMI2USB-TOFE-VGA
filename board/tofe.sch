@@ -106,7 +106,7 @@ Text HLabel 4100 2350 0    60   Input ~ 0
 R[0..9]
 Text HLabel 4100 5150 0    60   Input ~ 0
 G[0..9]
-Text HLabel 6800 4250 2    60   Input ~ 0
+Text HLabel 6800 3650 2    60   Input ~ 0
 B[0..9]
 Text HLabel 6800 2050 2    60   BiDi ~ 0
 VGAOUT_SCL
@@ -172,6 +172,290 @@ Text HLabel 4100 4650 0    60   Input ~ 0
 SOGOUT
 Text HLabel 4100 4550 0    60   BiDi ~ 0
 DATACK
+Text GLabel 6800 1650 2    60   UnSpc ~ 0
+PRNST
+Text GLabel 4100 6750 0    60   UnSpc ~ 0
+PRNST
+Entry Wire Line
+	4200 2350 4300 2450
+Entry Wire Line
+	4200 2550 4300 2650
+Entry Wire Line
+	4200 2850 4300 2950
+Entry Wire Line
+	4200 3050 4300 3150
+Entry Wire Line
+	4200 3150 4300 3250
+Entry Wire Line
+	4200 3650 4300 3750
+Entry Wire Line
+	4200 3750 4300 3850
+Entry Wire Line
+	4200 4050 4300 4150
+Entry Wire Line
+	4200 4150 4300 4250
+Entry Wire Line
+	4200 4750 4300 4850
+Text Label 4300 4850 0    60   ~ 0
+R9
+Text Label 4300 2450 0    60   ~ 0
+R0
+Text Label 4300 2650 0    60   ~ 0
+R1
+Text Label 4300 2950 0    60   ~ 0
+R2
+Text Label 4300 3150 0    60   ~ 0
+R3
+Text Label 4300 3250 0    60   ~ 0
+R4
+Text Label 4300 3750 0    60   ~ 0
+R5
+Text Label 4300 3850 0    60   ~ 0
+R6
+Text Label 4300 4150 0    60   ~ 0
+R7
+Text Label 4300 4250 0    60   ~ 0
+R8
+Entry Wire Line
+	4200 5150 4300 5250
+Entry Wire Line
+	4200 5250 4300 5350
+Entry Wire Line
+	4200 5650 4300 5750
+Entry Wire Line
+	4200 5550 4300 5650
+Text Label 4300 5250 0    60   ~ 0
+G9
+Text Label 4300 5350 0    60   ~ 0
+G8
+Text Label 4300 5650 0    60   ~ 0
+G7
+Text Label 4300 5750 0    60   ~ 0
+G6
+Text HLabel 6800 6150 2    60   Output ~ 0
+G[0..9]
+Entry Wire Line
+	4200 6050 4300 6150
+Entry Wire Line
+	4200 5950 4300 6050
+Entry Wire Line
+	6600 6750 6700 6650
+Entry Wire Line
+	6600 6650 6700 6550
+Entry Wire Line
+	6600 6350 6700 6250
+Entry Wire Line
+	6600 6250 6700 6150
+Entry Wire Line
+	6600 5950 6700 5850
+Entry Wire Line
+	6600 5850 6700 5750
+Entry Wire Line
+	6600 5550 6700 5450
+Entry Wire Line
+	6600 5450 6700 5350
+Entry Wire Line
+	6600 5050 6700 4950
+Entry Wire Line
+	6600 4850 6700 4750
+Entry Wire Line
+	6600 4750 6700 4650
+Entry Wire Line
+	6600 4450 6700 4350
+Entry Wire Line
+	6600 4350 6700 4250
+Text Label 6600 4350 2    60   ~ 0
+B0
+Text Label 6600 4450 2    60   ~ 0
+B1
+Text Label 6600 4750 2    60   ~ 0
+B2
+Text Label 6600 4850 2    60   ~ 0
+B3
+Text Label 6600 5050 2    60   ~ 0
+B4
+Text Label 6600 3750 2    60   ~ 0
+B5
+Text Label 6600 5450 2    60   ~ 0
+B6
+Text Label 6600 5550 2    60   ~ 0
+B7
+Text Label 6600 5850 2    60   ~ 0
+B8
+Text Label 6600 5950 2    60   ~ 0
+B9
+Text Label 6600 6250 2    60   ~ 0
+G0
+Text Label 6600 6350 2    60   ~ 0
+G1
+Text Label 6600 6650 2    60   ~ 0
+G2
+Text Label 6600 6750 2    60   ~ 0
+G3
+Text Label 4400 6150 2    60   ~ 0
+G4
+Text Label 4400 6050 2    60   ~ 0
+G5
+NoConn ~ 4600 3450
+NoConn ~ 4600 4950
+$Comp
+L JUMPER JP301
+U 1 1 56923A16
+P 3600 1100
+F 0 "JP301" H 3600 1250 50  0000 C CNN
+F 1 "JUMPER" H 3600 1020 50  0000 C CNN
+F 2 "CON-SMD-2.54:HARWIN-M20-87-2x1" H 3600 1100 50  0001 C CNN
+F 3 "" H 3600 1100 50  0000 C CNN
+	1    3600 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED DDG1
+U 1 1 56925C52
+P 8100 3050
+F 0 "DDG1" H 8350 3100 50  0000 C CNN
+F 1 "LED" H 8100 2950 50  0001 C CNN
+F 2 "LEDs:LED_0805" H 8100 3050 50  0001 C CNN
+F 3 "" H 8100 3050 50  0000 C CNN
+	1    8100 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R RDG1
+U 1 1 56925CE8
+P 7550 3050
+F 0 "RDG1" V 7500 3300 50  0000 C CNN
+F 1 "68R" V 7550 3050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7480 3050 50  0001 C CNN
+F 3 "" H 7550 3050 50  0000 C CNN
+	1    7550 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L LED DDG2
+U 1 1 56925FC5
+P 8100 3150
+F 0 "DDG2" H 8350 3200 50  0000 C CNN
+F 1 "LED" H 8100 3050 50  0001 C CNN
+F 2 "LEDs:LED_0805" H 8100 3150 50  0001 C CNN
+F 3 "" H 8100 3150 50  0000 C CNN
+	1    8100 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R RDG2
+U 1 1 56925FCB
+P 7550 3150
+F 0 "RDG2" V 7500 3400 50  0000 C CNN
+F 1 "68R" V 7550 3150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7480 3150 50  0001 C CNN
+F 3 "" H 7550 3150 50  0000 C CNN
+	1    7550 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X04 PTI2C1
+U 1 1 569310F0
+P 800 1400
+F 0 "PTI2C1" H 800 1650 50  0000 C CNN
+F 1 "TOFE I2C" V 900 1400 50  0000 C CNN
+F 2 "CON-SMD-2.54:HARWIN-M20-87-4x1" H 800 1400 50  0001 C CNN
+F 3 "" H 800 1400 50  0000 C CNN
+	1    800  1400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR019
+U 1 1 56931407
+P 1100 1550
+F 0 "#PWR019" H 1100 1300 50  0001 C CNN
+F 1 "GND" V 1000 1500 50  0000 C CNN
+F 2 "" H 1100 1550 50  0000 C CNN
+F 3 "" H 1100 1550 50  0000 C CNN
+	1    1100 1550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R303
+U 1 1 56934090
+P 3250 850
+F 0 "R303" V 3330 850 50  0000 C CNN
+F 1 "10K" V 3250 850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3180 850 50  0001 C CNN
+F 3 "" H 3250 850 50  0000 C CNN
+	1    3250 850 
+	1    0    0    -1  
+$EndComp
+Text HLabel 7245 2655 2    60   Output ~ 0
+VGAOUT_I2C_EN
+Text HLabel 7245 2755 2    60   Output ~ 0
+VGAIN_I2C_EN
+$Comp
+L +3V3 #PWR020
+U 1 1 579700B0
+P 8550 2950
+F 0 "#PWR020" H 8550 2800 50  0001 C CNN
+F 1 "+3V3" H 8550 3090 50  0000 C CNN
+F 2 "" H 8550 2950 60  0000 C CNN
+F 3 "" H 8550 2950 60  0000 C CNN
+	1    8550 2950
+	1    0    0    -1  
+$EndComp
+Text HLabel 6800 2650 2    60   Output ~ 0
+RST
+Text HLabel 6490 3450 2    60   Input ~ 0
+FIELD
+$Comp
+L GND #PWR021
+U 1 1 579E0967
+P 7400 3350
+F 0 "#PWR021" H 7400 3100 50  0001 C CNN
+F 1 "GND" H 7400 3200 50  0000 C CNN
+F 2 "" H 7400 3350 50  0000 C CNN
+F 3 "" H 7400 3350 50  0000 C CNN
+	1    7400 3350
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 6800 2950
+NoConn ~ 6800 3350
+$Comp
+L +3.3V #PWR022
+U 1 1 57A326A4
+P 5550 1250
+F 0 "#PWR022" H 5550 1100 50  0001 C CNN
+F 1 "+3.3V" H 5565 1423 50  0000 C CNN
+F 2 "" H 5550 1250 50  0000 C CNN
+F 3 "" H 5550 1250 50  0000 C CNN
+	1    5550 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR023
+U 1 1 57A328B1
+P 900 700
+F 0 "#PWR023" H 900 550 50  0001 C CNN
+F 1 "+3.3V" H 915 873 50  0000 C CNN
+F 2 "" H 900 700 50  0000 C CNN
+F 3 "" H 900 700 50  0000 C CNN
+	1    900  700 
+	1    0    0    -1  
+$EndComp
+Text Label 4970 1400 0    60   ~ 0
+VCC3V3
+Text Label 6700 1300 0    60   ~ 0
+VCC12V
+Text Label 7675 2950 0    60   ~ 0
+VCC3V3
+Text Label 1790 650  0    60   ~ 0
+VCC3V3
+Text Label 4015 2050 0    60   ~ 0
+IDCLK
+Text Label 4020 2150 0    60   ~ 0
+IDDAT
+Text Label 6510 2650 0    60   ~ 0
+RST
+Text Label 5865 1300 0    35   ~ 0
+RAW_VCC12V
 Wire Wire Line
 	4600 1950 4500 1950
 Wire Wire Line
@@ -355,54 +639,10 @@ Connection ~ 4400 1400
 Connection ~ 1650 650 
 Wire Wire Line
 	5450 7500 5450 7400
-Text GLabel 6800 1650 2    60   UnSpc ~ 0
-PRNST
-Text GLabel 4100 6750 0    60   UnSpc ~ 0
-PRNST
 Wire Wire Line
 	4100 6750 4600 6750
 Wire Wire Line
 	6300 1650 6800 1650
-Entry Wire Line
-	4200 2350 4300 2450
-Entry Wire Line
-	4200 2550 4300 2650
-Entry Wire Line
-	4200 2850 4300 2950
-Entry Wire Line
-	4200 3050 4300 3150
-Entry Wire Line
-	4200 3150 4300 3250
-Entry Wire Line
-	4200 3650 4300 3750
-Entry Wire Line
-	4200 3750 4300 3850
-Entry Wire Line
-	4200 4050 4300 4150
-Entry Wire Line
-	4200 4150 4300 4250
-Entry Wire Line
-	4200 4750 4300 4850
-Text Label 4300 4850 0    60   ~ 0
-R9
-Text Label 4300 2450 0    60   ~ 0
-R0
-Text Label 4300 2650 0    60   ~ 0
-R1
-Text Label 4300 2950 0    60   ~ 0
-R2
-Text Label 4300 3150 0    60   ~ 0
-R3
-Text Label 4300 3250 0    60   ~ 0
-R4
-Text Label 4300 3750 0    60   ~ 0
-R5
-Text Label 4300 3850 0    60   ~ 0
-R6
-Text Label 4300 4150 0    60   ~ 0
-R7
-Text Label 4300 4250 0    60   ~ 0
-R8
 Wire Wire Line
 	4100 4550 4600 4550
 Wire Wire Line
@@ -419,56 +659,6 @@ Wire Wire Line
 	6300 2250 6800 2250
 Wire Wire Line
 	6300 2350 6800 2350
-Entry Wire Line
-	4200 5150 4300 5250
-Entry Wire Line
-	4200 5250 4300 5350
-Entry Wire Line
-	4200 5650 4300 5750
-Entry Wire Line
-	4200 5550 4300 5650
-Text Label 4300 5250 0    60   ~ 0
-G9
-Text Label 4300 5350 0    60   ~ 0
-G8
-Text Label 4300 5650 0    60   ~ 0
-G7
-Text Label 4300 5750 0    60   ~ 0
-G6
-Text HLabel 6800 6150 2    60   Output ~ 0
-G[0..9]
-Entry Wire Line
-	4200 6050 4300 6150
-Entry Wire Line
-	4200 5950 4300 6050
-Entry Wire Line
-	6600 6750 6700 6650
-Entry Wire Line
-	6600 6650 6700 6550
-Entry Wire Line
-	6600 6350 6700 6250
-Entry Wire Line
-	6600 6250 6700 6150
-Entry Wire Line
-	6600 5950 6700 5850
-Entry Wire Line
-	6600 5850 6700 5750
-Entry Wire Line
-	6600 5550 6700 5450
-Entry Wire Line
-	6600 5450 6700 5350
-Entry Wire Line
-	6600 5250 6700 5150
-Entry Wire Line
-	6600 5050 6700 4950
-Entry Wire Line
-	6600 4850 6700 4750
-Entry Wire Line
-	6600 4750 6700 4650
-Entry Wire Line
-	6600 4450 6700 4350
-Entry Wire Line
-	6600 4350 6700 4250
 Wire Bus Line
 	4100 2350 4200 2350
 Wire Bus Line
@@ -498,8 +688,6 @@ Wire Wire Line
 Wire Wire Line
 	6300 5450 6600 5450
 Wire Wire Line
-	6600 5250 6300 5250
-Wire Wire Line
 	6300 5050 6600 5050
 Wire Wire Line
 	6600 4850 6300 4850
@@ -509,47 +697,13 @@ Wire Wire Line
 	6600 4450 6300 4450
 Wire Wire Line
 	6300 4350 6600 4350
-Text Label 6600 4350 2    60   ~ 0
-B0
-Text Label 6600 4450 2    60   ~ 0
-B1
-Text Label 6600 4750 2    60   ~ 0
-B2
-Text Label 6600 4850 2    60   ~ 0
-B3
-Text Label 6600 5050 2    60   ~ 0
-B4
-Text Label 6600 5250 2    60   ~ 0
-B5
-Text Label 6600 5450 2    60   ~ 0
-B6
-Text Label 6600 5550 2    60   ~ 0
-B7
-Text Label 6600 5850 2    60   ~ 0
-B8
-Text Label 6600 5950 2    60   ~ 0
-B9
-Text Label 6600 6250 2    60   ~ 0
-G0
-Text Label 6600 6350 2    60   ~ 0
-G1
-Text Label 6600 6650 2    60   ~ 0
-G2
-Text Label 6600 6750 2    60   ~ 0
-G3
-Text Label 4400 6150 2    60   ~ 0
-G4
-Text Label 4400 6050 2    60   ~ 0
-G5
 Wire Bus Line
 	6800 6150 6700 6150
 Wire Bus Line
-	6700 4250 6800 4250
+	6700 3650 6800 3650
 Wire Wire Line
 	4600 5050 4500 5050
 Connection ~ 4500 5050
-NoConn ~ 4600 3450
-NoConn ~ 4600 4950
 Wire Wire Line
 	4600 2450 4300 2450
 Wire Wire Line
@@ -581,22 +735,11 @@ Wire Wire Line
 Wire Bus Line
 	6700 6150 6700 6650
 Wire Bus Line
-	6700 4250 6700 5850
+	6700 3650 6700 5850
 Wire Wire Line
 	6300 3950 6800 3950
 Wire Wire Line
 	6800 4050 6300 4050
-$Comp
-L JUMPER JP301
-U 1 1 56923A16
-P 3600 1100
-F 0 "JP301" H 3600 1250 50  0000 C CNN
-F 1 "JUMPER" H 3600 1020 50  0000 C CNN
-F 2 "CON-SMD-2.54:HARWIN-M20-87-2x1" H 3600 1100 50  0001 C CNN
-F 3 "" H 3600 1100 50  0000 C CNN
-	1    3600 1100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3200 1100 3300 1100
 Wire Wire Line
@@ -607,55 +750,11 @@ Wire Wire Line
 Wire Wire Line
 	6300 3150 6800 3150
 Wire Wire Line
-	6300 3350 6550 3350
-$Comp
-L LED DDG1
-U 1 1 56925C52
-P 8100 3050
-F 0 "DDG1" H 8350 3100 50  0000 C CNN
-F 1 "LED" H 8100 2950 50  0001 C CNN
-F 2 "LEDs:LED_0805" H 8100 3050 50  0001 C CNN
-F 3 "" H 8100 3050 50  0000 C CNN
-	1    8100 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L R RDG1
-U 1 1 56925CE8
-P 7550 3050
-F 0 "RDG1" V 7500 3300 50  0000 C CNN
-F 1 "68R" V 7550 3050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7480 3050 50  0001 C CNN
-F 3 "" H 7550 3050 50  0000 C CNN
-	1    7550 3050
-	0    1    1    0   
-$EndComp
+	6300 3350 6645 3350
 Wire Wire Line
 	7300 3050 7400 3050
 Wire Wire Line
 	7700 3050 7900 3050
-$Comp
-L LED DDG2
-U 1 1 56925FC5
-P 8100 3150
-F 0 "DDG2" H 8350 3200 50  0000 C CNN
-F 1 "LED" H 8100 3050 50  0001 C CNN
-F 2 "LEDs:LED_0805" H 8100 3150 50  0001 C CNN
-F 3 "" H 8100 3150 50  0000 C CNN
-	1    8100 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L R RDG2
-U 1 1 56925FCB
-P 7550 3150
-F 0 "RDG2" V 7500 3400 50  0000 C CNN
-F 1 "68R" V 7550 3150 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7480 3150 50  0001 C CNN
-F 3 "" H 7550 3150 50  0000 C CNN
-	1    7550 3150
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7300 3150 7400 3150
 Wire Wire Line
@@ -670,17 +769,6 @@ Wire Wire Line
 Connection ~ 8500 3050
 Wire Wire Line
 	7300 2950 8550 2950
-$Comp
-L CONN_01X04 PTI2C1
-U 1 1 569310F0
-P 800 1400
-F 0 "PTI2C1" H 800 1650 50  0000 C CNN
-F 1 "TOFE I2C" V 900 1400 50  0000 C CNN
-F 2 "CON-SMD-2.54:HARWIN-M20-87-4x1" H 800 1400 50  0001 C CNN
-F 3 "" H 800 1400 50  0000 C CNN
-	1    800  1400
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	1100 650  1100 1250
 Wire Wire Line
@@ -689,128 +777,86 @@ Connection ~ 1300 650
 Wire Wire Line
 	1000 1350 1400 1350
 Connection ~ 1400 1350
-$Comp
-L GND #PWR019
-U 1 1 56931407
-P 1100 1550
-F 0 "#PWR019" H 1100 1300 50  0001 C CNN
-F 1 "GND" V 1000 1500 50  0000 C CNN
-F 2 "" H 1100 1550 50  0000 C CNN
-F 3 "" H 1100 1550 50  0000 C CNN
-	1    1100 1550
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	1000 1550 1100 1550
-$Comp
-L R R303
-U 1 1 56934090
-P 3250 850
-F 0 "R303" V 3330 850 50  0000 C CNN
-F 1 "10K" V 3250 850 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 3180 850 50  0001 C CNN
-F 3 "" H 3250 850 50  0000 C CNN
-	1    3250 850 
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3250 700  3250 650 
 Connection ~ 3250 650 
 Wire Wire Line
 	3250 1000 3250 1100
 Connection ~ 3250 1100
-$Comp
-L CONN_02X04 PDG0
-U 1 1 569346A3
-P 7050 3100
-F 0 "PDG0" H 7050 3350 50  0000 C CNN
-F 1 "DEBUG" H 7050 2850 50  0000 C CNN
-F 2 "CON-SMD-2.54:TE-AMPMODU-MOD-II-4X2" H 7050 1900 50  0001 C CNN
-F 3 "" H 7050 1900 50  0000 C CNN
-	1    7050 3100
-	1    0    0    -1  
-$EndComp
-Text HLabel 6800 3450 2    60   Output ~ 0
-VGAOUT_I2C_EN
-Text HLabel 6800 3750 2    60   Output ~ 0
-VGAIN_I2C_EN
 Wire Wire Line
-	6300 3450 6800 3450
-Wire Wire Line
-	6300 3750 6800 3750
-$Comp
-L +3V3 #PWR020
-U 1 1 579700B0
-P 8550 2950
-F 0 "#PWR020" H 8550 2800 50  0001 C CNN
-F 1 "+3V3" H 8550 3090 50  0000 C CNN
-F 2 "" H 8550 2950 60  0000 C CNN
-F 3 "" H 8550 2950 60  0000 C CNN
-	1    8550 2950
-	1    0    0    -1  
-$EndComp
+	6300 3750 6600 3750
 Wire Wire Line
 	6300 2650 6800 2650
-Text HLabel 6800 2650 2    60   Output ~ 0
-RST
-Wire Wire Line
-	8500 2950 8500 3150
-Text HLabel 6550 3350 2    60   Input ~ 0
-FIELD
-$Comp
-L GND #PWR021
-U 1 1 579E0967
-P 7400 3250
-F 0 "#PWR021" H 7400 3000 50  0001 C CNN
-F 1 "GND" H 7400 3100 50  0000 C CNN
-F 2 "" H 7400 3250 50  0000 C CNN
-F 3 "" H 7400 3250 50  0000 C CNN
-	1    7400 3250
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	6300 2950 6400 2950
-NoConn ~ 6800 2950
-NoConn ~ 6800 3250
 Wire Wire Line
 	900  700  1100 700 
 Connection ~ 1100 700 
+Wire Wire Line
+	7245 2755 6720 2755
+Wire Wire Line
+	6720 2755 6720 3050
+Connection ~ 6720 3050
+Wire Wire Line
+	7245 2655 7215 2655
+Wire Wire Line
+	7215 2655 7215 2710
+Wire Wire Line
+	7215 2710 6645 2710
+Wire Wire Line
+	6645 2710 6645 3150
+Connection ~ 6645 3150
+Entry Wire Line
+	6600 3750 6700 3650
+NoConn ~ 6300 5250
 $Comp
-L +3.3V #PWR022
-U 1 1 57A326A4
-P 5550 1250
-F 0 "#PWR022" H 5550 1100 50  0001 C CNN
-F 1 "+3.3V" H 5565 1423 50  0000 C CNN
-F 2 "" H 5550 1250 50  0000 C CNN
-F 3 "" H 5550 1250 50  0000 C CNN
-	1    5550 1250
-	1    0    0    -1  
+L R RDG3
+U 1 1 57A3F155
+P 7550 3250
+F 0 "RDG3" V 7500 3500 50  0000 C CNN
+F 1 "68R" V 7550 3250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7480 3250 50  0001 C CNN
+F 3 "" H 7550 3250 50  0000 C CNN
+	1    7550 3250
+	0    1    1    0   
 $EndComp
 $Comp
-L +3.3V #PWR023
-U 1 1 57A328B1
-P 900 700
-F 0 "#PWR023" H 900 550 50  0001 C CNN
-F 1 "+3.3V" H 915 873 50  0000 C CNN
-F 2 "" H 900 700 50  0000 C CNN
-F 3 "" H 900 700 50  0000 C CNN
-	1    900  700 
+L LED DDG3
+U 1 1 57A3F1EE
+P 8100 3250
+F 0 "DDG3" H 8350 3300 50  0000 C CNN
+F 1 "LED" H 8100 3150 50  0001 C CNN
+F 2 "LEDs:LED_0805" H 8100 3250 50  0001 C CNN
+F 3 "" H 8100 3250 50  0000 C CNN
+	1    8100 3250
 	1    0    0    -1  
 $EndComp
-Text Label 4970 1400 0    60   ~ 0
-VCC3V3
-Text Label 6700 1300 0    60   ~ 0
-VCC12V
-Text Label 7675 2950 0    60   ~ 0
-VCC3V3
-Text Label 1790 650  0    60   ~ 0
-VCC3V3
-Text Label 4015 2050 0    60   ~ 0
-IDCLK
-Text Label 4020 2150 0    60   ~ 0
-IDDAT
-Text Label 6510 2650 0    60   ~ 0
-RST
-Text Label 5865 1300 0    35   ~ 0
-RAW_VCC12V
+Connection ~ 8500 3150
+$Comp
+L CONN_02X05 PDG0
+U 1 1 57A3F8CA
+P 7050 3150
+F 0 "PDG0" H 7050 3450 50  0000 C CNN
+F 1 "DEBUG" H 7050 2850 50  0000 C CNN
+F 2 "" H 7050 1950 50  0000 C CNN
+F 3 "" H 7050 1950 50  0000 C CNN
+	1    7050 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 3250 7700 3250
+Wire Wire Line
+	8500 3250 8300 3250
+Wire Wire Line
+	8500 2950 8500 3250
+Wire Wire Line
+	7300 3350 7400 3350
+Wire Wire Line
+	6645 3350 6645 3250
+Wire Wire Line
+	6645 3250 6800 3250
+Wire Wire Line
+	6300 3450 6490 3450
 $EndSCHEMATC
