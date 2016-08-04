@@ -92,9 +92,9 @@ $EndComp
 Text Notes 9830 4085 0    157  ~ 31
 VGA Out
 Text HLabel 8300 5050 0    60   Input ~ 0
-VGAOUT_HSYNC0
+VGAOUT_HSYNC
 Text HLabel 8300 4950 0    60   Input ~ 0
-VGAOUT_VSYNC0
+VGAOUT_VSYNC
 $Comp
 L R R508
 U 1 1 56419F6C
@@ -140,7 +140,7 @@ F 3 "" H 4000 4650 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text HLabel 3900 1800 0    60   BiDi ~ 0
-VGAIN_SCLK
+VGAIN_SCL
 Text HLabel 3900 1950 0    60   BiDi ~ 0
 VGAIN_SDA
 $Comp
@@ -199,9 +199,9 @@ $EndComp
 Text Notes 10000 1135 0    157  ~ 31
 VGA In
 Text HLabel 8300 1950 0    60   Output ~ 0
-VGAIN_HSYNC0
+VGAIN_HSYNC
 Text HLabel 8300 1850 0    60   Output ~ 0
-VGAIN_VSYNC0
+VGAIN_VSYNC
 $Comp
 L R R507
 U 1 1 5641B8F6
