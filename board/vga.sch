@@ -584,11 +584,11 @@ Text Notes 7755 3285 1    60   ~ 0
 Analog VGA Signals\nNoise Sensitive
 Text Notes 7740 6375 1    60   ~ 0
 Analog VGA Signals\nNoise Sensitive
-Text HLabel 2100 3025 2    60   Input ~ 0
+Text HLabel 2100 3025 2    60   Output ~ 0
 COMP_Y
-Text HLabel 2100 3375 2    60   Input ~ 0
+Text HLabel 2100 3375 2    60   Output ~ 0
 COMP_Pb
-Text HLabel 2100 3725 2    60   Input ~ 0
+Text HLabel 2100 3725 2    60   Output ~ 0
 COMP_Pr
 $Comp
 L GNDA #PWR054
