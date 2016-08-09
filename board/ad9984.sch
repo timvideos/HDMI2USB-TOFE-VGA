@@ -1287,4 +1287,6 @@ Text Label 9035 3650 2    20   ~ 0
 VCC3V3
 Text Label 6450 2055 1    39   ~ 0
 FILT
+Text Notes 1500 5255 0    60   ~ 0
+Route analog signals with matched\nimpedance traces of 75 Ohm\n
 $EndSCHEMATC
