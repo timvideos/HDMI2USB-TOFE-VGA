@@ -1,4 +1,4 @@
-update=Fri 15 Jan 2016 13:02:02 GMT
+update=Thu 11 Aug 2016 10:56:34 AEST
 version=1
 last_client=kicad
 [cvpcb]
@@ -69,3 +69,5 @@ LibName16=vmodvga
 LibName17=testpoint
 LibName18=ad9984-power
 LibName19=3-rca
+LibName20=SP724AH
+LibName21=TPD7S019
