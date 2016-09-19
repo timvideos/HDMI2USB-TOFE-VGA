@@ -241,8 +241,6 @@
     (via_drill 0.305)
     (uvia_dia 0.1)
     (uvia_drill 0.03)
-    (diff_pair_gap 0.25)
-    (diff_pair_width 0.2)
     (add_net +12V)
     (add_net +3V3)
     (add_net +5V)
