@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/tansell/foss/timvideos/tofe/HDMI2USB-TOFE-VGA/board/TOFE-VGA.sch)
-    (date "Sat 01 Oct 2016 22:49:29 AEST")
+    (date "Sat 01 Oct 2016 22:52:27 AEST")
     (tool "Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -283,7 +283,7 @@
       (tstamp 569327BB))
     (comp (ref TOFE0)
       (value TOFE-8X)
-      (footprint TOFE_8X_FullHeight:TOFE_8X_FullHeight)
+      (footprint TOFE_8X_HalfHeight:TOFE_8X_HalfHeight)
       (libsource (lib TOFE) (part TOFE-8X))
       (sheetpath (names /TOFE-VGA/TOFE/) (tstamps /563EE495/))
       (tstamp 561CABB0))
