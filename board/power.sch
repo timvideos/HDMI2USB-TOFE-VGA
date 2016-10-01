@@ -758,28 +758,6 @@ F 3 "" H 4300 2500 60  0000 C CNN
 	1    4300 2500
 	1    0    0    -1  
 $EndComp
-$Comp
-L C CI2C1
-U 1 1 5693279A
-P 4550 2500
-F 0 "CI2C1" H 4575 2600 50  0000 L CNN
-F 1 "100n" H 4575 2400 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 4588 2350 30  0001 C CNN
-F 3 "" H 4550 2500 60  0000 C CNN
-	1    4550 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L C CI2C2
-U 1 1 569327A0
-P 4800 2500
-F 0 "CI2C2" H 4825 2600 50  0000 L CNN
-F 1 "100n" H 4825 2400 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 4838 2350 30  0001 C CNN
-F 3 "" H 4800 2500 60  0000 C CNN
-	1    4800 2500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4050 2050 4050 2350
 Connection ~ 4050 2050
@@ -792,17 +770,6 @@ Connection ~ 4300 2950
 Wire Wire Line
 	4300 2050 4300 2350
 Connection ~ 4300 2050
-Wire Wire Line
-	4550 2050 4550 2350
-Connection ~ 4550 2050
-Wire Wire Line
-	4550 2650 4550 2950
-Connection ~ 4550 2950
-Wire Wire Line
-	4800 2950 4800 2650
-Wire Wire Line
-	4800 2050 4800 2350
-Connection ~ 4800 2050
 $Comp
 L R RTIO1
 U 1 1 569327B5
@@ -831,7 +798,6 @@ Wire Wire Line
 	5200 2050 5200 2100
 Wire Wire Line
 	5200 2950 5200 2900
-Connection ~ 4800 2950
 Wire Wire Line
 	3450 2000 3450 2050
 Wire Wire Line
@@ -847,7 +813,7 @@ Place CPV* near AD9984 pins\nPlace others near UPV1
 Text Notes 3325 4225 0    60   ~ 0
 Place CVD* near AD9984 pins\nPlace others near UVD1
 Text Notes 3655 1680 0    60   ~ 0
-Place CAIO* near AD9984 pins\nPlace CI2C1 near UVI_I2C0\nPlace CI2C2 near UVO_I2C0\nPlace *TIO* near TOFE pins
+Place CAIO* near AD9984 pins\nPlace *TIO* near TOFE pins
 Text Notes 6970 1710 0    60   ~ 0
 Place all *5V* componets near each other
 Text Notes 1715 1670 0    60   ~ 0
