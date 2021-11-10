@@ -4,7 +4,7 @@ This repository contains a TOFE board for VGA capture based on
 [Rohit's vmodvga board](https://github.com/timvideos/HDMI2USB-vmodvga).
 
 For [more information on the TOFE interface, see the HDMI2USB website](http://hdmi2usb.tv/tofe).
-For the [KiCad website](http://kicad-pcb.org/) for more information on using it.
+For the [KiCad website](http://kicad.org/) for more information on using it.
 
 ## Parts
 
